@@ -1,0 +1,5119 @@
+{
+  "ID": "8f3522b4-67cd-48af-a528-416b56e8d8b3",
+  "salesFunnel": {
+    "byDay": [
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-05-27",
+        "openCard": 109,
+        "addToCart": 20,
+        "openToCart": 18,
+        "orders": 27,
+        "cartToOrder": 135,
+        "ordersSum": 14013,
+        "buyoutCount": 2,
+        "buyoutSum": 1038,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 23,
+        "viewCount": 7207,
+        "CTR": 2,
+        "medianPrice": 441
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-05-28",
+        "openCard": 127,
+        "addToCart": 34,
+        "openToCart": 27,
+        "orders": 5,
+        "cartToOrder": 15,
+        "ordersSum": 2595,
+        "buyoutCount": 3,
+        "buyoutSum": 1557,
+        "buyoutPercent": 75,
+        "cancelCount": 1,
+        "cancelSum": 519,
+        "avgPosition": 11,
+        "viewCount": 7001,
+        "CTR": 2,
+        "medianPrice": 443
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-05-29",
+        "openCard": 123,
+        "addToCart": 15,
+        "openToCart": 12,
+        "orders": 8,
+        "cartToOrder": 53,
+        "ordersSum": 4152,
+        "buyoutCount": 6,
+        "buyoutSum": 3212,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 35,
+        "viewCount": 6424,
+        "CTR": 2,
+        "medianPrice": 453
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-05-30",
+        "openCard": 135,
+        "addToCart": 18,
+        "openToCart": 13,
+        "orders": 7,
+        "cartToOrder": 39,
+        "ordersSum": 3633,
+        "buyoutCount": 16,
+        "buyoutSum": 8304,
+        "buyoutPercent": 73,
+        "cancelCount": 6,
+        "cancelSum": 3114,
+        "avgPosition": 8,
+        "viewCount": 6932,
+        "CTR": 2,
+        "medianPrice": 459
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-05-31",
+        "openCard": 150,
+        "addToCart": 22,
+        "openToCart": 15,
+        "orders": 9,
+        "cartToOrder": 41,
+        "ordersSum": 4671,
+        "buyoutCount": 8,
+        "buyoutSum": 4152,
+        "buyoutPercent": 89,
+        "cancelCount": 1,
+        "cancelSum": 519,
+        "avgPosition": 8,
+        "viewCount": 6922,
+        "CTR": 2,
+        "medianPrice": 450
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-01",
+        "openCard": 120,
+        "addToCart": 9,
+        "openToCart": 8,
+        "orders": 1,
+        "cartToOrder": 11,
+        "ordersSum": 519,
+        "buyoutCount": 7,
+        "buyoutSum": 3633,
+        "buyoutPercent": 88,
+        "cancelCount": 1,
+        "cancelSum": 519,
+        "avgPosition": 20,
+        "viewCount": 6494,
+        "CTR": 2,
+        "medianPrice": 446
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-02",
+        "openCard": 113,
+        "addToCart": 17,
+        "openToCart": 15,
+        "orders": 4,
+        "cartToOrder": 24,
+        "ordersSum": 2076,
+        "buyoutCount": 4,
+        "buyoutSum": 2076,
+        "buyoutPercent": 80,
+        "cancelCount": 1,
+        "cancelSum": 519,
+        "avgPosition": 11,
+        "viewCount": 6911,
+        "CTR": 2,
+        "medianPrice": 449
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-03",
+        "openCard": 114,
+        "addToCart": 8,
+        "openToCart": 7,
+        "orders": 3,
+        "cartToOrder": 38,
+        "ordersSum": 1557,
+        "buyoutCount": 11,
+        "buyoutSum": 5774,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 12,
+        "viewCount": 6278,
+        "CTR": 2,
+        "medianPrice": 462
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-04",
+        "openCard": 147,
+        "addToCart": 16,
+        "openToCart": 11,
+        "orders": 8,
+        "cartToOrder": 50,
+        "ordersSum": 4152,
+        "buyoutCount": 6,
+        "buyoutSum": 3114,
+        "buyoutPercent": 86,
+        "cancelCount": 1,
+        "cancelSum": 519,
+        "avgPosition": 14,
+        "viewCount": 6141,
+        "CTR": 2,
+        "medianPrice": 436
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-05",
+        "openCard": 101,
+        "addToCart": 9,
+        "openToCart": 9,
+        "orders": 1,
+        "cartToOrder": 11,
+        "ordersSum": 649,
+        "buyoutCount": 3,
+        "buyoutSum": 1557,
+        "buyoutPercent": 60,
+        "cancelCount": 2,
+        "cancelSum": 1071,
+        "avgPosition": 10,
+        "viewCount": 5951,
+        "CTR": 2,
+        "medianPrice": 522
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-06",
+        "openCard": 107,
+        "addToCart": 12,
+        "openToCart": 11,
+        "orders": 1,
+        "cartToOrder": 8,
+        "ordersSum": 649,
+        "buyoutCount": 3,
+        "buyoutSum": 1557,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 13,
+        "viewCount": 6012,
+        "CTR": 2,
+        "medianPrice": 577
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-07",
+        "openCard": 114,
+        "addToCart": 11,
+        "openToCart": 10,
+        "orders": 3,
+        "cartToOrder": 27,
+        "ordersSum": 1947,
+        "buyoutCount": 3,
+        "buyoutSum": 1557,
+        "buyoutPercent": 75,
+        "cancelCount": 1,
+        "cancelSum": 584,
+        "avgPosition": 16,
+        "viewCount": 6624,
+        "CTR": 2,
+        "medianPrice": 577
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-08",
+        "openCard": 110,
+        "addToCart": 13,
+        "openToCart": 12,
+        "orders": 7,
+        "cartToOrder": 54,
+        "ordersSum": 4543,
+        "buyoutCount": 3,
+        "buyoutSum": 1557,
+        "buyoutPercent": 75,
+        "cancelCount": 1,
+        "cancelSum": 519,
+        "avgPosition": 20,
+        "viewCount": 6415,
+        "CTR": 2,
+        "medianPrice": 564
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-09",
+        "openCard": 91,
+        "addToCart": 23,
+        "openToCart": 25,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 5,
+        "buyoutSum": 3115,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 4,
+        "viewCount": 6148,
+        "CTR": 1,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-10",
+        "openCard": 96,
+        "addToCart": 23,
+        "openToCart": 24,
+        "orders": 7,
+        "cartToOrder": 30,
+        "ordersSum": 4543,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 15,
+        "viewCount": 6359,
+        "CTR": 2,
+        "medianPrice": 571
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-11",
+        "openCard": 86,
+        "addToCart": 16,
+        "openToCart": 19,
+        "orders": 3,
+        "cartToOrder": 19,
+        "ordersSum": 1947,
+        "buyoutCount": 5,
+        "buyoutSum": 3245,
+        "buyoutPercent": 83,
+        "cancelCount": 1,
+        "cancelSum": 584,
+        "avgPosition": 19,
+        "viewCount": 5940,
+        "CTR": 1,
+        "medianPrice": 550
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-12",
+        "openCard": 132,
+        "addToCart": 19,
+        "openToCart": 14,
+        "orders": 5,
+        "cartToOrder": 26,
+        "ordersSum": 2985,
+        "buyoutCount": 1,
+        "buyoutSum": 649,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 41,
+        "viewCount": 5787,
+        "CTR": 2,
+        "medianPrice": 509
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-13",
+        "openCard": 104,
+        "addToCart": 19,
+        "openToCart": 18,
+        "orders": 8,
+        "cartToOrder": 42,
+        "ordersSum": 4672,
+        "buyoutCount": 3,
+        "buyoutSum": 1882,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 19,
+        "viewCount": 5667,
+        "CTR": 2,
+        "medianPrice": 501
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-14",
+        "openCard": 101,
+        "addToCart": 19,
+        "openToCart": 19,
+        "orders": 7,
+        "cartToOrder": 37,
+        "ordersSum": 4088,
+        "buyoutCount": 2,
+        "buyoutSum": 1233,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 15,
+        "viewCount": 6483,
+        "CTR": 2,
+        "medianPrice": 495
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-15",
+        "openCard": 84,
+        "addToCart": 9,
+        "openToCart": 11,
+        "orders": 8,
+        "cartToOrder": 89,
+        "ordersSum": 4672,
+        "buyoutCount": 5,
+        "buyoutSum": 2985,
+        "buyoutPercent": 83,
+        "cancelCount": 1,
+        "cancelSum": 649,
+        "avgPosition": 33,
+        "viewCount": 6046,
+        "CTR": 1,
+        "medianPrice": 506
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-16",
+        "openCard": 89,
+        "addToCart": 9,
+        "openToCart": 10,
+        "orders": 7,
+        "cartToOrder": 78,
+        "ordersSum": 4088,
+        "buyoutCount": 9,
+        "buyoutSum": 5451,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 19,
+        "viewCount": 6523,
+        "CTR": 1,
+        "medianPrice": 495
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-17",
+        "openCard": 94,
+        "addToCart": 6,
+        "openToCart": 6,
+        "orders": 3,
+        "cartToOrder": 50,
+        "ordersSum": 1752,
+        "buyoutCount": 5,
+        "buyoutSum": 2985,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 44,
+        "viewCount": 6183,
+        "CTR": 2,
+        "medianPrice": 508
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-18",
+        "openCard": 106,
+        "addToCart": 15,
+        "openToCart": 14,
+        "orders": 5,
+        "cartToOrder": 33,
+        "ordersSum": 2920,
+        "buyoutCount": 7,
+        "buyoutSum": 4218,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 27,
+        "viewCount": 6268,
+        "CTR": 2,
+        "medianPrice": 498
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-19",
+        "openCard": 119,
+        "addToCart": 28,
+        "openToCart": 24,
+        "orders": 13,
+        "cartToOrder": 46,
+        "ordersSum": 7592,
+        "buyoutCount": 2,
+        "buyoutSum": 1168,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 14,
+        "viewCount": 6561,
+        "CTR": 2,
+        "medianPrice": 463
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-20",
+        "openCard": 115,
+        "addToCart": 25,
+        "openToCart": 22,
+        "orders": 4,
+        "cartToOrder": 16,
+        "ordersSum": 2336,
+        "buyoutCount": 5,
+        "buyoutSum": 2920,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 13,
+        "viewCount": 7513,
+        "CTR": 2,
+        "medianPrice": 457
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-21",
+        "openCard": 122,
+        "addToCart": 31,
+        "openToCart": 25,
+        "orders": 8,
+        "cartToOrder": 26,
+        "ordersSum": 4672,
+        "buyoutCount": 4,
+        "buyoutSum": 2336,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 3,
+        "viewCount": 7785,
+        "CTR": 2,
+        "medianPrice": 460
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-22",
+        "openCard": 118,
+        "addToCart": 28,
+        "openToCart": 24,
+        "orders": 8,
+        "cartToOrder": 29,
+        "ordersSum": 4672,
+        "buyoutCount": 8,
+        "buyoutSum": 4802,
+        "buyoutPercent": 89,
+        "cancelCount": 1,
+        "cancelSum": 519,
+        "avgPosition": 19,
+        "viewCount": 7907,
+        "CTR": 1,
+        "medianPrice": 457
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-23",
+        "openCard": 128,
+        "addToCart": 15,
+        "openToCart": 12,
+        "orders": 7,
+        "cartToOrder": 47,
+        "ordersSum": 4088,
+        "buyoutCount": 5,
+        "buyoutSum": 2920,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 6,
+        "viewCount": 8259,
+        "CTR": 2,
+        "medianPrice": 443
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-24",
+        "openCard": 98,
+        "addToCart": 17,
+        "openToCart": 17,
+        "orders": 4,
+        "cartToOrder": 24,
+        "ordersSum": 2336,
+        "buyoutCount": 6,
+        "buyoutSum": 3504,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 18,
+        "viewCount": 7712,
+        "CTR": 1,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-25",
+        "openCard": 33,
+        "addToCart": 7,
+        "openToCart": 21,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 8,
+        "viewCount": 1727,
+        "CTR": 2,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-05-27",
+        "openCard": 33,
+        "addToCart": 5,
+        "openToCart": 15,
+        "orders": 1,
+        "cartToOrder": 20,
+        "ordersSum": 635,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 10,
+        "viewCount": 600,
+        "CTR": 6,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-05-28",
+        "openCard": 33,
+        "addToCart": 3,
+        "openToCart": 9,
+        "orders": 1,
+        "cartToOrder": 33,
+        "ordersSum": 635,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 21,
+        "viewCount": 817,
+        "CTR": 4,
+        "medianPrice": 511
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-05-29",
+        "openCard": 21,
+        "addToCart": 4,
+        "openToCart": 19,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 1,
+        "cancelSum": 635,
+        "avgPosition": 41,
+        "viewCount": 320,
+        "CTR": 7,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-05-30",
+        "openCard": 28,
+        "addToCart": 5,
+        "openToCart": 18,
+        "orders": 3,
+        "cartToOrder": 60,
+        "ordersSum": 1905,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 1,
+        "cancelSum": 635,
+        "avgPosition": 10,
+        "viewCount": 420,
+        "CTR": 7,
+        "medianPrice": 511
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-05-31",
+        "openCard": 21,
+        "addToCart": 1,
+        "openToCart": 5,
+        "orders": 2,
+        "cartToOrder": 200,
+        "ordersSum": 1270,
+        "buyoutCount": 1,
+        "buyoutSum": 635,
+        "buyoutPercent": 50,
+        "cancelCount": 1,
+        "cancelSum": 635,
+        "avgPosition": 37,
+        "viewCount": 356,
+        "CTR": 6,
+        "medianPrice": 486
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-01",
+        "openCard": 18,
+        "addToCart": 3,
+        "openToCart": 17,
+        "orders": 1,
+        "cartToOrder": 33,
+        "ordersSum": 635,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 2,
+        "viewCount": 123,
+        "CTR": 15,
+        "medianPrice": 527
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-02",
+        "openCard": 1,
+        "addToCart": 0,
+        "openToCart": 0,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 4,
+        "buyoutSum": 2540,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 3,
+        "viewCount": 219,
+        "CTR": 0,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-03",
+        "openCard": 8,
+        "addToCart": 0,
+        "openToCart": 0,
+        "orders": 1,
+        "cartToOrder": 0,
+        "ordersSum": 635,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 52,
+        "viewCount": 77,
+        "CTR": 10,
+        "medianPrice": 533
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-04",
+        "openCard": 10,
+        "addToCart": 0,
+        "openToCart": 0,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 1,
+        "buyoutSum": 635,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 44,
+        "viewCount": 77,
+        "CTR": 13,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-05",
+        "openCard": 12,
+        "addToCart": 0,
+        "openToCart": 0,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 43,
+        "viewCount": 102,
+        "CTR": 12,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-06",
+        "openCard": 7,
+        "addToCart": 0,
+        "openToCart": 0,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 64,
+        "viewCount": 273,
+        "CTR": 3,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-07",
+        "openCard": 13,
+        "addToCart": 1,
+        "openToCart": 8,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 35,
+        "viewCount": 108,
+        "CTR": 12,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-08",
+        "openCard": 6,
+        "addToCart": 1,
+        "openToCart": 17,
+        "orders": 1,
+        "cartToOrder": 100,
+        "ordersSum": 635,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 15,
+        "viewCount": 73,
+        "CTR": 8,
+        "medianPrice": 505
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-09",
+        "openCard": 6,
+        "addToCart": 0,
+        "openToCart": 0,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 36,
+        "viewCount": 64,
+        "CTR": 9,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-10",
+        "openCard": 6,
+        "addToCart": 0,
+        "openToCart": 0,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 1,
+        "buyoutSum": 635,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 20,
+        "viewCount": 49,
+        "CTR": 12,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-11",
+        "openCard": 13,
+        "addToCart": 0,
+        "openToCart": 0,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 13,
+        "viewCount": 52,
+        "CTR": 25,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-12",
+        "openCard": 7,
+        "addToCart": 0,
+        "openToCart": 0,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 11,
+        "viewCount": 50,
+        "CTR": 14,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-13",
+        "openCard": 13,
+        "addToCart": 0,
+        "openToCart": 0,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 51,
+        "viewCount": 54,
+        "CTR": 24,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-14",
+        "openCard": 4,
+        "addToCart": 0,
+        "openToCart": 0,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 15,
+        "viewCount": 59,
+        "CTR": 7,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-15",
+        "openCard": 5,
+        "addToCart": 0,
+        "openToCart": 0,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 9,
+        "viewCount": 57,
+        "CTR": 9,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-16",
+        "openCard": 5,
+        "addToCart": 1,
+        "openToCart": 20,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 1,
+        "buyoutSum": 635,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 16,
+        "viewCount": 49,
+        "CTR": 10,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-17",
+        "openCard": 7,
+        "addToCart": 0,
+        "openToCart": 0,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 2,
+        "viewCount": 48,
+        "CTR": 15,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-18",
+        "openCard": 9,
+        "addToCart": 0,
+        "openToCart": 0,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 22,
+        "viewCount": 52,
+        "CTR": 17,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-19",
+        "openCard": 12,
+        "addToCart": 1,
+        "openToCart": 8,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 10,
+        "viewCount": 41,
+        "CTR": 29,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-20",
+        "openCard": 6,
+        "addToCart": 0,
+        "openToCart": 0,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 11,
+        "viewCount": 51,
+        "CTR": 12,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-21",
+        "openCard": 6,
+        "addToCart": 1,
+        "openToCart": 17,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 26,
+        "viewCount": 54,
+        "CTR": 11,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-22",
+        "openCard": 6,
+        "addToCart": 1,
+        "openToCart": 17,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 23,
+        "viewCount": 67,
+        "CTR": 9,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-23",
+        "openCard": 11,
+        "addToCart": 0,
+        "openToCart": 0,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 10,
+        "viewCount": 60,
+        "CTR": 18,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-24",
+        "openCard": 10,
+        "addToCart": 0,
+        "openToCart": 0,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 8,
+        "viewCount": 55,
+        "CTR": 18,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-25",
+        "openCard": 2,
+        "addToCart": 0,
+        "openToCart": 0,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 24,
+        "viewCount": 10,
+        "CTR": 20,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-05-27",
+        "openCard": 97,
+        "addToCart": 13,
+        "openToCart": 13,
+        "orders": 7,
+        "cartToOrder": 54,
+        "ordersSum": 4018,
+        "buyoutCount": 3,
+        "buyoutSum": 1722,
+        "buyoutPercent": 75,
+        "cancelCount": 1,
+        "cancelSum": 574,
+        "avgPosition": 11,
+        "viewCount": 2044,
+        "CTR": 5,
+        "medianPrice": 481
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-05-28",
+        "openCard": 109,
+        "addToCart": 22,
+        "openToCart": 20,
+        "orders": 7,
+        "cartToOrder": 32,
+        "ordersSum": 4018,
+        "buyoutCount": 7,
+        "buyoutSum": 4018,
+        "buyoutPercent": 88,
+        "cancelCount": 1,
+        "cancelSum": 560,
+        "avgPosition": 10,
+        "viewCount": 1909,
+        "CTR": 6,
+        "medianPrice": 473
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-05-29",
+        "openCard": 110,
+        "addToCart": 7,
+        "openToCart": 6,
+        "orders": 3,
+        "cartToOrder": 43,
+        "ordersSum": 1722,
+        "buyoutCount": 4,
+        "buyoutSum": 2296,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 20,
+        "viewCount": 1905,
+        "CTR": 6,
+        "medianPrice": 487
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-05-30",
+        "openCard": 91,
+        "addToCart": 13,
+        "openToCart": 14,
+        "orders": 3,
+        "cartToOrder": 23,
+        "ordersSum": 1722,
+        "buyoutCount": 4,
+        "buyoutSum": 2296,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 19,
+        "viewCount": 1906,
+        "CTR": 5,
+        "medianPrice": 500
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-05-31",
+        "openCard": 91,
+        "addToCart": 10,
+        "openToCart": 11,
+        "orders": 1,
+        "cartToOrder": 10,
+        "ordersSum": 574,
+        "buyoutCount": 2,
+        "buyoutSum": 1148,
+        "buyoutPercent": 67,
+        "cancelCount": 1,
+        "cancelSum": 574,
+        "avgPosition": 12,
+        "viewCount": 1931,
+        "CTR": 5,
+        "medianPrice": 467
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-01",
+        "openCard": 97,
+        "addToCart": 11,
+        "openToCart": 11,
+        "orders": 3,
+        "cartToOrder": 27,
+        "ordersSum": 1722,
+        "buyoutCount": 5,
+        "buyoutSum": 2870,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 14,
+        "viewCount": 1697,
+        "CTR": 6,
+        "medianPrice": 498
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-02",
+        "openCard": 73,
+        "addToCart": 9,
+        "openToCart": 12,
+        "orders": 3,
+        "cartToOrder": 33,
+        "ordersSum": 1722,
+        "buyoutCount": 3,
+        "buyoutSum": 1722,
+        "buyoutPercent": 60,
+        "cancelCount": 2,
+        "cancelSum": 1148,
+        "avgPosition": 8,
+        "viewCount": 1711,
+        "CTR": 4,
+        "medianPrice": 500
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-03",
+        "openCard": 50,
+        "addToCart": 7,
+        "openToCart": 14,
+        "orders": 1,
+        "cartToOrder": 14,
+        "ordersSum": 574,
+        "buyoutCount": 2,
+        "buyoutSum": 1148,
+        "buyoutPercent": 67,
+        "cancelCount": 1,
+        "cancelSum": 574,
+        "avgPosition": 18,
+        "viewCount": 1653,
+        "CTR": 3,
+        "medianPrice": 510
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-04",
+        "openCard": 67,
+        "addToCart": 18,
+        "openToCart": 27,
+        "orders": 4,
+        "cartToOrder": 22,
+        "ordersSum": 2296,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 1,
+        "cancelSum": 574,
+        "avgPosition": 14,
+        "viewCount": 1744,
+        "CTR": 4,
+        "medianPrice": 470
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-05",
+        "openCard": 55,
+        "addToCart": 7,
+        "openToCart": 13,
+        "orders": 2,
+        "cartToOrder": 29,
+        "ordersSum": 1148,
+        "buyoutCount": 3,
+        "buyoutSum": 1722,
+        "buyoutPercent": 75,
+        "cancelCount": 1,
+        "cancelSum": 574,
+        "avgPosition": 10,
+        "viewCount": 1558,
+        "CTR": 4,
+        "medianPrice": 458
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-06",
+        "openCard": 51,
+        "addToCart": 10,
+        "openToCart": 20,
+        "orders": 4,
+        "cartToOrder": 40,
+        "ordersSum": 2295,
+        "buyoutCount": 1,
+        "buyoutSum": 574,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 42,
+        "viewCount": 1455,
+        "CTR": 4,
+        "medianPrice": 543
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-07",
+        "openCard": 61,
+        "addToCart": 5,
+        "openToCart": 8,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 9,
+        "viewCount": 1688,
+        "CTR": 4,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-08",
+        "openCard": 64,
+        "addToCart": 2,
+        "openToCart": 3,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 1,
+        "buyoutSum": 574,
+        "buyoutPercent": 33,
+        "cancelCount": 2,
+        "cancelSum": 1148,
+        "avgPosition": 12,
+        "viewCount": 1444,
+        "CTR": 4,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-09",
+        "openCard": 50,
+        "addToCart": 9,
+        "openToCart": 18,
+        "orders": 2,
+        "cartToOrder": 22,
+        "ordersSum": 1148,
+        "buyoutCount": 1,
+        "buyoutSum": 574,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 11,
+        "viewCount": 1532,
+        "CTR": 3,
+        "medianPrice": 456
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-10",
+        "openCard": 45,
+        "addToCart": 10,
+        "openToCart": 22,
+        "orders": 2,
+        "cartToOrder": 20,
+        "ordersSum": 1148,
+        "buyoutCount": 1,
+        "buyoutSum": 574,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 17,
+        "viewCount": 1631,
+        "CTR": 3,
+        "medianPrice": 419
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-11",
+        "openCard": 63,
+        "addToCart": 6,
+        "openToCart": 10,
+        "orders": 2,
+        "cartToOrder": 33,
+        "ordersSum": 1148,
+        "buyoutCount": 6,
+        "buyoutSum": 3443,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 15,
+        "viewCount": 1517,
+        "CTR": 4,
+        "medianPrice": 447
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-12",
+        "openCard": 51,
+        "addToCart": 10,
+        "openToCart": 20,
+        "orders": 2,
+        "cartToOrder": 20,
+        "ordersSum": 1148,
+        "buyoutCount": 4,
+        "buyoutSum": 2296,
+        "buyoutPercent": 80,
+        "cancelCount": 1,
+        "cancelSum": 574,
+        "avgPosition": 26,
+        "viewCount": 1634,
+        "CTR": 3,
+        "medianPrice": 459
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-13",
+        "openCard": 72,
+        "addToCart": 10,
+        "openToCart": 14,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 3,
+        "buyoutSum": 1722,
+        "buyoutPercent": 75,
+        "cancelCount": 1,
+        "cancelSum": 574,
+        "avgPosition": 14,
+        "viewCount": 1516,
+        "CTR": 5,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-14",
+        "openCard": 57,
+        "addToCart": 5,
+        "openToCart": 9,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 11,
+        "viewCount": 1691,
+        "CTR": 3,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-15",
+        "openCard": 58,
+        "addToCart": 9,
+        "openToCart": 16,
+        "orders": 3,
+        "cartToOrder": 33,
+        "ordersSum": 1722,
+        "buyoutCount": 3,
+        "buyoutSum": 1722,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 33,
+        "viewCount": 1507,
+        "CTR": 4,
+        "medianPrice": 452
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-16",
+        "openCard": 68,
+        "addToCart": 11,
+        "openToCart": 16,
+        "orders": 1,
+        "cartToOrder": 9,
+        "ordersSum": 574,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 1,
+        "cancelSum": 574,
+        "avgPosition": 17,
+        "viewCount": 1651,
+        "CTR": 4,
+        "medianPrice": 454
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-17",
+        "openCard": 50,
+        "addToCart": 6,
+        "openToCart": 12,
+        "orders": 1,
+        "cartToOrder": 17,
+        "ordersSum": 587,
+        "buyoutCount": 1,
+        "buyoutSum": 574,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 28,
+        "viewCount": 1585,
+        "CTR": 3,
+        "medianPrice": 482
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-18",
+        "openCard": 68,
+        "addToCart": 6,
+        "openToCart": 9,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 1,
+        "buyoutSum": 574,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 9,
+        "viewCount": 1286,
+        "CTR": 5,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-19",
+        "openCard": 67,
+        "addToCart": 12,
+        "openToCart": 18,
+        "orders": 3,
+        "cartToOrder": 25,
+        "ordersSum": 1761,
+        "buyoutCount": 2,
+        "buyoutSum": 1161,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 42,
+        "viewCount": 1280,
+        "CTR": 5,
+        "medianPrice": 450
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-20",
+        "openCard": 65,
+        "addToCart": 10,
+        "openToCart": 15,
+        "orders": 1,
+        "cartToOrder": 10,
+        "ordersSum": 587,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 19,
+        "viewCount": 1359,
+        "CTR": 5,
+        "medianPrice": 470
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-21",
+        "openCard": 54,
+        "addToCart": 7,
+        "openToCart": 13,
+        "orders": 1,
+        "cartToOrder": 14,
+        "ordersSum": 587,
+        "buyoutCount": 1,
+        "buyoutSum": 587,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 27,
+        "viewCount": 1635,
+        "CTR": 3,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-22",
+        "openCard": 58,
+        "addToCart": 11,
+        "openToCart": 19,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 20,
+        "viewCount": 1659,
+        "CTR": 3,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-23",
+        "openCard": 64,
+        "addToCart": 7,
+        "openToCart": 11,
+        "orders": 1,
+        "cartToOrder": 14,
+        "ordersSum": 587,
+        "buyoutCount": 1,
+        "buyoutSum": 574,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 14,
+        "viewCount": 1710,
+        "CTR": 4,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-24",
+        "openCard": 37,
+        "addToCart": 6,
+        "openToCart": 16,
+        "orders": 2,
+        "cartToOrder": 33,
+        "ordersSum": 1174,
+        "buyoutCount": 2,
+        "buyoutSum": 1161,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 6,
+        "viewCount": 1623,
+        "CTR": 2,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-25",
+        "openCard": 12,
+        "addToCart": 1,
+        "openToCart": 8,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 19,
+        "viewCount": 437,
+        "CTR": 3,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-05-27",
+        "openCard": 89,
+        "addToCart": 14,
+        "openToCart": 16,
+        "orders": 4,
+        "cartToOrder": 29,
+        "ordersSum": 2204,
+        "buyoutCount": 2,
+        "buyoutSum": 1171,
+        "buyoutPercent": 67,
+        "cancelCount": 1,
+        "cancelSum": 551,
+        "avgPosition": 58,
+        "viewCount": 3320,
+        "CTR": 3,
+        "medianPrice": 463
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-05-28",
+        "openCard": 61,
+        "addToCart": 6,
+        "openToCart": 10,
+        "orders": 3,
+        "cartToOrder": 50,
+        "ordersSum": 1653,
+        "buyoutCount": 7,
+        "buyoutSum": 3926,
+        "buyoutPercent": 88,
+        "cancelCount": 1,
+        "cancelSum": 551,
+        "avgPosition": 11,
+        "viewCount": 3392,
+        "CTR": 2,
+        "medianPrice": 485
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-05-29",
+        "openCard": 91,
+        "addToCart": 19,
+        "openToCart": 21,
+        "orders": 6,
+        "cartToOrder": 32,
+        "ordersSum": 3306,
+        "buyoutCount": 4,
+        "buyoutSum": 2204,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 12,
+        "viewCount": 3368,
+        "CTR": 3,
+        "medianPrice": 496
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-05-30",
+        "openCard": 121,
+        "addToCart": 19,
+        "openToCart": 16,
+        "orders": 6,
+        "cartToOrder": 32,
+        "ordersSum": 3306,
+        "buyoutCount": 3,
+        "buyoutSum": 1653,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 10,
+        "viewCount": 3555,
+        "CTR": 3,
+        "medianPrice": 471
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-05-31",
+        "openCard": 111,
+        "addToCart": 12,
+        "openToCart": 11,
+        "orders": 3,
+        "cartToOrder": 25,
+        "ordersSum": 1653,
+        "buyoutCount": 4,
+        "buyoutSum": 2239,
+        "buyoutPercent": 80,
+        "cancelCount": 1,
+        "cancelSum": 551,
+        "avgPosition": 18,
+        "viewCount": 3530,
+        "CTR": 3,
+        "medianPrice": 476
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-01",
+        "openCard": 85,
+        "addToCart": 10,
+        "openToCart": 12,
+        "orders": 5,
+        "cartToOrder": 50,
+        "ordersSum": 2755,
+        "buyoutCount": 5,
+        "buyoutSum": 2755,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 10,
+        "viewCount": 3199,
+        "CTR": 3,
+        "medianPrice": 494
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-02",
+        "openCard": 87,
+        "addToCart": 23,
+        "openToCart": 26,
+        "orders": 10,
+        "cartToOrder": 43,
+        "ordersSum": 5510,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 75,
+        "viewCount": 3101,
+        "CTR": 3,
+        "medianPrice": 482
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-03",
+        "openCard": 92,
+        "addToCart": 13,
+        "openToCart": 14,
+        "orders": 4,
+        "cartToOrder": 31,
+        "ordersSum": 2204,
+        "buyoutCount": 6,
+        "buyoutSum": 3306,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 8,
+        "viewCount": 3276,
+        "CTR": 3,
+        "medianPrice": 494
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-04",
+        "openCard": 95,
+        "addToCart": 20,
+        "openToCart": 21,
+        "orders": 4,
+        "cartToOrder": 20,
+        "ordersSum": 2204,
+        "buyoutCount": 5,
+        "buyoutSum": 2755,
+        "buyoutPercent": 83,
+        "cancelCount": 1,
+        "cancelSum": 551,
+        "avgPosition": 12,
+        "viewCount": 3194,
+        "CTR": 3,
+        "medianPrice": 478
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-05",
+        "openCard": 67,
+        "addToCart": 12,
+        "openToCart": 18,
+        "orders": 1,
+        "cartToOrder": 8,
+        "ordersSum": 551,
+        "buyoutCount": 13,
+        "buyoutSum": 7163,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 105,
+        "viewCount": 3405,
+        "CTR": 2,
+        "medianPrice": 443
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-06",
+        "openCard": 76,
+        "addToCart": 15,
+        "openToCart": 20,
+        "orders": 3,
+        "cartToOrder": 20,
+        "ordersSum": 2067,
+        "buyoutCount": 1,
+        "buyoutSum": 551,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 48,
+        "viewCount": 3270,
+        "CTR": 2,
+        "medianPrice": 613
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-07",
+        "openCard": 79,
+        "addToCart": 11,
+        "openToCart": 14,
+        "orders": 3,
+        "cartToOrder": 27,
+        "ordersSum": 2067,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 32,
+        "viewCount": 3481,
+        "CTR": 2,
+        "medianPrice": 616
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-08",
+        "openCard": 63,
+        "addToCart": 4,
+        "openToCart": 6,
+        "orders": 2,
+        "cartToOrder": 50,
+        "ordersSum": 1378,
+        "buyoutCount": 2,
+        "buyoutSum": 1102,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 17,
+        "viewCount": 3129,
+        "CTR": 2,
+        "medianPrice": 594
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-09",
+        "openCard": 51,
+        "addToCart": 5,
+        "openToCart": 10,
+        "orders": 1,
+        "cartToOrder": 20,
+        "ordersSum": 689,
+        "buyoutCount": 3,
+        "buyoutSum": 1791,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 31,
+        "viewCount": 3164,
+        "CTR": 2,
+        "medianPrice": 595
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-10",
+        "openCard": 54,
+        "addToCart": 28,
+        "openToCart": 52,
+        "orders": 1,
+        "cartToOrder": 4,
+        "ordersSum": 689,
+        "buyoutCount": 2,
+        "buyoutSum": 1102,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 4,
+        "viewCount": 3183,
+        "CTR": 2,
+        "medianPrice": 608
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-11",
+        "openCard": 52,
+        "addToCart": 4,
+        "openToCart": 8,
+        "orders": 3,
+        "cartToOrder": 75,
+        "ordersSum": 2067,
+        "buyoutCount": 4,
+        "buyoutSum": 2480,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 20,
+        "viewCount": 3110,
+        "CTR": 2,
+        "medianPrice": 594
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-12",
+        "openCard": 62,
+        "addToCart": 5,
+        "openToCart": 8,
+        "orders": 2,
+        "cartToOrder": 40,
+        "ordersSum": 1240,
+        "buyoutCount": 3,
+        "buyoutSum": 1653,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 128,
+        "viewCount": 3042,
+        "CTR": 2,
+        "medianPrice": 534
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-13",
+        "openCard": 61,
+        "addToCart": 10,
+        "openToCart": 16,
+        "orders": 6,
+        "cartToOrder": 60,
+        "ordersSum": 3720,
+        "buyoutCount": 2,
+        "buyoutSum": 1378,
+        "buyoutPercent": 67,
+        "cancelCount": 1,
+        "cancelSum": 551,
+        "avgPosition": 37,
+        "viewCount": 3135,
+        "CTR": 2,
+        "medianPrice": 541
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-14",
+        "openCard": 57,
+        "addToCart": 3,
+        "openToCart": 5,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 3,
+        "buyoutSum": 1860,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 31,
+        "viewCount": 3387,
+        "CTR": 2,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-15",
+        "openCard": 69,
+        "addToCart": 7,
+        "openToCart": 10,
+        "orders": 3,
+        "cartToOrder": 43,
+        "ordersSum": 1860,
+        "buyoutCount": 3,
+        "buyoutSum": 1998,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 25,
+        "viewCount": 2910,
+        "CTR": 2,
+        "medianPrice": 550
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-16",
+        "openCard": 76,
+        "addToCart": 9,
+        "openToCart": 12,
+        "orders": 2,
+        "cartToOrder": 22,
+        "ordersSum": 1240,
+        "buyoutCount": 3,
+        "buyoutSum": 1929,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 18,
+        "viewCount": 3241,
+        "CTR": 2,
+        "medianPrice": 547
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-17",
+        "openCard": 50,
+        "addToCart": 6,
+        "openToCart": 12,
+        "orders": 3,
+        "cartToOrder": 50,
+        "ordersSum": 1860,
+        "buyoutCount": 2,
+        "buyoutSum": 1378,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 18,
+        "viewCount": 2988,
+        "CTR": 2,
+        "medianPrice": 547
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-18",
+        "openCard": 114,
+        "addToCart": 15,
+        "openToCart": 13,
+        "orders": 3,
+        "cartToOrder": 20,
+        "ordersSum": 1860,
+        "buyoutCount": 4,
+        "buyoutSum": 2549,
+        "buyoutPercent": 80,
+        "cancelCount": 1,
+        "cancelSum": 551,
+        "avgPosition": 11,
+        "viewCount": 4134,
+        "CTR": 3,
+        "medianPrice": 547
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-19",
+        "openCard": 131,
+        "addToCart": 13,
+        "openToCart": 10,
+        "orders": 7,
+        "cartToOrder": 54,
+        "ordersSum": 4340,
+        "buyoutCount": 7,
+        "buyoutSum": 4340,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 10,
+        "viewCount": 3644,
+        "CTR": 4,
+        "medianPrice": 510
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-20",
+        "openCard": 151,
+        "addToCart": 20,
+        "openToCart": 13,
+        "orders": 4,
+        "cartToOrder": 20,
+        "ordersSum": 2480,
+        "buyoutCount": 3,
+        "buyoutSum": 1860,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 16,
+        "viewCount": 4684,
+        "CTR": 3,
+        "medianPrice": 510
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-21",
+        "openCard": 141,
+        "addToCart": 23,
+        "openToCart": 16,
+        "orders": 3,
+        "cartToOrder": 13,
+        "ordersSum": 1860,
+        "buyoutCount": 3,
+        "buyoutSum": 1860,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 17,
+        "viewCount": 4537,
+        "CTR": 3,
+        "medianPrice": 504
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-22",
+        "openCard": 123,
+        "addToCart": 21,
+        "openToCart": 17,
+        "orders": 4,
+        "cartToOrder": 19,
+        "ordersSum": 2480,
+        "buyoutCount": 4,
+        "buyoutSum": 2480,
+        "buyoutPercent": 80,
+        "cancelCount": 1,
+        "cancelSum": 620,
+        "avgPosition": 31,
+        "viewCount": 4386,
+        "CTR": 3,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-23",
+        "openCard": 140,
+        "addToCart": 28,
+        "openToCart": 20,
+        "orders": 5,
+        "cartToOrder": 18,
+        "ordersSum": 3100,
+        "buyoutCount": 3,
+        "buyoutSum": 1929,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 7,
+        "viewCount": 4816,
+        "CTR": 3,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-24",
+        "openCard": 116,
+        "addToCart": 15,
+        "openToCart": 13,
+        "orders": 7,
+        "cartToOrder": 47,
+        "ordersSum": 4340,
+        "buyoutCount": 3,
+        "buyoutSum": 1860,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 6,
+        "viewCount": 5019,
+        "CTR": 2,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-25",
+        "openCard": 20,
+        "addToCart": 8,
+        "openToCart": 40,
+        "orders": 2,
+        "cartToOrder": 25,
+        "ordersSum": 1240,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 0,
+        "viewCount": 1164,
+        "CTR": 2,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-05-27",
+        "openCard": 82,
+        "addToCart": 12,
+        "openToCart": 15,
+        "orders": 10,
+        "cartToOrder": 83,
+        "ordersSum": 7130,
+        "buyoutCount": 7,
+        "buyoutSum": 5051,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 7,
+        "viewCount": 1327,
+        "CTR": 6,
+        "medianPrice": 566
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-05-28",
+        "openCard": 77,
+        "addToCart": 15,
+        "openToCart": 19,
+        "orders": 8,
+        "cartToOrder": 53,
+        "ordersSum": 5704,
+        "buyoutCount": 8,
+        "buyoutSum": 5744,
+        "buyoutPercent": 73,
+        "cancelCount": 3,
+        "cancelSum": 2159,
+        "avgPosition": 6,
+        "viewCount": 1546,
+        "CTR": 5,
+        "medianPrice": 584
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-05-29",
+        "openCard": 134,
+        "addToCart": 23,
+        "openToCart": 17,
+        "orders": 10,
+        "cartToOrder": 43,
+        "ordersSum": 7130,
+        "buyoutCount": 7,
+        "buyoutSum": 5011,
+        "buyoutPercent": 70,
+        "cancelCount": 3,
+        "cancelSum": 2179,
+        "avgPosition": 13,
+        "viewCount": 1921,
+        "CTR": 7,
+        "medianPrice": 591
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-05-30",
+        "openCard": 91,
+        "addToCart": 18,
+        "openToCart": 20,
+        "orders": 6,
+        "cartToOrder": 33,
+        "ordersSum": 4278,
+        "buyoutCount": 9,
+        "buyoutSum": 6437,
+        "buyoutPercent": 82,
+        "cancelCount": 2,
+        "cancelSum": 1446,
+        "avgPosition": 20,
+        "viewCount": 1814,
+        "CTR": 5,
+        "medianPrice": 591
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-05-31",
+        "openCard": 87,
+        "addToCart": 21,
+        "openToCart": 24,
+        "orders": 4,
+        "cartToOrder": 19,
+        "ordersSum": 2852,
+        "buyoutCount": 6,
+        "buyoutSum": 4298,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 7,
+        "viewCount": 1776,
+        "CTR": 5,
+        "medianPrice": 591
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-01",
+        "openCard": 102,
+        "addToCart": 13,
+        "openToCart": 13,
+        "orders": 6,
+        "cartToOrder": 46,
+        "ordersSum": 4278,
+        "buyoutCount": 7,
+        "buyoutSum": 4991,
+        "buyoutPercent": 88,
+        "cancelCount": 1,
+        "cancelSum": 713,
+        "avgPosition": 13,
+        "viewCount": 1654,
+        "CTR": 6,
+        "medianPrice": 579
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-02",
+        "openCard": 111,
+        "addToCart": 16,
+        "openToCart": 14,
+        "orders": 8,
+        "cartToOrder": 50,
+        "ordersSum": 5704,
+        "buyoutCount": 1,
+        "buyoutSum": 713,
+        "buyoutPercent": 25,
+        "cancelCount": 3,
+        "cancelSum": 2139,
+        "avgPosition": 5,
+        "viewCount": 1803,
+        "CTR": 6,
+        "medianPrice": 591
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-03",
+        "openCard": 76,
+        "addToCart": 21,
+        "openToCart": 28,
+        "orders": 6,
+        "cartToOrder": 29,
+        "ordersSum": 4278,
+        "buyoutCount": 4,
+        "buyoutSum": 2852,
+        "buyoutPercent": 67,
+        "cancelCount": 2,
+        "cancelSum": 1426,
+        "avgPosition": 6,
+        "viewCount": 1660,
+        "CTR": 5,
+        "medianPrice": 577
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-04",
+        "openCard": 94,
+        "addToCart": 20,
+        "openToCart": 21,
+        "orders": 4,
+        "cartToOrder": 20,
+        "ordersSum": 2852,
+        "buyoutCount": 2,
+        "buyoutSum": 1426,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 19,
+        "viewCount": 1398,
+        "CTR": 7,
+        "medianPrice": 582
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-05",
+        "openCard": 60,
+        "addToCart": 15,
+        "openToCart": 25,
+        "orders": 7,
+        "cartToOrder": 47,
+        "ordersSum": 4991,
+        "buyoutCount": 9,
+        "buyoutSum": 6417,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 5,
+        "viewCount": 1198,
+        "CTR": 5,
+        "medianPrice": 591
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-06",
+        "openCard": 88,
+        "addToCart": 9,
+        "openToCart": 10,
+        "orders": 3,
+        "cartToOrder": 33,
+        "ordersSum": 2139,
+        "buyoutCount": 3,
+        "buyoutSum": 2139,
+        "buyoutPercent": 75,
+        "cancelCount": 1,
+        "cancelSum": 713,
+        "avgPosition": 11,
+        "viewCount": 1230,
+        "CTR": 7,
+        "medianPrice": 591
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-07",
+        "openCard": 83,
+        "addToCart": 13,
+        "openToCart": 16,
+        "orders": 2,
+        "cartToOrder": 15,
+        "ordersSum": 1426,
+        "buyoutCount": 3,
+        "buyoutSum": 2139,
+        "buyoutPercent": 75,
+        "cancelCount": 1,
+        "cancelSum": 713,
+        "avgPosition": 11,
+        "viewCount": 1367,
+        "CTR": 6,
+        "medianPrice": 582
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-08",
+        "openCard": 75,
+        "addToCart": 18,
+        "openToCart": 24,
+        "orders": 4,
+        "cartToOrder": 22,
+        "ordersSum": 2852,
+        "buyoutCount": 9,
+        "buyoutSum": 6417,
+        "buyoutPercent": 69,
+        "cancelCount": 4,
+        "cancelSum": 2852,
+        "avgPosition": 14,
+        "viewCount": 1513,
+        "CTR": 5,
+        "medianPrice": 581
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-09",
+        "openCard": 80,
+        "addToCart": 20,
+        "openToCart": 25,
+        "orders": 9,
+        "cartToOrder": 45,
+        "ordersSum": 6417,
+        "buyoutCount": 1,
+        "buyoutSum": 713,
+        "buyoutPercent": 50,
+        "cancelCount": 1,
+        "cancelSum": 713,
+        "avgPosition": 8,
+        "viewCount": 1395,
+        "CTR": 6,
+        "medianPrice": 570
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-10",
+        "openCard": 62,
+        "addToCart": 9,
+        "openToCart": 15,
+        "orders": 1,
+        "cartToOrder": 11,
+        "ordersSum": 713,
+        "buyoutCount": 4,
+        "buyoutSum": 2852,
+        "buyoutPercent": 80,
+        "cancelCount": 1,
+        "cancelSum": 713,
+        "avgPosition": 18,
+        "viewCount": 1310,
+        "CTR": 5,
+        "medianPrice": 579
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-11",
+        "openCard": 66,
+        "addToCart": 10,
+        "openToCart": 15,
+        "orders": 3,
+        "cartToOrder": 30,
+        "ordersSum": 2298,
+        "buyoutCount": 7,
+        "buyoutSum": 4991,
+        "buyoutPercent": 70,
+        "cancelCount": 3,
+        "cancelSum": 2159,
+        "avgPosition": 5,
+        "viewCount": 1177,
+        "CTR": 6,
+        "medianPrice": 601
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-12",
+        "openCard": 80,
+        "addToCart": 15,
+        "openToCart": 19,
+        "orders": 6,
+        "cartToOrder": 40,
+        "ordersSum": 4596,
+        "buyoutCount": 3,
+        "buyoutSum": 2139,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 14,
+        "viewCount": 1181,
+        "CTR": 7,
+        "medianPrice": 597
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-13",
+        "openCard": 78,
+        "addToCart": 7,
+        "openToCart": 9,
+        "orders": 3,
+        "cartToOrder": 43,
+        "ordersSum": 2298,
+        "buyoutCount": 2,
+        "buyoutSum": 1479,
+        "buyoutPercent": 67,
+        "cancelCount": 1,
+        "cancelSum": 766,
+        "avgPosition": 8,
+        "viewCount": 1061,
+        "CTR": 7,
+        "medianPrice": 615
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-14",
+        "openCard": 70,
+        "addToCart": 12,
+        "openToCart": 17,
+        "orders": 5,
+        "cartToOrder": 42,
+        "ordersSum": 3830,
+        "buyoutCount": 5,
+        "buyoutSum": 3830,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 7,
+        "viewCount": 1243,
+        "CTR": 6,
+        "medianPrice": 603
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-15",
+        "openCard": 74,
+        "addToCart": 19,
+        "openToCart": 26,
+        "orders": 5,
+        "cartToOrder": 26,
+        "ordersSum": 3870,
+        "buyoutCount": 2,
+        "buyoutSum": 1532,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 6,
+        "viewCount": 1023,
+        "CTR": 7,
+        "medianPrice": 622
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-16",
+        "openCard": 76,
+        "addToCart": 17,
+        "openToCart": 22,
+        "orders": 2,
+        "cartToOrder": 12,
+        "ordersSum": 1552,
+        "buyoutCount": 2,
+        "buyoutSum": 1479,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 8,
+        "viewCount": 1121,
+        "CTR": 7,
+        "medianPrice": 634
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-17",
+        "openCard": 70,
+        "addToCart": 17,
+        "openToCart": 24,
+        "orders": 4,
+        "cartToOrder": 24,
+        "ordersSum": 3104,
+        "buyoutCount": 5,
+        "buyoutSum": 3797,
+        "buyoutPercent": 63,
+        "cancelCount": 3,
+        "cancelSum": 2255,
+        "avgPosition": 7,
+        "viewCount": 1414,
+        "CTR": 5,
+        "medianPrice": 623
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-18",
+        "openCard": 78,
+        "addToCart": 9,
+        "openToCart": 12,
+        "orders": 4,
+        "cartToOrder": 44,
+        "ordersSum": 3104,
+        "buyoutCount": 5,
+        "buyoutSum": 3860,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 7,
+        "viewCount": 1256,
+        "CTR": 6,
+        "medianPrice": 619
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-19",
+        "openCard": 69,
+        "addToCart": 9,
+        "openToCart": 13,
+        "orders": 2,
+        "cartToOrder": 22,
+        "ordersSum": 1552,
+        "buyoutCount": 4,
+        "buyoutSum": 3031,
+        "buyoutPercent": 80,
+        "cancelCount": 1,
+        "cancelSum": 713,
+        "avgPosition": 2,
+        "viewCount": 1135,
+        "CTR": 6,
+        "medianPrice": 628
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-20",
+        "openCard": 77,
+        "addToCart": 12,
+        "openToCart": 16,
+        "orders": 2,
+        "cartToOrder": 17,
+        "ordersSum": 1552,
+        "buyoutCount": 2,
+        "buyoutSum": 1552,
+        "buyoutPercent": 67,
+        "cancelCount": 1,
+        "cancelSum": 766,
+        "avgPosition": 13,
+        "viewCount": 1560,
+        "CTR": 5,
+        "medianPrice": 630
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-21",
+        "openCard": 100,
+        "addToCart": 16,
+        "openToCart": 16,
+        "orders": 5,
+        "cartToOrder": 31,
+        "ordersSum": 3880,
+        "buyoutCount": 4,
+        "buyoutSum": 3094,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 3,
+        "viewCount": 1633,
+        "CTR": 6,
+        "medianPrice": 619
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-22",
+        "openCard": 81,
+        "addToCart": 14,
+        "openToCart": 17,
+        "orders": 6,
+        "cartToOrder": 43,
+        "ordersSum": 4656,
+        "buyoutCount": 2,
+        "buyoutSum": 1552,
+        "buyoutPercent": 50,
+        "cancelCount": 2,
+        "cancelSum": 1552,
+        "avgPosition": 4,
+        "viewCount": 1459,
+        "CTR": 6,
+        "medianPrice": 628
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-23",
+        "openCard": 106,
+        "addToCart": 16,
+        "openToCart": 15,
+        "orders": 3,
+        "cartToOrder": 19,
+        "ordersSum": 2328,
+        "buyoutCount": 2,
+        "buyoutSum": 1552,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 7,
+        "viewCount": 1883,
+        "CTR": 6,
+        "medianPrice": 576
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-24",
+        "openCard": 95,
+        "addToCart": 21,
+        "openToCart": 22,
+        "orders": 9,
+        "cartToOrder": 43,
+        "ordersSum": 6984,
+        "buyoutCount": 4,
+        "buyoutSum": 3104,
+        "buyoutPercent": 80,
+        "cancelCount": 1,
+        "cancelSum": 776,
+        "avgPosition": 11,
+        "viewCount": 1804,
+        "CTR": 5,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-25",
+        "openCard": 18,
+        "addToCart": 4,
+        "openToCart": 22,
+        "orders": 2,
+        "cartToOrder": 50,
+        "ordersSum": 1552,
+        "buyoutCount": 1,
+        "buyoutSum": 776,
+        "buyoutPercent": 50,
+        "cancelCount": 1,
+        "cancelSum": 776,
+        "avgPosition": 6,
+        "viewCount": 408,
+        "CTR": 4,
+        "medianPrice": 0
+      }
+    ],
+    "byWeek": [
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-05-25",
+        "openCard": 644,
+        "addToCart": 109,
+        "openToCart": 17,
+        "orders": 56,
+        "cartToOrder": 51,
+        "ordersSum": 29064,
+        "buyoutCount": 35,
+        "buyoutSum": 18263,
+        "buyoutPercent": 81,
+        "cancelCount": 8,
+        "cancelSum": 4152,
+        "avgPosition": 16,
+        "viewCount": 34486,
+        "CTR": 2,
+        "medianPrice": 443
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-01",
+        "openCard": 816,
+        "addToCart": 82,
+        "openToCart": 10,
+        "orders": 21,
+        "cartToOrder": 26,
+        "ordersSum": 11549,
+        "buyoutCount": 37,
+        "buyoutSum": 19268,
+        "buyoutPercent": 86,
+        "cancelCount": 6,
+        "cancelSum": 3212,
+        "avgPosition": 14,
+        "viewCount": 44411,
+        "CTR": 2,
+        "medianPrice": 449
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-08",
+        "openCard": 720,
+        "addToCart": 132,
+        "openToCart": 18,
+        "orders": 37,
+        "cartToOrder": 28,
+        "ordersSum": 22778,
+        "buyoutCount": 19,
+        "buyoutSum": 11681,
+        "buyoutPercent": 90,
+        "cancelCount": 2,
+        "cancelSum": 1103,
+        "avgPosition": 20,
+        "viewCount": 42799,
+        "CTR": 2,
+        "medianPrice": 550
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-15",
+        "openCard": 729,
+        "addToCart": 123,
+        "openToCart": 17,
+        "orders": 48,
+        "cartToOrder": 39,
+        "ordersSum": 28032,
+        "buyoutCount": 37,
+        "buyoutSum": 22063,
+        "buyoutPercent": 97,
+        "cancelCount": 1,
+        "cancelSum": 649,
+        "avgPosition": 22,
+        "viewCount": 46879,
+        "CTR": 2,
+        "medianPrice": 495
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-22",
+        "openCard": 377,
+        "addToCart": 67,
+        "openToCart": 18,
+        "orders": 19,
+        "cartToOrder": 28,
+        "ordersSum": 11096,
+        "buyoutCount": 19,
+        "buyoutSum": 11226,
+        "buyoutPercent": 95,
+        "cancelCount": 1,
+        "cancelSum": 519,
+        "avgPosition": 15,
+        "viewCount": 25605,
+        "CTR": 1,
+        "medianPrice": 450
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-05-25",
+        "openCard": 136,
+        "addToCart": 18,
+        "openToCart": 13,
+        "orders": 7,
+        "cartToOrder": 39,
+        "ordersSum": 4445,
+        "buyoutCount": 1,
+        "buyoutSum": 635,
+        "buyoutPercent": 25,
+        "cancelCount": 3,
+        "cancelSum": 1905,
+        "avgPosition": 21,
+        "viewCount": 2513,
+        "CTR": 5,
+        "medianPrice": 511
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-01",
+        "openCard": 69,
+        "addToCart": 4,
+        "openToCart": 6,
+        "orders": 2,
+        "cartToOrder": 50,
+        "ordersSum": 1270,
+        "buyoutCount": 5,
+        "buyoutSum": 3175,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 39,
+        "viewCount": 979,
+        "CTR": 7,
+        "medianPrice": 530
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-08",
+        "openCard": 55,
+        "addToCart": 1,
+        "openToCart": 2,
+        "orders": 1,
+        "cartToOrder": 100,
+        "ordersSum": 635,
+        "buyoutCount": 1,
+        "buyoutSum": 635,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 26,
+        "viewCount": 401,
+        "CTR": 14,
+        "medianPrice": 505
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-15",
+        "openCard": 50,
+        "addToCart": 3,
+        "openToCart": 6,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 1,
+        "buyoutSum": 635,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 13,
+        "viewCount": 352,
+        "CTR": 14,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-22",
+        "openCard": 29,
+        "addToCart": 1,
+        "openToCart": 3,
+        "orders": 0,
+        "cartToOrder": 0,
+        "ordersSum": 0,
+        "buyoutCount": 0,
+        "buyoutSum": 0,
+        "buyoutPercent": 0,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 15,
+        "viewCount": 192,
+        "CTR": 15,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-05-25",
+        "openCard": 498,
+        "addToCart": 65,
+        "openToCart": 13,
+        "orders": 21,
+        "cartToOrder": 32,
+        "ordersSum": 12054,
+        "buyoutCount": 20,
+        "buyoutSum": 11480,
+        "buyoutPercent": 87,
+        "cancelCount": 3,
+        "cancelSum": 1708,
+        "avgPosition": 14,
+        "viewCount": 9695,
+        "CTR": 5,
+        "medianPrice": 481
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-01",
+        "openCard": 454,
+        "addToCart": 67,
+        "openToCart": 15,
+        "orders": 17,
+        "cartToOrder": 25,
+        "ordersSum": 9757,
+        "buyoutCount": 14,
+        "buyoutSum": 8036,
+        "buyoutPercent": 74,
+        "cancelCount": 5,
+        "cancelSum": 2870,
+        "avgPosition": 15,
+        "viewCount": 11506,
+        "CTR": 4,
+        "medianPrice": 498
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-08",
+        "openCard": 402,
+        "addToCart": 52,
+        "openToCart": 13,
+        "orders": 8,
+        "cartToOrder": 15,
+        "ordersSum": 4592,
+        "buyoutCount": 16,
+        "buyoutSum": 9183,
+        "buyoutPercent": 80,
+        "cancelCount": 4,
+        "cancelSum": 2296,
+        "avgPosition": 15,
+        "viewCount": 10965,
+        "CTR": 4,
+        "medianPrice": 453
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-15",
+        "openCard": 430,
+        "addToCart": 61,
+        "openToCart": 14,
+        "orders": 10,
+        "cartToOrder": 16,
+        "ordersSum": 5818,
+        "buyoutCount": 8,
+        "buyoutSum": 4618,
+        "buyoutPercent": 89,
+        "cancelCount": 1,
+        "cancelSum": 574,
+        "avgPosition": 24,
+        "viewCount": 10303,
+        "CTR": 4,
+        "medianPrice": 456
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-22",
+        "openCard": 171,
+        "addToCart": 25,
+        "openToCart": 15,
+        "orders": 3,
+        "cartToOrder": 12,
+        "ordersSum": 1761,
+        "buyoutCount": 3,
+        "buyoutSum": 1735,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 17,
+        "viewCount": 5429,
+        "CTR": 3,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-05-25",
+        "openCard": 473,
+        "addToCart": 70,
+        "openToCart": 15,
+        "orders": 22,
+        "cartToOrder": 31,
+        "ordersSum": 12122,
+        "buyoutCount": 20,
+        "buyoutSum": 11193,
+        "buyoutPercent": 87,
+        "cancelCount": 3,
+        "cancelSum": 1653,
+        "avgPosition": 21,
+        "viewCount": 17165,
+        "CTR": 3,
+        "medianPrice": 476
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-01",
+        "openCard": 581,
+        "addToCart": 104,
+        "openToCart": 18,
+        "orders": 30,
+        "cartToOrder": 29,
+        "ordersSum": 17358,
+        "buyoutCount": 30,
+        "buyoutSum": 16530,
+        "buyoutPercent": 97,
+        "cancelCount": 1,
+        "cancelSum": 551,
+        "avgPosition": 42,
+        "viewCount": 22926,
+        "CTR": 3,
+        "medianPrice": 493
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-08",
+        "openCard": 400,
+        "addToCart": 59,
+        "openToCart": 15,
+        "orders": 15,
+        "cartToOrder": 25,
+        "ordersSum": 9783,
+        "buyoutCount": 19,
+        "buyoutSum": 11366,
+        "buyoutPercent": 95,
+        "cancelCount": 1,
+        "cancelSum": 551,
+        "avgPosition": 22,
+        "viewCount": 22150,
+        "CTR": 2,
+        "medianPrice": 541
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-15",
+        "openCard": 732,
+        "addToCart": 93,
+        "openToCart": 13,
+        "orders": 25,
+        "cartToOrder": 27,
+        "ordersSum": 15500,
+        "buyoutCount": 25,
+        "buyoutSum": 15914,
+        "buyoutPercent": 96,
+        "cancelCount": 1,
+        "cancelSum": 551,
+        "avgPosition": 17,
+        "viewCount": 26138,
+        "CTR": 3,
+        "medianPrice": 516
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-22",
+        "openCard": 399,
+        "addToCart": 72,
+        "openToCart": 18,
+        "orders": 18,
+        "cartToOrder": 25,
+        "ordersSum": 11160,
+        "buyoutCount": 10,
+        "buyoutSum": 6269,
+        "buyoutPercent": 91,
+        "cancelCount": 1,
+        "cancelSum": 620,
+        "avgPosition": 17,
+        "viewCount": 15385,
+        "CTR": 3,
+        "medianPrice": 0
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-05-25",
+        "openCard": 471,
+        "addToCart": 89,
+        "openToCart": 19,
+        "orders": 38,
+        "cartToOrder": 43,
+        "ordersSum": 27094,
+        "buyoutCount": 37,
+        "buyoutSum": 26541,
+        "buyoutPercent": 82,
+        "cancelCount": 8,
+        "cancelSum": 5784,
+        "avgPosition": 11,
+        "viewCount": 8384,
+        "CTR": 6,
+        "medianPrice": 584
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-01",
+        "openCard": 614,
+        "addToCart": 107,
+        "openToCart": 17,
+        "orders": 36,
+        "cartToOrder": 34,
+        "ordersSum": 25668,
+        "buyoutCount": 29,
+        "buyoutSum": 20677,
+        "buyoutPercent": 78,
+        "cancelCount": 8,
+        "cancelSum": 5704,
+        "avgPosition": 10,
+        "viewCount": 10310,
+        "CTR": 6,
+        "medianPrice": 588
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-08",
+        "openCard": 511,
+        "addToCart": 91,
+        "openToCart": 18,
+        "orders": 31,
+        "cartToOrder": 34,
+        "ordersSum": 23004,
+        "buyoutCount": 31,
+        "buyoutSum": 22421,
+        "buyoutPercent": 76,
+        "cancelCount": 10,
+        "cancelSum": 7203,
+        "avgPosition": 11,
+        "viewCount": 8880,
+        "CTR": 6,
+        "medianPrice": 599
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-15",
+        "openCard": 544,
+        "addToCart": 99,
+        "openToCart": 18,
+        "orders": 24,
+        "cartToOrder": 24,
+        "ordersSum": 18614,
+        "buyoutCount": 24,
+        "buyoutSum": 18345,
+        "buyoutPercent": 83,
+        "cancelCount": 5,
+        "cancelSum": 3734,
+        "avgPosition": 7,
+        "viewCount": 9142,
+        "CTR": 6,
+        "medianPrice": 626
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-22",
+        "openCard": 300,
+        "addToCart": 55,
+        "openToCart": 18,
+        "orders": 20,
+        "cartToOrder": 36,
+        "ordersSum": 15520,
+        "buyoutCount": 9,
+        "buyoutSum": 6984,
+        "buyoutPercent": 69,
+        "cancelCount": 4,
+        "cancelSum": 3104,
+        "avgPosition": 7,
+        "viewCount": 5554,
+        "CTR": 5,
+        "medianPrice": 626
+      }
+    ],
+    "byMonth": [
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-05-01",
+        "openCard": 644,
+        "addToCart": 109,
+        "openToCart": 17,
+        "orders": 56,
+        "cartToOrder": 51,
+        "ordersSum": 29064,
+        "buyoutCount": 35,
+        "buyoutSum": 18263,
+        "buyoutPercent": 81,
+        "cancelCount": 8,
+        "cancelSum": 4152,
+        "avgPosition": 16,
+        "viewCount": 34486,
+        "CTR": 2,
+        "medianPrice": 443
+      },
+      {
+        "nmID": 14559288,
+        "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+        "dt": "2026-06-01",
+        "openCard": 2642,
+        "addToCart": 404,
+        "openToCart": 15,
+        "orders": 125,
+        "cartToOrder": 31,
+        "ordersSum": 73455,
+        "buyoutCount": 112,
+        "buyoutSum": 64238,
+        "buyoutPercent": 92,
+        "cancelCount": 10,
+        "cancelSum": 5483,
+        "avgPosition": 17,
+        "viewCount": 159694,
+        "CTR": 2,
+        "medianPrice": 500
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-05-01",
+        "openCard": 136,
+        "addToCart": 18,
+        "openToCart": 13,
+        "orders": 7,
+        "cartToOrder": 39,
+        "ordersSum": 4445,
+        "buyoutCount": 1,
+        "buyoutSum": 635,
+        "buyoutPercent": 25,
+        "cancelCount": 3,
+        "cancelSum": 1905,
+        "avgPosition": 21,
+        "viewCount": 2513,
+        "CTR": 5,
+        "medianPrice": 511
+      },
+      {
+        "nmID": 744229353,
+        "nmName": "Теплые бордовые колготки микрофибра",
+        "dt": "2026-06-01",
+        "openCard": 203,
+        "addToCart": 9,
+        "openToCart": 4,
+        "orders": 3,
+        "cartToOrder": 33,
+        "ordersSum": 1905,
+        "buyoutCount": 7,
+        "buyoutSum": 4445,
+        "buyoutPercent": 100,
+        "cancelCount": 0,
+        "cancelSum": 0,
+        "avgPosition": 24,
+        "viewCount": 1924,
+        "CTR": 11,
+        "medianPrice": 527
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-05-01",
+        "openCard": 498,
+        "addToCart": 65,
+        "openToCart": 13,
+        "orders": 21,
+        "cartToOrder": 32,
+        "ordersSum": 12054,
+        "buyoutCount": 20,
+        "buyoutSum": 11480,
+        "buyoutPercent": 87,
+        "cancelCount": 3,
+        "cancelSum": 1708,
+        "avgPosition": 14,
+        "viewCount": 9695,
+        "CTR": 5,
+        "medianPrice": 481
+      },
+      {
+        "nmID": 39581761,
+        "nmName": "Колготки теплые зимние 100 ден",
+        "dt": "2026-06-01",
+        "openCard": 1457,
+        "addToCart": 205,
+        "openToCart": 14,
+        "orders": 38,
+        "cartToOrder": 19,
+        "ordersSum": 21928,
+        "buyoutCount": 41,
+        "buyoutSum": 23572,
+        "buyoutPercent": 80,
+        "cancelCount": 10,
+        "cancelSum": 5740,
+        "avgPosition": 18,
+        "viewCount": 38203,
+        "CTR": 4,
+        "medianPrice": 469
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-05-01",
+        "openCard": 473,
+        "addToCart": 70,
+        "openToCart": 15,
+        "orders": 22,
+        "cartToOrder": 31,
+        "ordersSum": 12122,
+        "buyoutCount": 20,
+        "buyoutSum": 11193,
+        "buyoutPercent": 87,
+        "cancelCount": 3,
+        "cancelSum": 1653,
+        "avgPosition": 21,
+        "viewCount": 17165,
+        "CTR": 3,
+        "medianPrice": 476
+      },
+      {
+        "nmID": 174999522,
+        "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+        "dt": "2026-06-01",
+        "openCard": 2112,
+        "addToCart": 328,
+        "openToCart": 16,
+        "orders": 88,
+        "cartToOrder": 27,
+        "ordersSum": 53801,
+        "buyoutCount": 84,
+        "buyoutSum": 50079,
+        "buyoutPercent": 95,
+        "cancelCount": 4,
+        "cancelSum": 2273,
+        "avgPosition": 27,
+        "viewCount": 86599,
+        "CTR": 2,
+        "medianPrice": 521
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-05-01",
+        "openCard": 471,
+        "addToCart": 89,
+        "openToCart": 19,
+        "orders": 38,
+        "cartToOrder": 43,
+        "ordersSum": 27094,
+        "buyoutCount": 37,
+        "buyoutSum": 26541,
+        "buyoutPercent": 82,
+        "cancelCount": 8,
+        "cancelSum": 5784,
+        "avgPosition": 11,
+        "viewCount": 8384,
+        "CTR": 6,
+        "medianPrice": 584
+      },
+      {
+        "nmID": 480740530,
+        "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+        "dt": "2026-06-01",
+        "openCard": 1969,
+        "addToCart": 352,
+        "openToCart": 18,
+        "orders": 111,
+        "cartToOrder": 32,
+        "ordersSum": 82806,
+        "buyoutCount": 93,
+        "buyoutSum": 68427,
+        "buyoutPercent": 78,
+        "cancelCount": 27,
+        "cancelSum": 19745,
+        "avgPosition": 9,
+        "viewCount": 33886,
+        "CTR": 6,
+        "medianPrice": 598
+      }
+    ]
+  },
+  "commonParams": [
+    {
+      "nmId": 14559288,
+      "nmName": "Колготки теплые MICROFIBRA 100 den из микрофибры",
+      "mainPhoto": "https://basket-02.wbbasket.ru/vol145/part14559/14559288/images/c246x328/1.webp",
+      "subject": "内衣",
+      "item": "连裤袜",
+      "brandName": "Minimi",
+      "isCardRated": true,
+      "nmRating": 10,
+      "minPrice": 584,
+      "maxPrice": 584,
+      "medianPrice": 463,
+      "feedbacksCount": {
+        "current": 62693,
+        "dynamics": 561
+      },
+      "feedbacksRating": 4.9,
+      "avgPosition": {
+        "current": 17,
+        "dynamics": 0
+      },
+      "timeToReady": {
+        "current": {
+          "days": 1,
+          "hours": 14,
+          "mins": 0
+        },
+        "dynamics": {
+          "days": 0,
+          "hours": -5,
+          "mins": 0
+        }
+      },
+      "openCard": {
+        "current": 3286,
+        "dynamics": -49
+      },
+      "addToCart": {
+        "current": 513,
+        "dynamics": -42
+      },
+      "openToCart": {
+        "current": 16,
+        "dynamics": 2
+      },
+      "orders": {
+        "current": 181,
+        "dynamics": -49
+      },
+      "cartToOrder": {
+        "current": 35,
+        "dynamics": -4
+      },
+      "buyoutCount": {
+        "current": 147,
+        "dynamics": -68
+      },
+      "buyoutPercent": {
+        "current": 89,
+        "dynamics": 3
+      },
+      "cancelCount": {
+        "current": 18,
+        "dynamics": -77
+      },
+      "isMoved": false,
+      "movedDate": "1970-01-01",
+      "tariffOptions": [],
+      "viewCount": {
+        "current": 194180,
+        "dynamics": -28
+      },
+      "CTR": {
+        "current": 2,
+        "dynamics": -1
+      },
+      "itemId": 213,
+      "nmCreated": "2020-08-25",
+      "isSubstitutedSKU": false,
+      "inAdvertising": true,
+      "promo": {
+        "inPromo": true,
+        "promoNames": [
+          "Жаркие скидки: бустинг продаж (автоматические скидки)",
+          "Встречаем лето: растим заказы (автоматические скидки)",
+          "Модная распродажа (автоматические скидки)"
+        ]
+      },
+      "sizes": [
+        {
+          "chrtID": 43036643,
+          "techSize": "2(S)",
+          "sellerPrice": 584,
+          "medianPrice": 492,
+          "timeToReady": {
+            "current": {
+              "days": 1,
+              "hours": 5,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 0,
+              "hours": -8,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 85,
+            "dynamics": -54
+          },
+          "orders": {
+            "current": 26,
+            "dynamics": -67
+          },
+          "cartToOrder": {
+            "current": 31,
+            "dynamics": -12
+          },
+          "buyoutCount": {
+            "current": 22,
+            "dynamics": -77
+          },
+          "buyoutPercent": {
+            "current": 88,
+            "dynamics": 7
+          },
+          "cancelCount": {
+            "current": 3,
+            "dynamics": -86
+          }
+        },
+        {
+          "chrtID": 43036644,
+          "techSize": "3(M)",
+          "sellerPrice": 584,
+          "medianPrice": 457,
+          "timeToReady": {
+            "current": {
+              "days": 1,
+              "hours": 8,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 0,
+              "hours": -14,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 135,
+            "dynamics": -58
+          },
+          "orders": {
+            "current": 68,
+            "dynamics": -46
+          },
+          "cartToOrder": {
+            "current": 50,
+            "dynamics": 12
+          },
+          "buyoutCount": {
+            "current": 58,
+            "dynamics": -66
+          },
+          "buyoutPercent": {
+            "current": 94,
+            "dynamics": 13
+          },
+          "cancelCount": {
+            "current": 4,
+            "dynamics": -89
+          }
+        },
+        {
+          "chrtID": 43036645,
+          "techSize": "4(L)",
+          "sellerPrice": 584,
+          "medianPrice": 455,
+          "timeToReady": {
+            "current": {
+              "days": 1,
+              "hours": 12,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 0,
+              "hours": -7,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 136,
+            "dynamics": -57
+          },
+          "orders": {
+            "current": 63,
+            "dynamics": -55
+          },
+          "cartToOrder": {
+            "current": 46,
+            "dynamics": 2
+          },
+          "buyoutCount": {
+            "current": 57,
+            "dynamics": -70
+          },
+          "buyoutPercent": {
+            "current": 84,
+            "dynamics": -7
+          },
+          "cancelCount": {
+            "current": 11,
+            "dynamics": -45
+          }
+        },
+        {
+          "chrtID": 43036646,
+          "techSize": "5(XL)",
+          "sellerPrice": 584,
+          "medianPrice": 486,
+          "timeToReady": {
+            "current": {
+              "days": 3,
+              "hours": 15,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 0,
+              "hours": 17,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 157,
+            "dynamics": 124
+          },
+          "orders": {
+            "current": 24,
+            "dynamics": 200
+          },
+          "cartToOrder": {
+            "current": 15,
+            "dynamics": 4
+          },
+          "buyoutCount": {
+            "current": 10,
+            "dynamics": 11
+          },
+          "buyoutPercent": {
+            "current": 100,
+            "dynamics": 11
+          },
+          "cancelCount": {
+            "current": 0,
+            "dynamics": -100
+          }
+        }
+      ]
+    },
+    {
+      "nmId": 744229353,
+      "nmName": "Теплые бордовые колготки микрофибра",
+      "mainPhoto": "https://basket-35.wbbasket.ru/vol7442/part744229/744229353/images/c246x328/1.webp",
+      "subject": "内衣",
+      "item": "连裤袜",
+      "brandName": "UNIITY",
+      "isCardRated": true,
+      "nmRating": 10,
+      "minPrice": 710,
+      "maxPrice": 710,
+      "medianPrice": 511,
+      "feedbacksCount": {
+        "current": 32574,
+        "dynamics": 217
+      },
+      "feedbacksRating": 4.7,
+      "avgPosition": {
+        "current": 23,
+        "dynamics": -9
+      },
+      "timeToReady": {
+        "current": {
+          "days": 1,
+          "hours": 20,
+          "mins": 0
+        },
+        "dynamics": {
+          "days": 0,
+          "hours": 1,
+          "mins": 0
+        }
+      },
+      "openCard": {
+        "current": 339,
+        "dynamics": -60
+      },
+      "addToCart": {
+        "current": 27,
+        "dynamics": -75
+      },
+      "openToCart": {
+        "current": 8,
+        "dynamics": -5
+      },
+      "orders": {
+        "current": 10,
+        "dynamics": -76
+      },
+      "cartToOrder": {
+        "current": 37,
+        "dynamics": -1
+      },
+      "buyoutCount": {
+        "current": 8,
+        "dynamics": -81
+      },
+      "buyoutPercent": {
+        "current": 73,
+        "dynamics": -4
+      },
+      "cancelCount": {
+        "current": 3,
+        "dynamics": -77
+      },
+      "isMoved": false,
+      "movedDate": "1970-01-01",
+      "tariffOptions": [
+        "cardTotalRating"
+      ],
+      "viewCount": {
+        "current": 4437,
+        "dynamics": -56
+      },
+      "CTR": {
+        "current": 8,
+        "dynamics": -1
+      },
+      "itemId": 213,
+      "nmCreated": "2026-01-09",
+      "isSubstitutedSKU": false,
+      "inAdvertising": true,
+      "promo": {
+        "inPromo": true,
+        "promoNames": [
+          "Повышаем заказы (автоматические скидки)",
+          "Экспресс-скидки (автоматические скидки)"
+        ]
+      },
+      "sizes": [
+        {
+          "chrtID": 1068855275,
+          "techSize": "3/4",
+          "sellerPrice": 710,
+          "medianPrice": 511,
+          "timeToReady": {
+            "current": {
+              "days": 1,
+              "hours": 18,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 0,
+              "hours": -1,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 26,
+            "dynamics": -76
+          },
+          "orders": {
+            "current": 9,
+            "dynamics": -78
+          },
+          "cartToOrder": {
+            "current": 35,
+            "dynamics": -3
+          },
+          "buyoutCount": {
+            "current": 7,
+            "dynamics": -83
+          },
+          "buyoutPercent": {
+            "current": 70,
+            "dynamics": -8
+          },
+          "cancelCount": {
+            "current": 3,
+            "dynamics": -77
+          }
+        },
+        {
+          "chrtID": 1068855274,
+          "techSize": "1/2",
+          "sellerPrice": 710,
+          "medianPrice": 511,
+          "timeToReady": {
+            "current": {
+              "days": 2,
+              "hours": 17,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 2,
+              "hours": 17,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 1,
+            "dynamics": 100
+          },
+          "orders": {
+            "current": 1,
+            "dynamics": 100
+          },
+          "cartToOrder": {
+            "current": 100,
+            "dynamics": 100
+          },
+          "buyoutCount": {
+            "current": 1,
+            "dynamics": 100
+          },
+          "buyoutPercent": {
+            "current": 100,
+            "dynamics": 100
+          },
+          "cancelCount": {
+            "current": 0,
+            "dynamics": 0
+          }
+        },
+        {
+          "chrtID": 1068855276,
+          "techSize": "4/5",
+          "sellerPrice": 710,
+          "medianPrice": 0,
+          "timeToReady": {
+            "current": {
+              "days": 0,
+              "hours": 0,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 0,
+              "hours": 0,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "orders": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "cartToOrder": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "buyoutCount": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "buyoutPercent": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "cancelCount": {
+            "current": 0,
+            "dynamics": 0
+          }
+        }
+      ]
+    },
+    {
+      "nmId": 39581761,
+      "nmName": "Колготки теплые зимние 100 ден",
+      "mainPhoto": "https://basket-03.wbbasket.ru/vol395/part39581/39581761/images/c246x328/1.webp",
+      "subject": "内衣",
+      "item": "连裤袜",
+      "brandName": "CALZEAMO",
+      "isCardRated": true,
+      "nmRating": 10,
+      "minPrice": 587,
+      "maxPrice": 587,
+      "medianPrice": 478,
+      "feedbacksCount": {
+        "current": 24887,
+        "dynamics": 175
+      },
+      "feedbacksRating": 4.8,
+      "avgPosition": {
+        "current": 17,
+        "dynamics": -7
+      },
+      "timeToReady": {
+        "current": {
+          "days": 1,
+          "hours": 14,
+          "mins": 0
+        },
+        "dynamics": {
+          "days": 0,
+          "hours": -1,
+          "mins": 0
+        }
+      },
+      "openCard": {
+        "current": 1955,
+        "dynamics": -79
+      },
+      "addToCart": {
+        "current": 270,
+        "dynamics": -80
+      },
+      "openToCart": {
+        "current": 14,
+        "dynamics": -1
+      },
+      "orders": {
+        "current": 59,
+        "dynamics": -89
+      },
+      "cartToOrder": {
+        "current": 22,
+        "dynamics": -18
+      },
+      "buyoutCount": {
+        "current": 61,
+        "dynamics": -90
+      },
+      "buyoutPercent": {
+        "current": 82,
+        "dynamics": 0
+      },
+      "cancelCount": {
+        "current": 13,
+        "dynamics": -90
+      },
+      "isMoved": false,
+      "movedDate": "1970-01-01",
+      "tariffOptions": [],
+      "viewCount": {
+        "current": 47898,
+        "dynamics": -80
+      },
+      "CTR": {
+        "current": 4,
+        "dynamics": 0
+      },
+      "itemId": 213,
+      "nmCreated": "2021-09-06",
+      "isSubstitutedSKU": false,
+      "inAdvertising": true,
+      "promo": {
+        "inPromo": true,
+        "promoNames": [
+          "Жаркие скидки-2 (автоматические скидки)"
+        ]
+      },
+      "sizes": [
+        {
+          "chrtID": 80147441,
+          "techSize": "2/S",
+          "sellerPrice": 587,
+          "medianPrice": 474,
+          "timeToReady": {
+            "current": {
+              "days": 1,
+              "hours": 2,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 0,
+              "hours": -7,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 65,
+            "dynamics": -78
+          },
+          "orders": {
+            "current": 14,
+            "dynamics": -88
+          },
+          "cartToOrder": {
+            "current": 22,
+            "dynamics": -16
+          },
+          "buyoutCount": {
+            "current": 14,
+            "dynamics": -88
+          },
+          "buyoutPercent": {
+            "current": 74,
+            "dynamics": -8
+          },
+          "cancelCount": {
+            "current": 5,
+            "dynamics": -82
+          }
+        },
+        {
+          "chrtID": 80147442,
+          "techSize": "3/M",
+          "sellerPrice": 587,
+          "medianPrice": 470,
+          "timeToReady": {
+            "current": {
+              "days": 1,
+              "hours": 21,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 0,
+              "hours": 10,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 86,
+            "dynamics": -79
+          },
+          "orders": {
+            "current": 19,
+            "dynamics": -89
+          },
+          "cartToOrder": {
+            "current": 22,
+            "dynamics": -20
+          },
+          "buyoutCount": {
+            "current": 19,
+            "dynamics": -91
+          },
+          "buyoutPercent": {
+            "current": 86,
+            "dynamics": 4
+          },
+          "cancelCount": {
+            "current": 3,
+            "dynamics": -93
+          }
+        },
+        {
+          "chrtID": 80147443,
+          "techSize": "4/L",
+          "sellerPrice": 587,
+          "medianPrice": 490,
+          "timeToReady": {
+            "current": {
+              "days": 1,
+              "hours": 21,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 0,
+              "hours": 2,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 59,
+            "dynamics": -82
+          },
+          "orders": {
+            "current": 13,
+            "dynamics": -91
+          },
+          "cartToOrder": {
+            "current": 22,
+            "dynamics": -20
+          },
+          "buyoutCount": {
+            "current": 15,
+            "dynamics": -89
+          },
+          "buyoutPercent": {
+            "current": 79,
+            "dynamics": 4
+          },
+          "cancelCount": {
+            "current": 4,
+            "dynamics": -91
+          }
+        },
+        {
+          "chrtID": 80147444,
+          "techSize": "5/XL",
+          "sellerPrice": 587,
+          "medianPrice": 487,
+          "timeToReady": {
+            "current": {
+              "days": 1,
+              "hours": 8,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 0,
+              "hours": -11,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 60,
+            "dynamics": -81
+          },
+          "orders": {
+            "current": 13,
+            "dynamics": -89
+          },
+          "cartToOrder": {
+            "current": 22,
+            "dynamics": -15
+          },
+          "buyoutCount": {
+            "current": 13,
+            "dynamics": -90
+          },
+          "buyoutPercent": {
+            "current": 93,
+            "dynamics": 7
+          },
+          "cancelCount": {
+            "current": 1,
+            "dynamics": -95
+          }
+        }
+      ]
+    },
+    {
+      "nmId": 174999522,
+      "nmName": "Колготки теплые VELOUR MICRO 100 den из микрофибры",
+      "mainPhoto": "https://basket-12.wbbasket.ru/vol1749/part174999/174999522/images/c246x328/1.webp",
+      "subject": "内衣",
+      "item": "连裤袜",
+      "brandName": "OMSA",
+      "isCardRated": true,
+      "nmRating": 10,
+      "minPrice": 620,
+      "maxPrice": 620,
+      "medianPrice": 504,
+      "feedbacksCount": {
+        "current": 20629,
+        "dynamics": 227
+      },
+      "feedbacksRating": 4.9,
+      "avgPosition": {
+        "current": 25,
+        "dynamics": 1
+      },
+      "timeToReady": {
+        "current": {
+          "days": 2,
+          "hours": 4,
+          "mins": 0
+        },
+        "dynamics": {
+          "days": 0,
+          "hours": 10,
+          "mins": 0
+        }
+      },
+      "openCard": {
+        "current": 2585,
+        "dynamics": -43
+      },
+      "addToCart": {
+        "current": 398,
+        "dynamics": -43
+      },
+      "openToCart": {
+        "current": 15,
+        "dynamics": 0
+      },
+      "orders": {
+        "current": 110,
+        "dynamics": -62
+      },
+      "cartToOrder": {
+        "current": 28,
+        "dynamics": -14
+      },
+      "buyoutCount": {
+        "current": 104,
+        "dynamics": -71
+      },
+      "buyoutPercent": {
+        "current": 94,
+        "dynamics": 4
+      },
+      "cancelCount": {
+        "current": 7,
+        "dynamics": -83
+      },
+      "isMoved": false,
+      "movedDate": "1970-01-01",
+      "tariffOptions": [],
+      "viewCount": {
+        "current": 103764,
+        "dynamics": -31
+      },
+      "CTR": {
+        "current": 2,
+        "dynamics": 0
+      },
+      "itemId": 213,
+      "nmCreated": "2023-08-29",
+      "isSubstitutedSKU": false,
+      "inAdvertising": true,
+      "promo": {
+        "inPromo": true,
+        "promoNames": [
+          "Жаркие скидки: бустинг продаж (автоматические скидки)",
+          "Повышаем заказы (автоматические скидки)",
+          "Встречаем лето: растим заказы (автоматические скидки)",
+          "Модная распродажа (автоматические скидки)"
+        ]
+      },
+      "sizes": [
+        {
+          "chrtID": 290078156,
+          "techSize": "3(M)",
+          "sellerPrice": 620,
+          "medianPrice": 510,
+          "timeToReady": {
+            "current": {
+              "days": 1,
+              "hours": 11,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 0,
+              "hours": -2,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 107,
+            "dynamics": -38
+          },
+          "orders": {
+            "current": 27,
+            "dynamics": -50
+          },
+          "cartToOrder": {
+            "current": 25,
+            "dynamics": -6
+          },
+          "buyoutCount": {
+            "current": 26,
+            "dynamics": -64
+          },
+          "buyoutPercent": {
+            "current": 100,
+            "dynamics": 12
+          },
+          "cancelCount": {
+            "current": 0,
+            "dynamics": -100
+          }
+        },
+        {
+          "chrtID": 290078155,
+          "techSize": "2(S)",
+          "sellerPrice": 620,
+          "medianPrice": 534,
+          "timeToReady": {
+            "current": {
+              "days": 1,
+              "hours": 14,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 0,
+              "hours": 0,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 37,
+            "dynamics": -39
+          },
+          "orders": {
+            "current": 14,
+            "dynamics": -39
+          },
+          "cartToOrder": {
+            "current": 38,
+            "dynamics": 0
+          },
+          "buyoutCount": {
+            "current": 13,
+            "dynamics": -41
+          },
+          "buyoutPercent": {
+            "current": 87,
+            "dynamics": -13
+          },
+          "cancelCount": {
+            "current": 2,
+            "dynamics": 100
+          }
+        },
+        {
+          "chrtID": 290078158,
+          "techSize": "5(XL)",
+          "sellerPrice": 620,
+          "medianPrice": 487,
+          "timeToReady": {
+            "current": {
+              "days": 2,
+              "hours": 12,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 0,
+              "hours": 20,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 120,
+            "dynamics": -44
+          },
+          "orders": {
+            "current": 34,
+            "dynamics": -59
+          },
+          "cartToOrder": {
+            "current": 28,
+            "dynamics": -10
+          },
+          "buyoutCount": {
+            "current": 29,
+            "dynamics": -70
+          },
+          "buyoutPercent": {
+            "current": 91,
+            "dynamics": 5
+          },
+          "cancelCount": {
+            "current": 3,
+            "dynamics": -80
+          }
+        },
+        {
+          "chrtID": 682038476,
+          "techSize": "6(XXL)",
+          "sellerPrice": 620,
+          "medianPrice": 501,
+          "timeToReady": {
+            "current": {
+              "days": 3,
+              "hours": 10,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 1,
+              "hours": 18,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 61,
+            "dynamics": -51
+          },
+          "orders": {
+            "current": 16,
+            "dynamics": -76
+          },
+          "cartToOrder": {
+            "current": 26,
+            "dynamics": -29
+          },
+          "buyoutCount": {
+            "current": 18,
+            "dynamics": -79
+          },
+          "buyoutPercent": {
+            "current": 100,
+            "dynamics": 11
+          },
+          "cancelCount": {
+            "current": 0,
+            "dynamics": -100
+          }
+        },
+        {
+          "chrtID": 290078157,
+          "techSize": "4(L)",
+          "sellerPrice": 620,
+          "medianPrice": 620,
+          "timeToReady": {
+            "current": {
+              "days": 4,
+              "hours": 17,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 0,
+              "hours": 11,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 17,
+            "dynamics": -23
+          },
+          "orders": {
+            "current": 1,
+            "dynamics": -67
+          },
+          "cartToOrder": {
+            "current": 6,
+            "dynamics": -8
+          },
+          "buyoutCount": {
+            "current": 1,
+            "dynamics": -67
+          },
+          "buyoutPercent": {
+            "current": 100,
+            "dynamics": 0
+          },
+          "cancelCount": {
+            "current": 0,
+            "dynamics": 0
+          }
+        },
+        {
+          "chrtID": 682038477,
+          "techSize": "7(XXXL)",
+          "sellerPrice": 620,
+          "medianPrice": 509,
+          "timeToReady": {
+            "current": {
+              "days": 1,
+              "hours": 18,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 0,
+              "hours": -10,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 56,
+            "dynamics": -46
+          },
+          "orders": {
+            "current": 18,
+            "dynamics": -68
+          },
+          "cartToOrder": {
+            "current": 32,
+            "dynamics": -23
+          },
+          "buyoutCount": {
+            "current": 17,
+            "dynamics": -77
+          },
+          "buyoutPercent": {
+            "current": 89,
+            "dynamics": -3
+          },
+          "cancelCount": {
+            "current": 2,
+            "dynamics": -67
+          }
+        }
+      ]
+    },
+    {
+      "nmId": 480740530,
+      "nmName": "Колготки теплые из микрофибры 100 ден черные зимние",
+      "mainPhoto": "https://basket-26.wbbasket.ru/vol4807/part480740/480740530/images/c246x328/1.webp",
+      "subject": "内衣",
+      "item": "连裤袜",
+      "brandName": "the MIRSIS",
+      "isCardRated": true,
+      "nmRating": 10,
+      "minPrice": 776,
+      "maxPrice": 776,
+      "medianPrice": 591,
+      "feedbacksCount": {
+        "current": 12639,
+        "dynamics": 241
+      },
+      "feedbacksRating": 4.8,
+      "avgPosition": {
+        "current": 9,
+        "dynamics": -3
+      },
+      "timeToReady": {
+        "current": {
+          "days": 1,
+          "hours": 14,
+          "mins": 0
+        },
+        "dynamics": {
+          "days": 0,
+          "hours": -5,
+          "mins": 0
+        }
+      },
+      "openCard": {
+        "current": 2440,
+        "dynamics": -44
+      },
+      "addToCart": {
+        "current": 441,
+        "dynamics": -39
+      },
+      "openToCart": {
+        "current": 18,
+        "dynamics": 1
+      },
+      "orders": {
+        "current": 149,
+        "dynamics": -48
+      },
+      "cartToOrder": {
+        "current": 34,
+        "dynamics": -6
+      },
+      "buyoutCount": {
+        "current": 130,
+        "dynamics": -50
+      },
+      "buyoutPercent": {
+        "current": 79,
+        "dynamics": 4
+      },
+      "cancelCount": {
+        "current": 35,
+        "dynamics": -57
+      },
+      "isMoved": false,
+      "movedDate": "1970-01-01",
+      "tariffOptions": [
+        "cardTotalRating"
+      ],
+      "viewCount": {
+        "current": 42270,
+        "dynamics": -33
+      },
+      "CTR": {
+        "current": 6,
+        "dynamics": -1
+      },
+      "itemId": 213,
+      "nmCreated": "2025-07-27",
+      "isSubstitutedSKU": false,
+      "inAdvertising": true,
+      "promo": {
+        "inPromo": true,
+        "promoNames": [
+          "Повышаем заказы (автоматические скидки)",
+          "Встречаем лето: растим заказы (автоматические скидки)",
+          "Модная распродажа (автоматические скидки)",
+          "Встречаем лето - 2 (автоматические скидки)"
+        ]
+      },
+      "sizes": [
+        {
+          "chrtID": 671532093,
+          "techSize": "46-52",
+          "sellerPrice": 776,
+          "medianPrice": 591,
+          "timeToReady": {
+            "current": {
+              "days": 1,
+              "hours": 8,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 0,
+              "hours": -9,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 166,
+            "dynamics": -21
+          },
+          "orders": {
+            "current": 53,
+            "dynamics": -33
+          },
+          "cartToOrder": {
+            "current": 32,
+            "dynamics": -6
+          },
+          "buyoutCount": {
+            "current": 50,
+            "dynamics": -21
+          },
+          "buyoutPercent": {
+            "current": 82,
+            "dynamics": 19
+          },
+          "cancelCount": {
+            "current": 11,
+            "dynamics": -61
+          }
+        },
+        {
+          "chrtID": 671531619,
+          "techSize": "42-46",
+          "sellerPrice": 776,
+          "medianPrice": 598,
+          "timeToReady": {
+            "current": {
+              "days": 1,
+              "hours": 7,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 0,
+              "hours": -9,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 136,
+            "dynamics": -38
+          },
+          "orders": {
+            "current": 46,
+            "dynamics": -49
+          },
+          "cartToOrder": {
+            "current": 34,
+            "dynamics": -7
+          },
+          "buyoutCount": {
+            "current": 38,
+            "dynamics": -54
+          },
+          "buyoutPercent": {
+            "current": 78,
+            "dynamics": 3
+          },
+          "cancelCount": {
+            "current": 11,
+            "dynamics": -58
+          }
+        },
+        {
+          "chrtID": 671532095,
+          "techSize": "52-58",
+          "sellerPrice": 776,
+          "medianPrice": 573,
+          "timeToReady": {
+            "current": {
+              "days": 3,
+              "hours": 10,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 1,
+              "hours": 10,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 28,
+            "dynamics": -86
+          },
+          "orders": {
+            "current": 12,
+            "dynamics": -85
+          },
+          "cartToOrder": {
+            "current": 43,
+            "dynamics": 3
+          },
+          "buyoutCount": {
+            "current": 14,
+            "dynamics": -82
+          },
+          "buyoutPercent": {
+            "current": 82,
+            "dynamics": 4
+          },
+          "cancelCount": {
+            "current": 3,
+            "dynamics": -85
+          }
+        },
+        {
+          "chrtID": 671532096,
+          "techSize": "56-62",
+          "sellerPrice": 776,
+          "medianPrice": 595,
+          "timeToReady": {
+            "current": {
+              "days": 1,
+              "hours": 23,
+              "mins": 0
+            },
+            "dynamics": {
+              "days": 0,
+              "hours": 5,
+              "mins": 0
+            }
+          },
+          "addToCart": {
+            "current": 111,
+            "dynamics": 12
+          },
+          "orders": {
+            "current": 38,
+            "dynamics": 3
+          },
+          "cartToOrder": {
+            "current": 34,
+            "dynamics": -3
+          },
+          "buyoutCount": {
+            "current": 28,
+            "dynamics": -30
+          },
+          "buyoutPercent": {
+            "current": 74,
+            "dynamics": -11
+          },
+          "cancelCount": {
+            "current": 10,
+            "dynamics": 25
+          }
+        }
+      ]
+    }
+  ],
+  "searchQueries": [
+    {
+      "text": "колготки женские",
+      "frequency": {
+        "current": 27254,
+        "dynamics": -37498
+      },
+      "nms": [
+        {
+          "nmId": 14559288,
+          "cartToOrder": {
+            "current": 40,
+            "dynamics": 21
+          },
+          "openToCart": {
+            "current": 16,
+            "dynamics": 78
+          }
+        },
+        {
+          "nmId": 744229353,
+          "cartToOrder": {
+            "current": 0,
+            "dynamics": -100
+          },
+          "openToCart": {
+            "current": 0,
+            "dynamics": -100
+          }
+        },
+        {
+          "nmId": 39581761,
+          "cartToOrder": {
+            "current": 67,
+            "dynamics": 347
+          },
+          "openToCart": {
+            "current": 10,
+            "dynamics": -23
+          }
+        },
+        {
+          "nmId": 174999522,
+          "cartToOrder": {
+            "current": 0,
+            "dynamics": -100
+          },
+          "openToCart": {
+            "current": 10,
+            "dynamics": -67
+          }
+        },
+        {
+          "nmId": 480740530,
+          "cartToOrder": {
+            "current": 67,
+            "dynamics": 100
+          },
+          "openToCart": {
+            "current": 23,
+            "dynamics": 64
+          }
+        }
+      ]
+    }
+  ]
+}

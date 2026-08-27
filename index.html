@@ -1,0 +1,1504 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>产品数据表格 - Vue3 虚拟列表</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Microsoft YaHei", Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 20px;
+        min-height: 100vh;
+      }
+
+      #app {
+        max-width: 100%;
+        margin: 0 auto;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 20px 30px;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      .controls {
+        padding: 20px 30px;
+        background: #f8f9fa;
+        border-bottom: 2px solid #e9ecef;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .search-box {
+        flex: 1;
+        min-width: 250px;
+        max-width: 400px;
+      }
+
+      .search-box input {
+        width: 100%;
+        padding: 10px 15px;
+        border: 2px solid #dee2e6;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s;
+      }
+
+      .search-box input:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      }
+
+      .info {
+        color: #6c757d;
+        font-size: 14px;
+      }
+
+      .table-wrapper {
+        position: relative;
+        height: calc(100vh - 150px);
+        min-height: 500px;
+        overflow-y: auto;
+        overflow-x: auto;
+      }
+
+      .virtual-table-container {
+        position: relative;
+        width: 100%;
+        /* 确保最小宽度以适应内容 */
+        min-width: 100%;
+      }
+
+      .virtual-table-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        display: flex;
+        width: 100%;
+      }
+
+      .virtual-table-body {
+        position: relative;
+        width: 100%;
+        /* 高度由内联样式动态设置，用于撑开滚动区域 */
+      }
+
+      .virtual-row {
+        display: flex;
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 200px; /* 精确控制行高 */
+        background: white;
+        transition: background-color 0.2s;
+        box-sizing: border-box;
+      }
+
+      .virtual-row:hover {
+        background-color: #f8f9fa;
+      }
+
+      .virtual-row:nth-child(even) {
+        background-color: #fafbfc;
+      }
+
+      .virtual-row:nth-child(even):hover {
+        background-color: #f8f9fa;
+      }
+
+      .virtual-cell {
+        padding: 12px 10px;
+        border-bottom: 1px solid #e9ecef;
+        font-size: 13px;
+        overflow: hidden;
+        word-wrap: break-word;
+        word-break: break-word;
+        line-height: 1.4;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+      }
+
+      .virtual-header-cell {
+        padding: 15px 10px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 13px;
+        cursor: pointer;
+        user-select: none;
+        position: relative;
+        white-space: normal;
+        word-wrap: break-word;
+        word-break: break-word;
+        line-height: 1.4;
+        transition: background-color 0.2s;
+        overflow: hidden;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+      }
+
+      .virtual-header-cell:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .virtual-header-cell .sort-icon {
+        margin-left: 5px;
+        opacity: 0.5;
+        font-size: 12px;
+      }
+
+      .virtual-header-cell.sorted-asc .sort-icon::after {
+        content: "▲";
+        opacity: 1;
+      }
+
+      .virtual-header-cell.sorted-desc .sort-icon::after {
+        content: "▼";
+        opacity: 1;
+      }
+
+      .virtual-header-cell:not(.sorted-asc):not(.sorted-desc)
+        .sort-icon::after {
+        content: "⇅";
+      }
+
+      .loading {
+        text-align: center;
+        padding: 50px;
+        color: #6c757d;
+        font-size: 16px;
+      }
+
+      .error {
+        text-align: center;
+        padding: 50px;
+        color: #dc3545;
+        font-size: 16px;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      .badge-success {
+        background-color: #28a745;
+        color: white;
+      }
+
+      .badge-info {
+        background-color: #17a2b8;
+        color: white;
+      }
+
+      .badge-warning {
+        background-color: #ffc107;
+        color: #212529;
+      }
+
+      .text-truncate {
+        max-width: 250px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        word-wrap: break-word;
+        word-break: break-word;
+      }
+
+      /* 虚拟列表占位 */
+      .virtual-spacer {
+        padding: 0 !important;
+      }
+
+      /* 图片预览遮罩层 */
+      .image-preview-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        cursor: pointer;
+        animation: fadeIn 0.3s ease;
+      }
+
+      .image-preview-overlay.hidden {
+        display: none;
+      }
+
+      .image-preview-container {
+        position: relative;
+        max-width: 90vw;
+        max-height: 90vh;
+        animation: zoomIn 0.3s ease;
+      }
+
+      .image-preview {
+        max-width: 100%;
+        max-height: 90vh;
+        border-radius: 8px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      }
+
+      .image-preview-close {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 8px 12px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        transition: background 0.2s;
+      }
+
+      .image-preview-close:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      .image-preview-info {
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 14px;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes zoomIn {
+        from {
+          transform: scale(0.9);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .previewable-image {
+        cursor: zoom-in;
+        transition: transform 0.2s;
+      }
+
+      .previewable-image:hover {
+        transform: scale(1.05);
+      }
+
+      .copy-btn {
+        background: #667eea;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 4px 10px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background 0.2s;
+      }
+
+      .copy-btn:hover {
+        background: #764ba2;
+      }
+
+      .copy-btn:active {
+        background: #28a745;
+      }
+
+      .import-btn {
+        background: #667eea;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 500;
+        transition: background 0.2s;
+        white-space: nowrap;
+      }
+
+      .import-btn:hover {
+        background: #5a6fd6;
+      }
+
+      .import-btn.primary {
+        background: #28a745;
+      }
+
+      .import-btn.primary:hover {
+        background: #218838;
+      }
+
+      .history-section {
+        margin-top: 5px;
+        width: 100%;
+      }
+
+      .history-toggle {
+        background: none;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        padding: 6px 14px;
+        cursor: pointer;
+        font-size: 13px;
+        color: #495057;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .history-toggle:hover {
+        background: #e9ecef;
+        border-color: #adb5bd;
+      }
+
+      .history-toggle .badge-count {
+        background: #667eea;
+        color: white;
+        border-radius: 10px;
+        padding: 1px 8px;
+        font-size: 11px;
+        font-weight: 600;
+      }
+
+      .history-list {
+        margin-top: 8px;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        max-height: 250px;
+        overflow-y: auto;
+        background: white;
+      }
+
+      .history-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 14px;
+        border-bottom: 1px solid #f0f0f0;
+        cursor: pointer;
+        transition: background 0.15s;
+        font-size: 13px;
+      }
+
+      .history-item:last-child {
+        border-bottom: none;
+      }
+
+      .history-item:hover {
+        background: #f8f9fa;
+      }
+
+      .history-item.active {
+        background: #eef0ff;
+        border-left: 3px solid #667eea;
+      }
+
+      .history-item-info {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .history-item-time {
+        color: #6c757d;
+        font-size: 12px;
+      }
+
+      .history-item-count {
+        color: #667eea;
+        font-weight: 600;
+      }
+
+      .history-item-delete {
+        background: none;
+        border: none;
+        color: #dc3545;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 2px 6px;
+        border-radius: 3px;
+        opacity: 0;
+        transition: opacity 0.15s;
+      }
+
+      .history-item:hover .history-item-delete {
+        opacity: 1;
+      }
+
+      .history-item-delete:hover {
+        background: #fce4e4;
+      }
+
+      .history-footer {
+        display: flex;
+        justify-content: flex-end;
+        padding: 6px 10px;
+        background: #f8f9fa;
+        border-top: 1px solid #f0f0f0;
+      }
+
+      .history-clear-btn {
+        background: none;
+        border: none;
+        color: #dc3545;
+        cursor: pointer;
+        font-size: 12px;
+        padding: 2px 8px;
+        border-radius: 3px;
+      }
+
+      .history-clear-btn:hover {
+        background: #fce4e4;
+      }
+
+      @media (max-width: 768px) {
+        .controls {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .search-box {
+          max-width: 100%;
+        }
+
+        th,
+        td {
+          padding: 8px 5px;
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 图片预览遮罩层 -->
+      <div
+        class="image-preview-overlay hidden"
+        onclick="window.closeImagePreview()"
+      >
+        <div class="image-preview-container" onclick="event.stopPropagation()">
+          <span class="image-preview-close" onclick="window.closeImagePreview()"
+            >&times;</span
+          >
+          <img class="image-preview" src="" alt="产品图片" />
+          <div class="image-preview-info"></div>
+        </div>
+      </div>
+
+      <div class="controls" style="flex-direction: column; align-items: stretch;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+          <div class="search-box">
+            <input
+              type="text"
+              v-model="searchQuery"
+              @input="handleSearch"
+              placeholder="搜索ID、产品名称、品牌或供应商..."
+            />
+          </div>
+          <div class="info">
+            共 <strong>{{ filteredData.length }}</strong> 条数据
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+          <button class="import-btn" @click="triggerFileImport">📁 导入JSON文件</button>
+          <input
+            type="file"
+            ref="fileInput"
+            accept=".json"
+            style="display: none;"
+            @change="handleFileImport"
+          />
+          <button class="import-btn" @click="toggleJsonInput">{{ showJsonInput ? '❌ 关闭输入' : '✏️ 粘贴JSON' }}</button>
+          <button class="import-btn primary" @click="parseJsonInput" v-if="showJsonInput">✅ 解析JSON</button>
+        </div>
+        <div v-if="showJsonInput" style="width: 100%;">
+          <textarea
+            v-model="jsonInputText"
+            placeholder="请在此粘贴JSON数据..."
+            style="width: 100%; height: 150px; padding: 10px; border: 2px solid #dee2e6; border-radius: 5px; font-size: 13px; font-family: Consolas, Monaco, monospace; resize: vertical;"
+          ></textarea>
+        </div>
+
+        <!-- 解析历史记录 -->
+        <div class="history-section" v-if="historyList.length > 0">
+          <button class="history-toggle" @click="showHistory = !showHistory">
+            📜 解析历史 <span class="badge-count">{{ historyList.length }}</span>
+            <span style="margin-left: 4px; font-size: 11px;">{{ showHistory ? '▲' : '▼' }}</span>
+          </button>
+          <div class="history-list" v-if="showHistory">
+            <div
+              v-for="(entry, index) in historyList"
+              :key="entry.id"
+              class="history-item"
+              :class="{ active: entry.id === currentHistoryId }"
+              @click="loadFromHistory(entry)"
+            >
+              <div class="history-item-info">
+                <div class="history-item-time">{{ entry.time }}</div>
+                <div>
+                  <span class="history-item-count">{{ entry.recordCount }}</span> 条记录
+                  <span style="color: #adb5bd; font-size: 11px; margin-left: 6px;">{{ entry.source }}</span>
+                </div>
+              </div>
+              <button class="history-item-delete" @click.stop="deleteHistory(entry.id)" title="删除此记录">×</button>
+            </div>
+            <div class="history-footer">
+              <button class="history-clear-btn" @click="clearHistory">清空全部历史</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-wrapper" ref="tableWrapper" @scroll="handleScroll">
+        <div v-if="loading" class="loading">正在加载数据...</div>
+        <div v-else-if="error" class="error">❌ 加载数据失败: {{ error }}</div>
+        <div
+          v-else
+          class="virtual-table-container"
+          :style="{ height: totalHeight + 'px' }"
+        >
+          <!-- 表头 -->
+          <div class="virtual-table-header">
+            <div
+              v-for="field in DISPLAY_FIELDS"
+              :key="field.key"
+              :data-field="field.key"
+              :style="{ width: field.width, minWidth: field.width, maxWidth: field.width, flex: '0 0 auto' }"
+              :class="{
+                'sorted-asc': sortField === field.key && sortOrder === 'asc',
+                'sorted-desc': sortField === field.key && sortOrder === 'desc'
+              }"
+              class="virtual-header-cell"
+              @click="field.render ? null : handleSort(field.key)"
+            >
+              {{ getFieldTitle(field) }}
+              <span class="sort-icon" v-if="!field.render"></span>
+            </div>
+          </div>
+
+          <!-- 虚拟列表主体 -->
+          <div class="virtual-table-body" :key="dataVersion">
+            <!-- 可见行 -->
+            <div
+              v-for="(item, index) in visibleData"
+              :key="item.id || index"
+              class="virtual-row"
+              :style="{ 
+                top: (startIndex + index) * rowHeight + 'px',
+                height: rowHeight + 'px'
+              }"
+            >
+              <div
+                v-for="field in DISPLAY_FIELDS"
+                :key="field.key"
+                :style="{ width: field.width, minWidth: field.width, maxWidth: field.width, flex: '0 0 auto' }"
+                class="virtual-cell"
+              >
+                <!-- 使用自定义渲染函数 -->
+                <span v-if="field.render" v-html="field.render(item)"></span>
+                <!-- 使用默认格式化 -->
+                <span
+                  v-else
+                  v-html="formatValue(field.key, getFieldValue(item, field.key))"
+                ></span>
+              </div>
+            </div>
+
+            <!-- 无数据提示 -->
+            <div
+              v-if="filteredData.length === 0"
+              style="
+                text-align: center;
+                padding: 50px;
+                color: #6c757d;
+                position: absolute;
+                width: 100%;
+                top: 0;
+              "
+            >
+              暂无数据
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const { createApp, ref, computed, onMounted, nextTick } = Vue;
+
+      createApp({
+        setup() {
+          // ============================================
+          // 中文映射配置
+          // ============================================
+          const KEY_MAPPING = {
+            id: "ID",
+            root: "Root ID",
+            kindId: "分类ID",
+            brand: "品牌",
+            brandId: "品牌ID",
+            siteBrandId: "站点品牌ID",
+            name: "产品名称",
+            entity: "实体类型",
+            matchId: "匹配ID",
+            supplier: "供应商",
+            supplierId: "供应商ID",
+            supplierRating: "供应评分",
+            supplierFlags: "供应商标识",
+            rating: "评分",
+            reviewRating: "评价评分",
+            nmReviewRating: "NM评价评分",
+            feedbacks: "评论数",
+            nmFeedbacks: "NM反馈数",
+            colors: "颜色",
+            subjectId: "主题ID",
+            subjectParentId: "主题父ID",
+            semanticId: "语义ID",
+            pics: "图片数",
+            volume: "体积",
+            weight: "重量",
+            viewFlags: "查看标志",
+            isNew: "是否新品",
+            sizes: "尺寸",
+            totalQuantity: "总数量",
+            time1: "时间1",
+            time2: "时间2",
+            wh: "仓库",
+            dtype: "数据类型",
+            dist: "距离",
+            panelPromoId: "促销ID",
+            meta: "元数据",
+
+            price: "价格",
+            basic: "原价",
+
+            image: "图片",
+            copy: "复制",
+          };
+
+          // ============================================
+          // 显示字段配置（包含列宽和自定义渲染）
+          // ============================================
+          const DISPLAY_FIELDS = [
+            {
+              key: "id",
+              width: "100px",
+              render: (item) => {
+                return `<a href="https://www.wildberries.ru/catalog/${item.id}/detail.aspx" target="_blank">${item.id}</a>`;
+              },
+            },
+            {
+              key: "image",
+              width: "200px",
+              title: "产品图片",
+              // 自定义渲染函数：返回 HTML 字符串
+              render: (item) => {
+                if (!item.id) {
+                  return '<span style="color: #999;">无图片</span>';
+                }
+                return createLazyImage(item, item.image || item._img, []);
+              },
+            },
+            {
+              key: "price",
+              width: "80px",
+              render: (item) => {
+                // 向下取整
+                return `<span style="color: red;">${Math.floor((item.price / 100) * 0.98)}</span>`;
+              },
+            },
+            {
+              key: "basic",
+              width: "80px",
+              render: (item) => {
+                // 向下取整
+                return `<span style="color: red;">${item.basic / 100}</span>`;
+              },
+            },
+            { key: "brand", width: "150px" },
+            { key: "name", width: "300px" },
+            { key: "supplier", width: "200px" },
+            // { key: "supplierRating", width: "100px" },
+            { key: "reviewRating", width: "80px" },
+            { key: "feedbacks", width: "90px" },
+            // { key: "wh", width: "100px" },
+            { key: "isNew", width: "90px" },
+            {
+              key: "copy",
+              width: "80px",
+              title: "复制",
+              render: (item) => {
+                const data = {
+                  id: item.id || "",
+                  price: item.price || "",
+                  brand: item.brand || "",
+                  supplier: item.supplier || "",
+                  rating: item.reviewRating || "",
+                  reviews: item.feedbacks || "",
+                };
+                const encoded = encodeURIComponent(JSON.stringify(data));
+                return `<button class="copy-btn" onclick="window.copyRowData(this.getAttribute('data-copy'))" data-copy="${encoded}" title="复制行数据">📋</button>`;
+              },
+            },
+            // 自定义列示例：图片列（带懒加载和备用链接）
+          ];
+
+          // 提取字段key列表（用于遍历）
+          const fieldKeys = computed(() => DISPLAY_FIELDS.map((f) => f.key));
+
+          // ============================================
+          // 响应式数据
+          // ============================================
+          const allData = ref([]);
+          const filteredData = ref([]);
+          const searchQuery = ref("");
+          const sortField = ref(null);
+          const sortOrder = ref(null);
+          const loading = ref(false);
+          const error = ref(null);
+          const tableWrapper = ref(null);
+          const scrollTop = ref(0);
+          const dataVersion = ref(0); // 数据版本号，用于强制刷新
+
+          // JSON输入相关
+          const showJsonInput = ref(false);
+          const jsonInputText = ref("");
+          const fileInput = ref(null);
+
+          // 解析历史记录
+          const STORAGE_KEY = "json_parse_history";
+          const MAX_HISTORY = 20;
+          const showHistory = ref(false);
+          const currentHistoryId = ref(null);
+          const historyList = ref([]);
+
+          const loadHistoryFromStorage = () => {
+            try {
+              const stored = localStorage.getItem(STORAGE_KEY);
+              if (stored) {
+                historyList.value = JSON.parse(stored);
+              }
+            } catch (e) {
+              console.error("读取历史记录失败:", e);
+              historyList.value = [];
+            }
+          };
+
+          const saveHistoryToStorage = () => {
+            try {
+              localStorage.setItem(STORAGE_KEY, JSON.stringify(historyList.value));
+            } catch (e) {
+              console.error("保存历史记录失败（可能数据过大）:", e);
+              // 如果存储失败，尝试移除最旧的记录
+              if (historyList.value.length > 1) {
+                historyList.value.shift();
+                try {
+                  localStorage.setItem(STORAGE_KEY, JSON.stringify(historyList.value));
+                } catch (e2) {
+                  console.error("再次保存失败:", e2);
+                }
+              }
+            }
+          };
+
+          const addToHistory = (rawJson, source) => {
+            let parsed;
+            try {
+              parsed = JSON.parse(rawJson);
+            } catch (e) {
+              return; // 不应该发生，因为调用前已经解析过了
+            }
+            const recordCount = Array.isArray(parsed) ? parsed.length : 1;
+            const now = new Date();
+            const timeStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")} ${String(now.getHours()).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")}:${String(now.getSeconds()).padStart(2, "0")}`;
+
+            const entry = {
+              id: Date.now(),
+              time: timeStr,
+              recordCount,
+              source,
+              rawJson,
+            };
+
+            // 去重：如果最近一条记录和当前相同，跳过
+            if (historyList.value.length > 0) {
+              const last = historyList.value[historyList.value.length - 1];
+              if (last.rawJson === rawJson) {
+                currentHistoryId.value = last.id;
+                return;
+              }
+            }
+
+            historyList.value.push(entry);
+            currentHistoryId.value = entry.id;
+
+            // 限制历史记录数量
+            while (historyList.value.length > MAX_HISTORY) {
+              historyList.value.shift();
+            }
+
+            saveHistoryToStorage();
+          };
+
+          const loadFromHistory = (entry) => {
+            try {
+              const jsonData = JSON.parse(entry.rawJson);
+              processJsonData(jsonData, false); // 不再次添加到历史
+              currentHistoryId.value = entry.id;
+            } catch (err) {
+              console.error("从历史加载数据失败:", err);
+              error.value = "历史数据解析失败: " + err.message;
+            }
+          };
+
+          const deleteHistory = (id) => {
+            historyList.value = historyList.value.filter((e) => e.id !== id);
+            if (currentHistoryId.value === id) {
+              currentHistoryId.value = null;
+            }
+            saveHistoryToStorage();
+          };
+
+          const clearHistory = () => {
+            historyList.value = [];
+            currentHistoryId.value = null;
+            localStorage.removeItem(STORAGE_KEY);
+          };
+
+          // 虚拟列表配置
+          const rowHeight = 200; // 增加行高以适应换行后的内容
+          const bufferSize = 10;
+
+          // ============================================
+          // 计算属性
+          // ============================================
+
+          // 计算起始和结束索引
+          const startIndex = computed(() => {
+            const wrapperHeight = tableWrapper.value?.clientHeight || 500;
+            const visibleRows = Math.ceil(wrapperHeight / rowHeight);
+            return Math.max(
+              0,
+              Math.floor(scrollTop.value / rowHeight) - bufferSize,
+            );
+          });
+
+          const endIndex = computed(() => {
+            const wrapperHeight = tableWrapper.value?.clientHeight || 500;
+            const visibleRows = Math.ceil(wrapperHeight / rowHeight);
+            return Math.min(
+              filteredData.value.length,
+              startIndex.value + visibleRows + bufferSize * 2,
+            );
+          });
+
+          // 可见数据
+          const visibleData = computed(() => {
+            return filteredData.value.slice(startIndex.value, endIndex.value);
+          });
+
+          // 总高度
+          const totalHeight = computed(() => {
+            return filteredData.value.length * rowHeight;
+          });
+
+          // ============================================
+          // 工具函数
+          // ============================================
+
+          const getChineseKey = (key) => {
+            return KEY_MAPPING[key] || key;
+          };
+
+          // 获取字段的显示标题（支持自定义title）
+          const getFieldTitle = (field) => {
+            if (field.title) {
+              return field.title;
+            }
+            return getChineseKey(field.key);
+          };
+
+          const getFieldValue = (obj, path) => {
+            if (!path.includes(".")) {
+              return obj[path];
+            }
+            return path.split(".").reduce((current, key) => {
+              return current && current[key] !== undefined
+                ? current[key]
+                : undefined;
+            }, obj);
+          };
+
+          const formatValue = (key, value) => {
+            if (value === null || value === undefined) return "-";
+
+            // 布尔值
+            if (typeof value === "boolean") {
+              return value
+                ? '<span class="badge badge-success">是</span>'
+                : '<span class="badge badge-warning">否</span>';
+            }
+
+            // 数组（颜色）
+            if (key === "colors" && Array.isArray(value)) {
+              return value.map((c) => c.name).join(", ");
+            }
+
+            // 数组（其他）
+            if (Array.isArray(value)) {
+              return value.length + " 项";
+            }
+
+            // 数字
+            if (typeof value === "number") {
+              if (key === "supplierRating" || key === "rating") {
+                return value.toFixed(1);
+              }
+              return value.toString(); // 不使用千分位分隔符
+            }
+
+            // 字符串
+            if (typeof value === "string") {
+              return value;
+            }
+
+            // 对象
+            if (typeof value === "object") {
+              return JSON.stringify(value);
+            }
+
+            return String(value);
+          };
+
+          // ============================================
+          // 图片懒加载和错误处理
+          // ============================================
+
+          // 存储每个图片的备用链接信息
+          window.imageFallbackMap = new Map();
+
+          // 全局图片预览函数
+          window.handleImagePreview = function (url, name) {
+            const overlay = document.querySelector(".image-preview-overlay");
+            const previewImg = document.querySelector(".image-preview");
+            const previewInfo = document.querySelector(".image-preview-info");
+
+            if (overlay && previewImg) {
+              previewImg.src = url;
+              previewImg.alt = name || "产品图片";
+              if (previewInfo) {
+                previewInfo.textContent = name || "产品图片";
+              }
+              overlay.classList.remove("hidden");
+              document.body.style.overflow = "hidden";
+            }
+          };
+
+          window.closeImagePreview = function () {
+            const overlay = document.querySelector(".image-preview-overlay");
+            if (overlay) {
+              overlay.classList.add("hidden");
+              document.body.style.overflow = "";
+            }
+          };
+
+          // 全局复制行数据函数
+          window.copyRowData = function (encodedStr) {
+            try {
+              const jsonStr = decodeURIComponent(encodedStr);
+              const data = JSON.parse(jsonStr);
+              const text = `ID: ${data.id}\n价格: ${data.price}\n品牌: ${data.brand}\n供应商: ${data.supplier}\n评分: ${data.rating}\n评论数: ${data.reviews}`;
+              navigator.clipboard
+                .writeText(text)
+                .then(() => {
+                  window.showCopyToast("复制成功");
+                })
+                .catch((err) => {
+                  console.error("复制失败:", err);
+                  // 降级方案：使用 textarea
+                  const textarea = document.createElement("textarea");
+                  textarea.value = text;
+                  textarea.style.position = "fixed";
+                  textarea.style.left = "-9999px";
+                  document.body.appendChild(textarea);
+                  textarea.select();
+                  try {
+                    document.execCommand("copy");
+                    window.showCopyToast("复制成功");
+                  } catch (e2) {
+                    console.error(e2);
+                  }
+                  document.body.removeChild(textarea);
+                });
+            } catch (e) {
+              console.error("解析复制数据失败:", e);
+            }
+          };
+
+          // 复制成功提示
+          window.showCopyToast = function (msg) {
+            const toast = document.createElement("div");
+            toast.textContent = msg;
+            Object.assign(toast.style, {
+              position: "fixed",
+              top: "20px",
+              left: "50%",
+              transform: "translateX(-50%)",
+              background: "#28a745",
+              color: "white",
+              padding: "10px 24px",
+              borderRadius: "6px",
+              fontSize: "14px",
+              fontWeight: "600",
+              zIndex: "99999",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
+              transition: "opacity 0.3s",
+              opacity: "1",
+            });
+            document.body.appendChild(toast);
+            setTimeout(() => {
+              toast.style.opacity = "0";
+              setTimeout(() => document.body.removeChild(toast), 300);
+            }, 1500);
+          };
+
+          // 全局图片错误处理函数（需要在Vue初始化之前定义）
+          window.handleImageError = function (imgElement) {
+            const imgId = imgElement.id;
+            const fallbackInfo = window.imageFallbackMap.get(imgId);
+
+            if (
+              !fallbackInfo ||
+              !fallbackInfo.urls ||
+              fallbackInfo.urls.length === 0
+            ) {
+              // 没有备用链接，显示默认占位图
+              imgElement.onerror = null;
+              imgElement.src =
+                "data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22%3E%3Crect fill=%22%23f0f0f0%22 width=%2260%22 height=%2260%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22%3E加载失败%3C/text%3E%3C/svg%3E";
+              return;
+            }
+
+            // 尝试下一个备用链接
+            const nextUrl = fallbackInfo.urls.shift();
+            console.log(`图片加载失败 [${imgId}]，尝试备用链接: ${nextUrl}`);
+
+            // 更新映射中的剩余链接
+            fallbackInfo.urls = [...fallbackInfo.urls];
+            window.imageFallbackMap.set(imgId, fallbackInfo);
+
+            imgElement.src = nextUrl;
+          };
+
+          // 创建带懒加载和备用链接的图片HTML
+          const createLazyImage = (item, primaryUrl, fallbackUrls = []) => {
+            if (!primaryUrl && fallbackUrls.length === 0) {
+              return '<span style="color: #999;">无图片</span>';
+            }
+
+            const imgId = `img_${item.id}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+            const allUrls = [primaryUrl, ...fallbackUrls].filter(Boolean);
+            const displayUrl = primaryUrl || allUrls[0];
+
+            // 存储备用链接信息到全局Map
+            if (allUrls.length > 1) {
+              window.imageFallbackMap.set(imgId, {
+                urls: [...allUrls.slice(1)],
+                originalUrls: [...allUrls.slice(1)],
+              });
+            }
+
+            // 生成JavaScript代码来处理图片加载失败
+            let errorHandler = "";
+            if (allUrls.length > 1) {
+              errorHandler = `onerror="window.handleImageError(this)"`;
+            } else {
+              errorHandler = `onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22%3E%3Crect fill=%22%23f0f0f0%22 width=%2260%22 height=%2260%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22%3E无图%3C/text%3E%3C/svg%3E';"`;
+            }
+
+            return `<img id="${imgId}" 
+                          src="${displayUrl}" 
+                          loading="lazy"
+                          decoding="async"
+                          class="previewable-image"
+                          style="width: 200px; height: 200px; border-radius: 4px; object-fit: cover; background: #f0f0f0;" 
+                          alt="产品图片"
+                          title="点击查看大图"
+                          ${errorHandler}
+                          onclick="window.handleImagePreview('${displayUrl}', '${item.name || "产品图片"}')" />`;
+          };
+
+          // ============================================
+          // 排序功能
+          // ============================================
+
+          const handleSort = (field) => {
+            if (sortField.value === field) {
+              // 切换排序方向
+              if (sortOrder.value === "asc") {
+                sortOrder.value = "desc";
+              } else if (sortOrder.value === "desc") {
+                sortOrder.value = null;
+                sortField.value = null;
+              } else {
+                sortOrder.value = "asc";
+              }
+            } else {
+              // 新字段，默认升序
+              sortField.value = field;
+              sortOrder.value = "asc";
+            }
+
+            applySorting();
+          };
+
+          const applySorting = () => {
+            if (!sortField.value || !sortOrder.value) {
+              // 无排序时保持当前过滤结果不变（创建新引用触发响应式更新）
+              filteredData.value = [...filteredData.value];
+            } else {
+              // 执行排序
+              filteredData.value.sort((a, b) => {
+                let valA = getFieldValue(a, sortField.value);
+                let valB = getFieldValue(b, sortField.value);
+
+                // 处理 undefined
+                if (valA === undefined) valA = null;
+                if (valB === undefined) valB = null;
+
+                // 处理数组
+                if (Array.isArray(valA)) valA = valA.length;
+                if (Array.isArray(valB)) valB = valB.length;
+
+                // 处理颜色数组转字符串
+                if (sortField.value === "colors") {
+                  valA = Array.isArray(a.colors)
+                    ? a.colors.map((c) => c.name).join(", ")
+                    : "";
+                  valB = Array.isArray(b.colors)
+                    ? b.colors.map((c) => c.name).join(", ")
+                    : "";
+                }
+
+                // 比较
+                let comparison = 0;
+                if (typeof valA === "string" && typeof valB === "string") {
+                  comparison = valA.localeCompare(valB, "ru");
+                } else if (valA < valB) {
+                  comparison = -1;
+                } else if (valA > valB) {
+                  comparison = 1;
+                }
+
+                return sortOrder.value === "asc" ? comparison : -comparison;
+              });
+            }
+          };
+
+          // ============================================
+          // 搜索功能
+          // ============================================
+
+          const handleSearch = () => {
+            const query = searchQuery.value.toLowerCase().trim();
+            console.log("搜索关键词:", query);
+            console.log("数据总数:", allData.value.length);
+
+            if (!query) {
+              filteredData.value = [...allData.value];
+              console.log("清空搜索，显示全部数据");
+            } else {
+              filteredData.value = allData.value.filter((item) => {
+                // 在ID中搜索
+                if (item.id && String(item.id).toLowerCase().includes(query)) {
+                  return true;
+                }
+                // 在名称中搜索
+                if (item.name && item.name.toLowerCase().includes(query)) {
+                  return true;
+                }
+                // 在品牌中搜索
+                if (item.brand && item.brand.toLowerCase().includes(query)) {
+                  return true;
+                }
+                // 在供应商中搜索
+                if (
+                  item.supplier &&
+                  item.supplier.toLowerCase().includes(query)
+                ) {
+                  return true;
+                }
+                return false;
+              });
+              console.log("搜索结果数:", filteredData.value.length);
+            }
+
+            // 重新应用排序
+            applySorting();
+
+            // 增加版本号强制刷新虚拟列表
+            dataVersion.value++;
+
+            // 重置滚动位置
+            scrollTop.value = 0;
+            nextTick(() => {
+              if (tableWrapper.value) {
+                tableWrapper.value.scrollTop = 0;
+              }
+            });
+          };
+
+          // ============================================
+          // 滚动处理
+          // ============================================
+
+          const handleScroll = (e) => {
+            scrollTop.value = e.target.scrollTop;
+          };
+
+          // ============================================
+          // 数据处理（提取公共逻辑）
+          // ============================================
+
+          const processJsonData = (jsonData, addToHistoryFlag = true) => {
+            if (!Array.isArray(jsonData)) {
+              // 如果不是数组，尝试包装
+              if (typeof jsonData === "object" && jsonData !== null) {
+                // 可能是单个对象，包装成数组
+                jsonData = [jsonData];
+              } else {
+                throw new Error("JSON数据格式不正确，需要数组或对象");
+              }
+            }
+
+            allData.value = jsonData
+              .map((item) => {
+                item.price = item.sizes[0].price.product;
+                item.basic = item.sizes[0].price.basic;
+                return item;
+              })
+              .filter((item) => {
+                if (item.feedbacks > 10 && item.reviewRating > 4) return true;
+                return false;
+              });
+            filteredData.value = [...allData.value];
+            dataVersion.value++;
+            scrollTop.value = 0;
+            searchQuery.value = "";
+            sortField.value = null;
+            sortOrder.value = null;
+            nextTick(() => {
+              if (tableWrapper.value) {
+                tableWrapper.value.scrollTop = 0;
+              }
+            });
+          };
+
+          // ============================================
+          // JSON输入功能
+          // ============================================
+
+          const toggleJsonInput = () => {
+            showJsonInput.value = !showJsonInput.value;
+          };
+
+          const triggerFileImport = () => {
+            if (fileInput.value) {
+              fileInput.value.click();
+            }
+          };
+
+          const handleFileImport = (event) => {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            loading.value = true;
+            error.value = null;
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+              try {
+                const rawJson = e.target.result;
+                const jsonData = JSON.parse(rawJson);
+                processJsonData(jsonData);
+                addToHistory(rawJson, file.name);
+                loading.value = false;
+              } catch (err) {
+                console.error("解析JSON文件出错:", err);
+                error.value = "文件解析失败: " + err.message;
+                loading.value = false;
+              }
+            };
+            reader.onerror = () => {
+              error.value = "文件读取失败";
+              loading.value = false;
+            };
+            reader.readAsText(file);
+
+            // 重置file input，以便可以重新选择同一个文件
+            event.target.value = "";
+          };
+
+          const parseJsonInput = () => {
+            const text = jsonInputText.value.trim();
+            if (!text) {
+              error.value = "请输入JSON数据";
+              return;
+            }
+
+            loading.value = true;
+            error.value = null;
+
+            try {
+              const jsonData = JSON.parse(text);
+              processJsonData(jsonData);
+              addToHistory(text, "手动输入");
+              loading.value = false;
+              showJsonInput.value = false;
+              jsonInputText.value = "";
+            } catch (err) {
+              console.error("解析JSON出错:", err);
+              error.value = "JSON解析失败: " + err.message;
+              loading.value = false;
+            }
+          };
+
+          // ============================================
+          // 加载数据（保留旧方法，但不再自动调用）
+          // ============================================
+
+          const loadData = async () => {
+            try {
+              loading.value = true;
+              error.value = null;
+
+              const response = await fetch("测试.json");
+
+              if (!response.ok) {
+                throw new Error("加载数据失败: " + response.status);
+              }
+
+              const jsonData = await response.json();
+              processJsonData(jsonData);
+              loading.value = false;
+            } catch (err) {
+              console.error("加载数据出错:", err);
+              error.value = err.message;
+              loading.value = false;
+            }
+          };
+
+          // ============================================
+          // 生命周期
+          // ============================================
+
+          onMounted(() => {
+            // 不再自动加载数据，等待用户输入或导入
+            loadHistoryFromStorage();
+          });
+
+          // ============================================
+          // 返回给模板
+          // ============================================
+
+          return {
+            // 数据
+            allData,
+            filteredData,
+            visibleData,
+            searchQuery,
+            sortField,
+            sortOrder,
+            loading,
+            error,
+            tableWrapper,
+            startIndex,
+            endIndex,
+            rowHeight,
+            totalHeight,
+            DISPLAY_FIELDS,
+            dataVersion,
+
+            // JSON输入
+            showJsonInput,
+            jsonInputText,
+            fileInput,
+
+            // 解析历史
+            showHistory,
+            currentHistoryId,
+            historyList,
+
+            // 方法
+            getChineseKey,
+            getFieldTitle,
+            getFieldValue,
+            formatValue,
+            createLazyImage,
+            handleSort,
+            handleSearch,
+            handleScroll,
+            toggleJsonInput,
+            triggerFileImport,
+            handleFileImport,
+            parseJsonInput,
+            loadFromHistory,
+            deleteHistory,
+            clearHistory,
+          };
+        },
+      }).mount("#app");
+
+      // ESC键关闭预览
+      window.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          window.closeImagePreview();
+        }
+      });
+    </script>
+  </body>
+</html>
