@@ -613,10 +613,10 @@
                 'sorted-desc': sortField === field.key && sortOrder === 'desc'
               }"
               class="virtual-header-cell"
-              @click="field.render ? null : handleSort(field.key)"
+              @click="field.sortable === false ? null : handleSort(field.key)"
             >
               {{ getFieldTitle(field) }}
-              <span class="sort-icon" v-if="!field.render"></span>
+              <span class="sort-icon" v-if="field.sortable !== false"></span>
             </div>
           </div>
 
@@ -735,6 +735,7 @@
               key: "image",
               width: "200px",
               title: "产品图片",
+              sortable: false,
               // 自定义渲染函数：返回 HTML 字符串
               render: (item) => {
                 if (!item.id) {
@@ -746,6 +747,7 @@
             {
               key: "price",
               width: "80px",
+              sortable: true,
               render: (item) => {
                 // 向下取整
                 return `<span style="color: red;">${Math.floor((item.price / 100) * 0.98)}</span>`;
@@ -754,6 +756,7 @@
             {
               key: "basic",
               width: "80px",
+              sortable: true,
               render: (item) => {
                 // 向下取整
                 return `<span style="color: red;">${item.basic / 100}</span>`;
@@ -771,6 +774,7 @@
               key: "copy",
               width: "80px",
               title: "复制",
+              sortable: false,
               render: (item) => {
                 const data = {
                   id: item.id || "",
