@@ -347,6 +347,29 @@
         background: #28a745;
       }
 
+      .remark-input {
+        width: 100%;
+        padding: 4px 8px;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        font-size: 12px;
+        font-family: inherit;
+        background: #fafbfc;
+        transition: border-color 0.2s, background 0.2s;
+        box-sizing: border-box;
+      }
+
+      .remark-input:focus {
+        outline: none;
+        border-color: #667eea;
+        background: white;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.15);
+      }
+
+      .remark-input:hover {
+        border-color: #adb5bd;
+      }
+
       .import-btn {
         background: #667eea;
         color: white;
@@ -718,6 +741,7 @@
 
             image: "图片",
             copy: "复制",
+            remark: "备注",
           };
 
           // ============================================
@@ -786,6 +810,23 @@
                 };
                 const encoded = encodeURIComponent(JSON.stringify(data));
                 return `<button class="copy-btn" onclick="window.copyRowData(this.getAttribute('data-copy'))" data-copy="${encoded}" title="复制行数据">📋</button>`;
+              },
+            },
+            {
+              key: "remark",
+              width: "160px",
+              title: "备注",
+              sortable: false,
+              render: (item) => {
+                const remark = (window.remarksMap && window.remarksMap[item.id]) || "";
+                const escaped = remark.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                return `<input type="text" 
+                  class="remark-input"
+                  value="${escaped}" 
+                  placeholder="添加备注..." 
+                  data-id="${item.id}"
+                  onchange="window.saveRemark(this.getAttribute('data-id'), this.value)" 
+                  onblur="window.saveRemark(this.getAttribute('data-id'), this.value)" />`;
               },
             },
             // 自定义列示例：图片列（带懒加载和备用链接）
@@ -1108,6 +1149,37 @@
               toast.style.opacity = "0";
               setTimeout(() => document.body.removeChild(toast), 300);
             }, 1500);
+          };
+
+          // 备注存储
+          window.remarksMap = {};
+          const REMARKS_STORAGE_KEY = "item_remarks";
+
+          window.loadRemarks = function () {
+            try {
+              const stored = localStorage.getItem(REMARKS_STORAGE_KEY);
+              if (stored) {
+                window.remarksMap = JSON.parse(stored);
+              }
+            } catch (e) {
+              console.error("读取备注数据失败:", e);
+              window.remarksMap = {};
+            }
+          };
+
+          window.saveRemark = function (id, value) {
+            if (!id) return;
+            const trimmed = value.trim();
+            if (trimmed) {
+              window.remarksMap[id] = trimmed;
+            } else {
+              delete window.remarksMap[id];
+            }
+            try {
+              localStorage.setItem(REMARKS_STORAGE_KEY, JSON.stringify(window.remarksMap));
+            } catch (e) {
+              console.error("保存备注失败:", e);
+            }
           };
 
           // 全局图片错误处理函数（需要在Vue初始化之前定义）
@@ -1443,6 +1515,7 @@
           onMounted(() => {
             // 不再自动加载数据，等待用户输入或导入
             loadHistoryFromStorage();
+            window.loadRemarks();
           });
 
           // ============================================
