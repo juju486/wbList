@@ -347,29 +347,6 @@
         background: #28a745;
       }
 
-      .remark-input {
-        width: 100%;
-        padding: 4px 8px;
-        border: 1px solid #dee2e6;
-        border-radius: 4px;
-        font-size: 12px;
-        font-family: inherit;
-        background: #fafbfc;
-        transition: border-color 0.2s, background 0.2s;
-        box-sizing: border-box;
-      }
-
-      .remark-input:focus {
-        outline: none;
-        border-color: #667eea;
-        background: white;
-        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.15);
-      }
-
-      .remark-input:hover {
-        border-color: #adb5bd;
-      }
-
       .import-btn {
         background: #667eea;
         color: white;
@@ -518,6 +495,48 @@
         background: #fce4e4;
       }
 
+      .remark-input {
+        width: 100%;
+        padding: 4px 8px;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        font-size: 12px;
+        transition: border-color 0.2s;
+        box-sizing: border-box;
+      }
+
+      .remark-input:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.15);
+      }
+
+      .remark-input::placeholder {
+        color: #adb5bd;
+      }
+
+      .current-remark-box {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 12px;
+        background: #eef0ff;
+        border-radius: 5px;
+        font-size: 13px;
+        color: #495057;
+        margin-left: 10px;
+      }
+
+      .current-remark-box strong {
+        color: #667eea;
+        white-space: nowrap;
+      }
+
+      .current-remark-box .remark-input {
+        min-width: 150px;
+        max-width: 300px;
+      }
+
       @media (max-width: 768px) {
         .controls {
           flex-direction: column;
@@ -564,6 +583,16 @@
           </div>
           <div class="info">
             共 <strong>{{ filteredData.length }}</strong> 条数据
+            <span class="current-remark-box" v-if="currentHistoryId">
+              <strong>📝 备注:</strong>
+              <input
+                type="text"
+                :value="currentHistoryRemark"
+                @input="updateCurrentRemark($event.target.value)"
+                placeholder="添加备注名称..."
+                class="remark-input"
+              />
+            </span>
           </div>
         </div>
         <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
@@ -602,6 +631,16 @@
             >
               <div class="history-item-info">
                 <div class="history-item-time">{{ entry.time }}</div>
+                <div style="margin: 4px 0;">
+                  <input
+                    type="text"
+                    :value="entry.remark || ''"
+                    @input="updateHistoryRemark(entry.id, $event.target.value)"
+                    @click.stop
+                    placeholder="添加备注名称..."
+                    class="remark-input"
+                  />
+                </div>
                 <div>
                   <span class="history-item-count">{{ entry.recordCount }}</span> 条记录
                   <span style="color: #adb5bd; font-size: 11px; margin-left: 6px;">{{ entry.source }}</span>
@@ -741,7 +780,6 @@
 
             image: "图片",
             copy: "复制",
-            remark: "备注",
           };
 
           // ============================================
@@ -810,23 +848,6 @@
                 };
                 const encoded = encodeURIComponent(JSON.stringify(data));
                 return `<button class="copy-btn" onclick="window.copyRowData(this.getAttribute('data-copy'))" data-copy="${encoded}" title="复制行数据">📋</button>`;
-              },
-            },
-            {
-              key: "remark",
-              width: "160px",
-              title: "备注",
-              sortable: false,
-              render: (item) => {
-                const remark = (window.remarksMap && window.remarksMap[item.id]) || "";
-                const escaped = remark.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-                return `<input type="text" 
-                  class="remark-input"
-                  value="${escaped}" 
-                  placeholder="添加备注..." 
-                  data-id="${item.id}"
-                  onchange="window.saveRemark(this.getAttribute('data-id'), this.value)" 
-                  onblur="window.saveRemark(this.getAttribute('data-id'), this.value)" />`;
               },
             },
             // 自定义列示例：图片列（带懒加载和备用链接）
@@ -907,6 +928,7 @@
               recordCount,
               source,
               rawJson,
+              remark: "",
             };
 
             // 去重：如果最近一条记录和当前相同，跳过
@@ -952,6 +974,28 @@
             historyList.value = [];
             currentHistoryId.value = null;
             localStorage.removeItem(STORAGE_KEY);
+          };
+
+          const currentHistoryRemark = computed(() => {
+            if (!currentHistoryId.value) return "";
+            const entry = historyList.value.find(
+              (e) => e.id === currentHistoryId.value,
+            );
+            return entry ? entry.remark || "" : "";
+          });
+
+          const updateHistoryRemark = (id, remark) => {
+            const entry = historyList.value.find((e) => e.id === id);
+            if (entry) {
+              entry.remark = remark;
+              saveHistoryToStorage();
+            }
+          };
+
+          const updateCurrentRemark = (remark) => {
+            if (currentHistoryId.value) {
+              updateHistoryRemark(currentHistoryId.value, remark);
+            }
           };
 
           // 虚拟列表配置
@@ -1149,37 +1193,6 @@
               toast.style.opacity = "0";
               setTimeout(() => document.body.removeChild(toast), 300);
             }, 1500);
-          };
-
-          // 备注存储
-          window.remarksMap = {};
-          const REMARKS_STORAGE_KEY = "item_remarks";
-
-          window.loadRemarks = function () {
-            try {
-              const stored = localStorage.getItem(REMARKS_STORAGE_KEY);
-              if (stored) {
-                window.remarksMap = JSON.parse(stored);
-              }
-            } catch (e) {
-              console.error("读取备注数据失败:", e);
-              window.remarksMap = {};
-            }
-          };
-
-          window.saveRemark = function (id, value) {
-            if (!id) return;
-            const trimmed = value.trim();
-            if (trimmed) {
-              window.remarksMap[id] = trimmed;
-            } else {
-              delete window.remarksMap[id];
-            }
-            try {
-              localStorage.setItem(REMARKS_STORAGE_KEY, JSON.stringify(window.remarksMap));
-            } catch (e) {
-              console.error("保存备注失败:", e);
-            }
           };
 
           // 全局图片错误处理函数（需要在Vue初始化之前定义）
@@ -1515,7 +1528,6 @@
           onMounted(() => {
             // 不再自动加载数据，等待用户输入或导入
             loadHistoryFromStorage();
-            window.loadRemarks();
           });
 
           // ============================================
@@ -1549,6 +1561,7 @@
             showHistory,
             currentHistoryId,
             historyList,
+            currentHistoryRemark,
 
             // 方法
             getChineseKey,
@@ -1566,6 +1579,8 @@
             loadFromHistory,
             deleteHistory,
             clearHistory,
+            updateHistoryRemark,
+            updateCurrentRemark,
           };
         },
       }).mount("#app");
