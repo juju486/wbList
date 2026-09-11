@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>产品数据表格 - Vue3 虚拟列表</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
     <style>
       * {
         margin: 0;
@@ -606,6 +607,9 @@
           />
           <button class="import-btn" @click="toggleJsonInput">{{ showJsonInput ? '❌ 关闭输入' : '✏️ 粘贴JSON' }}</button>
           <button class="import-btn primary" @click="parseJsonInput" v-if="showJsonInput">✅ 解析JSON</button>
+          <button class="import-btn" @click="exportToExcel" :disabled="exporting" style="background: #217346;">
+            {{ exporting ? '⏳ 导出中...' : '📥 导出 Excel' }}
+          </button>
         </div>
         <div v-if="showJsonInput" style="width: 100%;">
           <textarea
@@ -869,6 +873,7 @@
           const tableWrapper = ref(null);
           const scrollTop = ref(0);
           const dataVersion = ref(0); // 数据版本号，用于强制刷新
+          const exporting = ref(false); // 导出状态
 
           // JSON输入相关
           const showJsonInput = ref(false);
@@ -1497,6 +1502,182 @@
           };
 
           // ============================================
+          // Excel 导出功能
+          // ============================================
+
+          const imageToBase64 = async (url, timeoutMs = 8000) => {
+            const controller = new AbortController();
+            const timer = setTimeout(() => controller.abort(), timeoutMs);
+            try {
+              const resp = await fetch(url, {
+                signal: controller.signal,
+                mode: "cors",
+                credentials: "omit",
+              });
+              if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+              const blob = await resp.blob();
+              const ext = blob.type === "image/png" ? "png" : "jpeg";
+              return await new Promise((resolve) => {
+                const reader = new FileReader();
+                reader.onloadend = () =>
+                  resolve({ base64: reader.result, ext });
+                reader.readAsDataURL(blob);
+              });
+            } catch (e) {
+              console.warn("图片加载失败:", url, e.message);
+              return null;
+            } finally {
+              clearTimeout(timer);
+            }
+          };
+
+          const exportToExcel = async () => {
+            if (exporting.value) return;
+            const data = allData.value;
+            if (!data || data.length === 0) {
+              alert("没有数据可导出");
+              return;
+            }
+
+            exporting.value = true;
+
+            try {
+              const workbook = new ExcelJS.Workbook();
+              workbook.creator = "产品数据报表";
+              const worksheet = workbook.addWorksheet("产品数据", {
+                views: [{ state: "frozen", ySplit: 1 }],
+              });
+
+              const imgColIdx = 0;
+
+              // ---------- 表头 ----------
+              const headerRow = worksheet.getRow(1);
+              headerRow.height = 28;
+
+              const headerStyle = {
+                font: { bold: true, size: 11, name: "Microsoft YaHei", color: { argb: "FFFFFFFF" } },
+                fill: { type: "pattern", pattern: "solid", fgColor: { argb: "FF667EEA" } },
+                alignment: { horizontal: "center", vertical: "middle", wrapText: true },
+                border: {
+                  top: { style: "thin" },
+                  left: { style: "thin" },
+                  bottom: { style: "thin" },
+                  right: { style: "thin" },
+                },
+              };
+
+              const imgHeaderCell = headerRow.getCell(1);
+              imgHeaderCell.value = "产品图片";
+              Object.assign(imgHeaderCell, headerStyle);
+
+              for (let i = 0; i < DISPLAY_FIELDS.length; i++) {
+                const cell = headerRow.getCell(i + 2);
+                cell.value = getFieldTitle(DISPLAY_FIELDS[i]);
+                Object.assign(cell, headerStyle);
+              }
+
+              // ---------- 列宽 ----------
+              worksheet.getColumn(1).width = 22;
+              for (let i = 0; i < DISPLAY_FIELDS.length; i++) {
+                const w = parseInt(DISPLAY_FIELDS[i].width) || 100;
+                worksheet.getColumn(i + 2).width = Math.max(Math.round(w / 7.5), 10);
+              }
+
+              const cellStyle = {
+                alignment: { horizontal: "center", vertical: "middle", wrapText: true },
+                border: {
+                  top: { style: "thin" },
+                  left: { style: "thin" },
+                  bottom: { style: "thin" },
+                  right: { style: "thin" },
+                },
+                font: { size: 11, name: "Microsoft YaHei" },
+              };
+
+              // ---------- 数据行 ----------
+              for (let i = 0; i < data.length; i++) {
+                const item = data[i];
+
+                const rowValues = [""].concat(
+                  DISPLAY_FIELDS.map((field) => {
+                  let value = getFieldValue(item, field.key);
+                  if (value == null || value === "") return "";
+                  if (field.key === "price") {
+                    return Math.floor((value / 100) * 0.98);
+                  }
+                  if (field.key === "basic") {
+                    return value / 100;
+                  }
+                  if (field.key === "isNew") {
+                    return value ? "是" : "否";
+                  }
+                  if (typeof value === "boolean") {
+                    return value ? "是" : "否";
+                  }
+                  if (Array.isArray(value)) {
+                    if (field.key === "colors") {
+                      return value.map((c) => c.name).join(", ");
+                    }
+                    return value.length + " 项";
+                  }
+                  if (typeof value === "object") {
+                    return JSON.stringify(value);
+                  }
+                  return value;
+                })
+              );
+
+                const row = worksheet.addRow(rowValues);
+                row.height = 135;
+                Object.assign(row, cellStyle);
+              }
+
+              // ---------- 嵌入图片（倒序避免索引错乱） ----------
+              for (let i = data.length - 1; i >= 0; i--) {
+                const item = data[i];
+                const imgUrl = item.image || item._img || null;
+                if (!imgUrl) continue;
+
+                const result = await imageToBase64(imgUrl);
+                if (!result) continue;
+
+                const imageId = workbook.addImage({
+                  base64: result.base64.replace(
+                    /^data:image\/\w+;base64,/,
+                    "",
+                  ),
+                  extension: result.ext,
+                });
+
+                worksheet.addImage(imageId, {
+                  tl: { col: imgColIdx, row: i + 1 },
+                  ext: { width: 100, height: 133 },
+                  editAs: "oneCell",
+                });
+              }
+
+              // ---------- 生成并下载 ----------
+              const fileName = `产品数据_${new Date().toISOString().slice(0, 10)}.xlsx`;
+              const buffer = await workbook.xlsx.writeBuffer();
+              const blob = new Blob([buffer], {
+                type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+              });
+              const link = document.createElement("a");
+              link.href = URL.createObjectURL(blob);
+              link.download = fileName;
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+              URL.revokeObjectURL(link.href);
+            } catch (err) {
+              console.error("导出失败:", err);
+              alert("导出失败: " + (err.message || "未知错误"));
+            } finally {
+              exporting.value = false;
+            }
+          };
+
+          // ============================================
           // 加载数据（保留旧方法，但不再自动调用）
           // ============================================
 
@@ -1581,6 +1762,10 @@
             clearHistory,
             updateHistoryRemark,
             updateCurrentRemark,
+
+            // 导出Excel
+            exporting,
+            exportToExcel,
           };
         },
       }).mount("#app");
