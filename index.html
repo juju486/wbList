@@ -516,6 +516,196 @@
         color: #adb5bd;
       }
 
+      .tag-bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      .tag-bar-label {
+        font-size: 13px;
+        color: #495057;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      .tag-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 3px 10px;
+        border-radius: 14px;
+        font-size: 12px;
+        font-weight: 500;
+        cursor: pointer;
+        user-select: none;
+        transition: all 0.2s;
+        border: 2px solid transparent;
+        white-space: nowrap;
+      }
+
+      .tag-badge:hover {
+        transform: scale(1.05);
+      }
+
+      .tag-badge.active {
+        border-color: #333;
+        box-shadow: 0 0 0 2px rgba(0,0,0,0.15);
+      }
+
+      .tag-badge-all {
+        background: #e9ecef;
+        color: #495057;
+        border: 2px dashed #adb5bd;
+      }
+
+      .tag-badge-all:hover {
+        background: #dee2e6;
+      }
+
+      .tag-badge-all.active {
+        border-color: #667eea;
+        background: #667eea;
+        color: white;
+        border-style: solid;
+      }
+
+      .tag-badge-add {
+        background: #f8f9fa;
+        color: #667eea;
+        border: 2px dashed #667eea;
+        font-size: 14px;
+        padding: 3px 8px;
+      }
+
+      .tag-badge-add:hover {
+        background: #667eea;
+        color: white;
+        border-style: solid;
+      }
+
+      .tag-new-input {
+        padding: 4px 10px;
+        border: 2px solid #667eea;
+        border-radius: 14px;
+        font-size: 12px;
+        width: 120px;
+        outline: none;
+        transition: all 0.2s;
+      }
+
+      .tag-new-input:focus {
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+      }
+
+      .tag-delete-btn {
+        cursor: pointer;
+        opacity: 0.6;
+        font-size: 14px;
+        line-height: 1;
+        margin-left: 2px;
+      }
+
+      .tag-delete-btn:hover {
+        opacity: 1;
+      }
+
+      .tag-row-badge {
+        display: inline-block;
+        padding: 2px 7px;
+        border-radius: 10px;
+        font-size: 11px;
+        font-weight: 500;
+        margin: 2px 3px 2px 0;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: opacity 0.15s;
+      }
+
+      .tag-row-badge:hover {
+        opacity: 0.8;
+      }
+
+      .tag-row-add-btn {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        line-height: 18px;
+        text-align: center;
+        border-radius: 50%;
+        background: #e9ecef;
+        color: #667eea;
+        font-size: 14px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.15s;
+        border: none;
+      }
+
+      .tag-row-add-btn:hover {
+        background: #667eea;
+        color: white;
+      }
+
+      .tag-popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+      }
+
+      .tag-popup {
+        position: absolute;
+        background: white;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        padding: 10px;
+        z-index: 1000;
+        min-width: 180px;
+        max-width: 280px;
+        animation: fadeIn 0.15s ease;
+      }
+
+      .tag-popup-title {
+        font-size: 13px;
+        font-weight: 600;
+        color: #495057;
+        margin-bottom: 8px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .tag-popup-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 8px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 13px;
+        transition: background 0.1s;
+      }
+
+      .tag-popup-item:hover {
+        background: #f8f9fa;
+      }
+
+      .tag-popup-item input[type="checkbox"] {
+        cursor: pointer;
+      }
+
+      .tag-popup-empty {
+        color: #adb5bd;
+        font-size: 12px;
+        padding: 8px;
+        text-align: center;
+      }
+
       .current-remark-box {
         display: inline-flex;
         align-items: center;
@@ -617,6 +807,44 @@
             placeholder="请在此粘贴JSON数据..."
             style="width: 100%; height: 150px; padding: 10px; border: 2px solid #dee2e6; border-radius: 5px; font-size: 13px; font-family: Consolas, Monaco, monospace; resize: vertical;"
           ></textarea>
+        </div>
+
+        <!-- 标签管理 -->
+        <div class="tag-bar" v-if="allData.length > 0">
+          <span class="tag-bar-label">🏷️ 标签筛选:</span>
+          <span
+            class="tag-badge tag-badge-all"
+            :class="{ active: activeTagFilter === null }"
+            @click="activeTagFilter = null; applyTagFilter()"
+          >全部</span>
+          <span
+            v-for="tag in allTags"
+            :key="tag"
+            class="tag-badge"
+            :style="getTagStyle(tag)"
+            :class="{ active: activeTagFilter === tag }"
+            @click="toggleTagFilter(tag)"
+          >
+            {{ tag }}
+            <span class="tag-delete-btn" @click.stop="deleteTag(tag)" title="删除此标签">×</span>
+          </span>
+          <span v-if="showTagInput" style="display: inline-flex; align-items: center; gap: 4px;">
+            <input
+              type="text"
+              v-model="newTagName"
+              @keyup.enter="addTag"
+              @keyup.escape="showTagInput = false; newTagName = ''"
+              @blur="handleTagInputBlur"
+              placeholder="输入标签名"
+              class="tag-new-input"
+              ref="tagInputRef"
+            />
+          </span>
+          <span
+            v-if="!showTagInput"
+            class="tag-badge tag-badge-add"
+            @click="showTagInput = true; $nextTick(() => $refs.tagInputRef && $refs.tagInputRef.focus())"
+          >+</span>
         </div>
 
         <!-- 解析历史记录 -->
@@ -734,6 +962,205 @@
     </div>
 
     <script>
+      // ============================================
+      // 全局标签系统和颜色映射
+      // ============================================
+      const TAG_COLORS = [
+        { bg: "#e3f2fd", text: "#1565c0" },
+        { bg: "#e8f5e9", text: "#2e7d32" },
+        { bg: "#fff3e0", text: "#e65100" },
+        { bg: "#fce4ec", text: "#c62828" },
+        { bg: "#f3e5f5", text: "#7b1fa2" },
+        { bg: "#e0f7fa", text: "#00838f" },
+        { bg: "#fff8e1", text: "#f9a825" },
+        { bg: "#e8eaf6", text: "#283593" },
+        { bg: "#efebe9", text: "#4e342e" },
+        { bg: "#f1f8e9", text: "#558b2f" },
+      ];
+
+      const TAG_STORAGE_KEY = "table_tags_v1";
+      const TAG_ASSIGN_STORAGE_KEY = "table_tag_assignments_v1";
+
+      window.tagAssignments = {};
+      window.tagColorMap = {};
+
+      const loadTagsFromStorage = () => {
+        try {
+          const stored = localStorage.getItem(TAG_STORAGE_KEY);
+          if (stored) {
+            return JSON.parse(stored);
+          }
+        } catch (e) {
+          console.error("读取标签列表失败:", e);
+        }
+        return [];
+      };
+
+      const saveTagsToStorage = (tags) => {
+        try {
+          localStorage.setItem(TAG_STORAGE_KEY, JSON.stringify(tags));
+        } catch (e) {
+          console.error("保存标签列表失败:", e);
+        }
+      };
+
+      const loadTagAssignmentsFromStorage = () => {
+        try {
+          const stored = localStorage.getItem(TAG_ASSIGN_STORAGE_KEY);
+          if (stored) {
+            window.tagAssignments = JSON.parse(stored);
+          }
+          rebuildColorMap();
+        } catch (e) {
+          console.error("读取标签分配失败:", e);
+          window.tagAssignments = {};
+        }
+      };
+
+      const saveTagAssignmentsToStorage = () => {
+        try {
+          localStorage.setItem(
+            TAG_ASSIGN_STORAGE_KEY,
+            JSON.stringify(window.tagAssignments),
+          );
+        } catch (e) {
+          console.error("保存标签分配失败:", e);
+        }
+      };
+
+      const rebuildColorMap = () => {
+        window.tagColorMap = {};
+        const allUsedTags = new Set();
+        Object.values(window.tagAssignments).forEach((tags) => {
+          tags.forEach((t) => allUsedTags.add(t));
+        });
+        let idx = 0;
+        allUsedTags.forEach((tag) => {
+          window.tagColorMap[tag] = TAG_COLORS[idx % TAG_COLORS.length];
+          idx++;
+        });
+      };
+
+      const assignColor = (tag) => {
+        if (!window.tagColorMap[tag]) {
+          const usedColors = Object.keys(window.tagColorMap).length;
+          window.tagColorMap[tag] = TAG_COLORS[usedColors % TAG_COLORS.length];
+        }
+        return window.tagColorMap[tag];
+      };
+
+      window.getTagColor = (tag) => {
+        if (!window.tagColorMap[tag]) {
+          assignColor(tag);
+        }
+        return window.tagColorMap[tag];
+      };
+
+      window.getTagAssignments = (itemId) => {
+        return window.tagAssignments[itemId] || [];
+      };
+
+      window.toggleTagForItem = (itemId, tag) => {
+        if (!window.tagAssignments[itemId]) {
+          window.tagAssignments[itemId] = [];
+        }
+        const tags = window.tagAssignments[itemId];
+        const idx = tags.indexOf(tag);
+        if (idx >= 0) {
+          tags.splice(idx, 1);
+        } else {
+          tags.push(tag);
+          assignColor(tag);
+        }
+        if (tags.length === 0) {
+          delete window.tagAssignments[itemId];
+        }
+        saveTagAssignmentsToStorage();
+        if (window.refreshTagDisplay) {
+          window.refreshTagDisplay();
+        }
+      };
+
+      window.toggleTagFilterGlobal = (tag) => {
+        if (window.activeTagFilterValue === tag) {
+          window.activeTagFilterValue = null;
+        } else {
+          window.activeTagFilterValue = tag;
+        }
+        if (window.applyTagFilterFn) {
+          window.applyTagFilterFn();
+        }
+      };
+
+      window.openTagPopup = (event, itemId) => {
+        const existing = document.querySelector(".tag-popup");
+        if (existing) existing.remove();
+
+        const overlay = document.createElement("div");
+        overlay.className = "tag-popup-overlay";
+        overlay.onclick = (e) => {
+          if (!e.target.closest(".tag-popup")) {
+            overlay.remove();
+          }
+        };
+
+        const popup = document.createElement("div");
+        popup.className = "tag-popup";
+
+        const allTags = window.allTagsList || [];
+        const itemTags = window.tagAssignments[itemId] || [];
+
+        let html = `<div class="tag-popup-title">为 #${itemId} 设置标签</div>`;
+        if (allTags.length === 0) {
+          html += `<div class="tag-popup-empty">暂无标签，请先在顶部创建标签</div>`;
+        } else {
+          allTags.forEach((tag) => {
+            const checked = itemTags.includes(tag) ? "checked" : "";
+            html += `<label class="tag-popup-item">
+              <input type="checkbox" ${checked} onchange="window.toggleTagForItem('${itemId}', '${tag.replace(/'/g, "\\'")}'); window.refreshTagPopupCheckboxes('${itemId}', this.closest('.tag-popup'))" />
+              ${tag}
+            </label>`;
+          });
+        }
+
+        popup.innerHTML = html;
+        overlay.appendChild(popup);
+        document.body.appendChild(overlay);
+
+        const rect = event.target.getBoundingClientRect();
+        const popupWidth = 200;
+        let left = rect.left + rect.width / 2 - popupWidth / 2;
+        let top = rect.bottom + 4;
+
+        if (left < 10) left = 10;
+        if (left + popupWidth > window.innerWidth - 10)
+          left = window.innerWidth - popupWidth - 10;
+        if (top + 300 > window.innerHeight) top = rect.top - 300 - 4;
+
+        popup.style.left = left + "px";
+        popup.style.top = top + "px";
+      };
+
+      window.refreshTagPopupCheckboxes = (itemId, popupEl) => {
+        if (!popupEl) return;
+        const itemTags = window.tagAssignments[itemId] || [];
+        const checkboxes = popupEl.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach((cb) => {
+          const label = cb.parentElement;
+          const tagName = label.textContent.trim();
+          cb.checked = itemTags.includes(tagName);
+        });
+      };
+
+      window.refreshTagDisplay = () => {};
+
+      window.activeTagFilterValue = null;
+      window.applyTagFilterFn = null;
+      window.allTagsList = [];
+
+      // 初始化：从 localStorage 加载
+      loadTagAssignmentsFromStorage();
+
       const { createApp, ref, computed, onMounted, nextTick } = Vue;
 
       createApp({
@@ -837,6 +1264,23 @@
             // { key: "wh", width: "100px" },
             { key: "isNew", width: "90px" },
             {
+              key: "tags",
+              width: "200px",
+              title: "标签",
+              sortable: false,
+              render: (item) => {
+                const itemTags = window.tagAssignments[item.id] || [];
+                if (itemTags.length === 0) {
+                  return `<button class="tag-row-add-btn" onclick="window.openTagPopup(event, '${item.id}')" title="添加标签">+</button>`;
+                }
+                const badges = itemTags.map((t) => {
+                  const color = window.getTagColor(t);
+                  return `<span class="tag-row-badge" style="background:${color.bg};color:${color.text}" onclick="window.toggleTagFilterGlobal('${t.replace(/'/g, "\\'")}')" title="点击筛选此标签">${t}</span>`;
+                }).join("");
+                return badges + ` <button class="tag-row-add-btn" onclick="window.openTagPopup(event, '${item.id}')" title="添加标签">+</button>`;
+              },
+            },
+            {
               key: "copy",
               width: "80px",
               title: "复制",
@@ -886,6 +1330,13 @@
           const showHistory = ref(false);
           const currentHistoryId = ref(null);
           const historyList = ref([]);
+
+          // 标签管理状态
+          const allTags = ref(loadTagsFromStorage());
+          const activeTagFilter = ref(null);
+          const newTagName = ref("");
+          const showTagInput = ref(false);
+          const tagInputRef = ref(null);
 
           const loadHistoryFromStorage = () => {
             try {
@@ -1001,6 +1452,115 @@
             if (currentHistoryId.value) {
               updateHistoryRemark(currentHistoryId.value, remark);
             }
+          };
+
+          // ============================================
+          // 标签管理方法
+          // ============================================
+
+          const getTagStyle = (tag) => {
+            const color = window.getTagColor(tag);
+            return { background: color.bg, color: color.text };
+          };
+
+          const addTag = () => {
+            const name = newTagName.value.trim();
+            if (!name) return;
+            if (!allTags.value.includes(name)) {
+              allTags.value.push(name);
+              saveTagsToStorage(allTags.value);
+              assignColor(name);
+            }
+            newTagName.value = "";
+            showTagInput.value = false;
+            // 更新全局标签列表
+            window.allTagsList = allTags.value;
+          };
+
+          const handleTagInputBlur = () => {
+            if (newTagName.value.trim()) {
+              addTag();
+            } else {
+              showTagInput.value = false;
+              newTagName.value = "";
+            }
+          };
+
+          const deleteTag = (tag) => {
+            allTags.value = allTags.value.filter((t) => t !== tag);
+            saveTagsToStorage(allTags.value);
+            window.allTagsList = allTags.value;
+            // 移除所有行上该标签的分配
+            let changed = false;
+            Object.keys(window.tagAssignments).forEach((id) => {
+              const idx = window.tagAssignments[id].indexOf(tag);
+              if (idx >= 0) {
+                window.tagAssignments[id].splice(idx, 1);
+                if (window.tagAssignments[id].length === 0) {
+                  delete window.tagAssignments[id];
+                }
+                changed = true;
+              }
+            });
+            if (changed) {
+              saveTagAssignmentsToStorage();
+              rebuildColorMap();
+            }
+            // 如果当前正按此标签筛选，清除筛选并重新过滤
+            if (activeTagFilter.value === tag) {
+              activeTagFilter.value = null;
+              window.activeTagFilterValue = null;
+              applyTagFilter();
+            }
+            dataVersion.value++;
+          };
+
+          const toggleTagFilter = (tag) => {
+            if (activeTagFilter.value === tag) {
+              activeTagFilter.value = null;
+              window.activeTagFilterValue = null;
+            } else {
+              activeTagFilter.value = tag;
+              window.activeTagFilterValue = tag;
+            }
+            applyTagFilter();
+          };
+
+          const applyTagFilter = () => {
+            activeTagFilter.value = window.activeTagFilterValue;
+            const tag = activeTagFilter.value;
+            const query = searchQuery.value.toLowerCase().trim();
+
+            let data = [...allData.value];
+
+            // 文本搜索过滤
+            if (query) {
+              data = data.filter((item) => {
+                if (item.id && String(item.id).toLowerCase().includes(query)) return true;
+                if (item.name && item.name.toLowerCase().includes(query)) return true;
+                if (item.brand && item.brand.toLowerCase().includes(query)) return true;
+                if (item.supplier && item.supplier.toLowerCase().includes(query)) return true;
+                return false;
+              });
+            }
+
+            // 标签过滤
+            if (tag) {
+              data = data.filter((item) => {
+                const itemTags = window.tagAssignments[item.id] || [];
+                return itemTags.includes(tag);
+              });
+            }
+
+            filteredData.value = data;
+            applySorting();
+            dataVersion.value++;
+            scrollTop.value = 0;
+            nextTick(() => {
+              if (tableWrapper.value) {
+                tableWrapper.value.scrollTop = 0;
+              }
+            });
           };
 
           // 虚拟列表配置
@@ -1338,52 +1898,7 @@
           // ============================================
 
           const handleSearch = () => {
-            const query = searchQuery.value.toLowerCase().trim();
-            console.log("搜索关键词:", query);
-            console.log("数据总数:", allData.value.length);
-
-            if (!query) {
-              filteredData.value = [...allData.value];
-              console.log("清空搜索，显示全部数据");
-            } else {
-              filteredData.value = allData.value.filter((item) => {
-                // 在ID中搜索
-                if (item.id && String(item.id).toLowerCase().includes(query)) {
-                  return true;
-                }
-                // 在名称中搜索
-                if (item.name && item.name.toLowerCase().includes(query)) {
-                  return true;
-                }
-                // 在品牌中搜索
-                if (item.brand && item.brand.toLowerCase().includes(query)) {
-                  return true;
-                }
-                // 在供应商中搜索
-                if (
-                  item.supplier &&
-                  item.supplier.toLowerCase().includes(query)
-                ) {
-                  return true;
-                }
-                return false;
-              });
-              console.log("搜索结果数:", filteredData.value.length);
-            }
-
-            // 重新应用排序
-            applySorting();
-
-            // 增加版本号强制刷新虚拟列表
-            dataVersion.value++;
-
-            // 重置滚动位置
-            scrollTop.value = 0;
-            nextTick(() => {
-              if (tableWrapper.value) {
-                tableWrapper.value.scrollTop = 0;
-              }
-            });
+            applyTagFilter();
           };
 
           // ============================================
@@ -1425,6 +1940,8 @@
             searchQuery.value = "";
             sortField.value = null;
             sortOrder.value = null;
+            activeTagFilter.value = null;
+            window.activeTagFilterValue = null;
             nextTick(() => {
               if (tableWrapper.value) {
                 tableWrapper.value.scrollTop = 0;
@@ -1533,7 +2050,7 @@
 
           const exportToExcel = async () => {
             if (exporting.value) return;
-            const data = allData.value;
+            const data = filteredData.value;
             if (!data || data.length === 0) {
               alert("没有数据可导出");
               return;
@@ -1709,6 +2226,13 @@
           onMounted(() => {
             // 不再自动加载数据，等待用户输入或导入
             loadHistoryFromStorage();
+            // 初始化标签系统与Vue的桥接
+            window.allTagsList = allTags.value;
+            window.applyTagFilterFn = applyTagFilter;
+            window.activeTagFilterValue = activeTagFilter.value;
+            window.refreshTagDisplay = () => {
+              dataVersion.value++;
+            };
           });
 
           // ============================================
@@ -1763,6 +2287,19 @@
             updateHistoryRemark,
             updateCurrentRemark,
 
+            // 标签管理
+            allTags,
+            activeTagFilter,
+            newTagName,
+            showTagInput,
+            tagInputRef,
+            getTagStyle,
+            addTag,
+            handleTagInputBlur,
+            deleteTag,
+            toggleTagFilter,
+            applyTagFilter,
+
             // 导出Excel
             exporting,
             exportToExcel,
@@ -1770,10 +2307,12 @@
         },
       }).mount("#app");
 
-      // ESC键关闭预览
+      // ESC键关闭预览和标签弹窗
       window.addEventListener("keydown", function (e) {
         if (e.key === "Escape") {
           window.closeImagePreview();
+          const popup = document.querySelector(".tag-popup-overlay");
+          if (popup) popup.remove();
         }
       });
     </script>
