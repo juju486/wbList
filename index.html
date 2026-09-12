@@ -815,7 +815,7 @@
           <span
             class="tag-badge tag-badge-all"
             :class="{ active: activeTagFilter === null }"
-            @click="activeTagFilter = null; applyTagFilter()"
+            @click="activeTagFilter = null; window.activeTagFilterValue = null; applyTagFilter()"
           >全部</span>
           <span
             v-for="tag in allTags"
