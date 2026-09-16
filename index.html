@@ -800,6 +800,9 @@
           <button class="import-btn" @click="exportToExcel" :disabled="exporting" style="background: #217346;">
             {{ exporting ? '⏳ 导出中...' : '📥 导出 Excel' }}
           </button>
+          <button class="import-btn" @click="exportToJson" style="background: #e67e22;">
+            📤 导出 JSON
+          </button>
         </div>
         <div v-if="showJsonInput" style="width: 100%;">
           <textarea
@@ -1326,7 +1329,7 @@
 
           // 解析历史记录
           const STORAGE_KEY = "json_parse_history";
-          const MAX_HISTORY = 20;
+          const MAX_HISTORY = 100;
           const showHistory = ref(false);
           const currentHistoryId = ref(null);
           const historyList = ref([]);
@@ -2194,6 +2197,24 @@
             }
           };
 
+          const exportToJson = () => {
+            const data = filteredData.value;
+            if (!data || data.length === 0) {
+              alert("没有数据可导出");
+              return;
+            }
+            const jsonStr = JSON.stringify(data, null, 2);
+            const blob = new Blob([jsonStr], { type: "application/json" });
+            const fileName = `产品数据_${new Date().toISOString().slice(0, 10)}.json`;
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(link.href);
+          };
+
           // ============================================
           // 加载数据（保留旧方法，但不再自动调用）
           // ============================================
@@ -2303,6 +2324,7 @@
             // 导出Excel
             exporting,
             exportToExcel,
+            exportToJson,
           };
         },
       }).mount("#app");
