@@ -744,6 +744,262 @@
           font-size: 12px;
         }
       }
+
+      /* ============================================
+         瀑布流布局样式
+         ============================================ */
+      .layout-toggle-btn {
+        background: #6c757d;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 500;
+        transition: background 0.2s;
+        white-space: nowrap;
+      }
+
+      .layout-toggle-btn:hover {
+        background: #5a6268;
+      }
+
+      .layout-toggle-btn.active {
+        background: #28a745;
+      }
+
+      .waterfall-wrapper {
+        height: calc(100vh - 150px);
+        min-height: 500px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 20px;
+        background: #f5f6fa;
+      }
+
+      .waterfall-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 200px);
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .waterfall-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s, box-shadow 0.2s;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .waterfall-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .waterfall-card-img {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        background: #f0f0f0;
+        overflow: hidden;
+        cursor: zoom-in;
+      }
+
+      .waterfall-card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s;
+      }
+
+      .waterfall-card:hover .waterfall-card-img img {
+        transform: scale(1.05);
+      }
+
+      .waterfall-card-img .card-img-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 3px 8px;
+        border-radius: 10px;
+        font-size: 11px;
+        font-weight: 500;
+      }
+
+      .waterfall-card-body {
+        padding: 14px 16px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .waterfall-card-name {
+        font-size: 14px;
+        font-weight: 600;
+        color: #212529;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 39px;
+      }
+
+      .waterfall-card-brand {
+        font-size: 12px;
+        color: #6c757d;
+      }
+
+      .waterfall-card-brand strong {
+        color: #495057;
+      }
+
+      .waterfall-card-price-row {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        margin-top: auto;
+      }
+
+      .waterfall-card-price {
+        font-size: 20px;
+        font-weight: 700;
+        color: #e74c3c;
+      }
+
+      .waterfall-card-price-original {
+        font-size: 13px;
+        color: #adb5bd;
+        text-decoration: line-through;
+      }
+
+      .waterfall-card-meta {
+        display: flex;
+        gap: 12px;
+        font-size: 12px;
+        color: #6c757d;
+        flex-wrap: wrap;
+      }
+
+      .waterfall-card-meta span {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+      }
+
+      .waterfall-card-meta .star {
+        color: #f39c12;
+      }
+
+      .waterfall-card-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin-top: 4px;
+      }
+
+      .waterfall-card-actions {
+        display: flex;
+        gap: 8px;
+        padding: 0 16px 14px;
+      }
+
+      .waterfall-card-btn {
+        flex: 1;
+        padding: 8px 12px;
+        border: 1px solid #dee2e6;
+        border-radius: 6px;
+        background: white;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 500;
+        transition: all 0.2s;
+        text-align: center;
+        color: #495057;
+      }
+
+      .waterfall-card-btn:hover {
+        background: #f8f9fa;
+        border-color: #adb5bd;
+      }
+
+      .waterfall-card-btn.primary {
+        background: #667eea;
+        color: white;
+        border-color: #667eea;
+      }
+
+      .waterfall-card-btn.primary:hover {
+        background: #5a6fd6;
+      }
+
+      .waterfall-empty {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding: 80px 20px;
+        color: #adb5bd;
+      }
+
+      .waterfall-empty-icon {
+        font-size: 48px;
+        margin-bottom: 16px;
+      }
+
+      .waterfall-empty-text {
+        font-size: 16px;
+      }
+
+      .waterfall-sort-bar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 20px;
+        background: white;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+        flex-wrap: wrap;
+      }
+
+      .waterfall-sort-label {
+        font-size: 13px;
+        font-weight: 600;
+        color: #495057;
+        white-space: nowrap;
+      }
+
+      .waterfall-sort-btn {
+        padding: 6px 14px;
+        border: 1px solid #dee2e6;
+        border-radius: 20px;
+        background: white;
+        cursor: pointer;
+        font-size: 12px;
+        color: #495057;
+        transition: all 0.2s;
+        white-space: nowrap;
+      }
+
+      .waterfall-sort-btn:hover {
+        background: #f0f0ff;
+        border-color: #667eea;
+      }
+
+      .waterfall-sort-btn.active {
+        background: #667eea;
+        color: white;
+        border-color: #667eea;
+      }
     </style>
   </head>
   <body>
@@ -803,6 +1059,9 @@
           <button class="import-btn" @click="exportToJson" style="background: #e67e22;">
             📤 导出 JSON
           </button>
+          <button class="import-btn layout-toggle-btn" @click="toggleLayout" :style="{ background: layoutMode === 'table' ? '#6c757d' : '#28a745' }">
+            {{ layoutMode === 'table' ? '📋 当前: 表格' : '🛍️ 当前: 瀑布流' }}
+          </button>
         </div>
         <div v-if="showJsonInput" style="width: 100%;">
           <textarea
@@ -818,7 +1077,7 @@
           <span
             class="tag-badge tag-badge-all"
             :class="{ active: activeTagFilter === null }"
-            @click="activeTagFilter = null; window.activeTagFilterValue = null; applyTagFilter()"
+            @click="clearTagFilter"
           >全部</span>
           <span
             v-for="tag in allTags"
@@ -890,7 +1149,7 @@
         </div>
       </div>
 
-      <div class="table-wrapper" ref="tableWrapper" @scroll="handleScroll">
+      <div class="table-wrapper" ref="tableWrapper" @scroll="handleScroll" v-show="layoutMode === 'table'">
         <div v-if="loading" class="loading">正在加载数据...</div>
         <div v-else-if="error" class="error">❌ 加载数据失败: {{ error }}</div>
         <div
@@ -958,6 +1217,94 @@
               "
             >
               暂无数据
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 瀑布流布局 -->
+      <div class="waterfall-wrapper" ref="waterfallWrapper" @scroll="handleWaterfallScroll" v-show="layoutMode === 'waterfall'">
+        <div v-if="loading" class="loading">正在加载数据...</div>
+        <div v-else-if="error" class="error">❌ 加载数据失败: {{ error }}</div>
+        <div v-else>
+          <!-- 瀑布流排序栏 -->
+          <div class="waterfall-sort-bar">
+            <span class="waterfall-sort-label">排序:</span>
+            <button
+              v-for="opt in waterfallSortOptions"
+              :key="opt.key"
+              class="waterfall-sort-btn"
+              :class="{ active: sortField === opt.key }"
+              @click="handleWaterfallSort(opt.key)"
+            >
+              {{ opt.label }}
+              <span v-if="sortField === opt.key">
+                {{ sortOrder === 'asc' ? '↑' : '↓' }}
+              </span>
+            </button>
+          </div>
+          <div class="waterfall-grid" :key="'wf-' + dataVersion">
+            <div
+              v-for="item in waterfallVisibleData"
+              :key="item.id"
+              class="waterfall-card"
+            >
+              <!-- 图片区域 -->
+              <div class="waterfall-card-img" @click="previewWaterfallImage(item)">
+                <img
+                  :src="item.image || item._img || ''"
+                  loading="lazy"
+                  decoding="async"
+                  :alt="item.name"
+                  @error="e => e.target.src = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22266%22 viewBox=%220 0 200 266%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22200%22 height=%22266%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22%3E暂无图片%3C/text%3E%3C/svg%3E'"
+                />
+                <span class="card-img-badge" v-if="item.isNew">NEW</span>
+              </div>
+              <!-- 商品信息 -->
+              <div class="waterfall-card-body">
+                <div class="waterfall-card-name">{{ item.name || '未命名商品' }}</div>
+                <div class="waterfall-card-brand">
+                  <strong>{{ item.brand || '未知品牌' }}</strong> / {{ item.supplier || '未知供应商' }}
+                </div>
+                <div class="waterfall-card-price-row">
+                  <span class="waterfall-card-price">₽{{ Math.floor((item.price / 100) * 0.98) }}</span>
+                  <span class="waterfall-card-price-original">₽{{ item.basic / 100 }}</span>
+                </div>
+                <div class="waterfall-card-meta">
+                  <span><span class="star">★</span> {{ item.reviewRating || '-' }}</span>
+                  <span>💬 {{ item.feedbacks || 0 }}</span>
+                  <span>📦 {{ item.totalQuantity || 0 }}</span>
+                </div>
+                <!-- 标签 -->
+                <div class="waterfall-card-tags">
+                  <span
+                    v-for="tag in getWaterfallItemTags(item)"
+                    :key="tag"
+                    class="tag-row-badge"
+                    :style="getTagStyle(tag)"
+                    @click.stop="toggleTagFilter(tag)"
+                  >{{ tag }}</span>
+                  <button
+                    class="tag-row-add-btn"
+                    @click.stop="openWaterfallTagPopup($event, item.id)"
+                    title="添加标签"
+                  >+</button>
+                </div>
+              </div>
+              <!-- 操作按钮 -->
+              <div class="waterfall-card-actions">
+                <button class="waterfall-card-btn" @click.stop="copyWaterfallItem(item)">📋 复制</button>
+                <button class="waterfall-card-btn primary" @click.stop="openProductLink(item.id)">🔗 查看</button>
+              </div>
+            </div>
+            <!-- 无数据提示 -->
+            <div v-if="filteredData.length === 0" class="waterfall-empty">
+              <div class="waterfall-empty-icon">📭</div>
+              <div class="waterfall-empty-text">暂无数据</div>
+            </div>
+            <!-- 加载更多 -->
+            <div v-if="waterfallHasMore" class="waterfall-empty" style="padding: 30px;">
+              <div style="color: #6c757d; font-size: 14px;">滚动加载更多...</div>
             </div>
           </div>
         </div>
@@ -1322,6 +1669,20 @@
           const dataVersion = ref(0); // 数据版本号，用于强制刷新
           const exporting = ref(false); // 导出状态
 
+          // 布局模式: 'table' | 'waterfall'
+          const LAYOUT_STORAGE_KEY = "table_layout_mode_v1";
+          const getSavedLayoutMode = () => {
+            try {
+              const saved = localStorage.getItem(LAYOUT_STORAGE_KEY);
+              if (saved === "table" || saved === "waterfall") return saved;
+            } catch (e) { /* ignore */ }
+            return "table";
+          };
+          const layoutMode = ref(getSavedLayoutMode());
+          const waterfallWrapper = ref(null);
+          const waterfallPageSize = 20;
+          const waterfallLoadedCount = ref(20);
+
           // JSON输入相关
           const showJsonInput = ref(false);
           const jsonInputText = ref("");
@@ -1518,6 +1879,13 @@
             dataVersion.value++;
           };
 
+          const clearTagFilter = () => {
+            activeTagFilter.value = null;
+            window.activeTagFilterValue = null;
+            waterfallLoadedCount.value = waterfallPageSize;
+            applyTagFilter();
+          };
+
           const toggleTagFilter = (tag) => {
             if (activeTagFilter.value === tag) {
               activeTagFilter.value = null;
@@ -1559,6 +1927,7 @@
             applySorting();
             dataVersion.value++;
             scrollTop.value = 0;
+            waterfallLoadedCount.value = waterfallPageSize;
             nextTick(() => {
               if (tableWrapper.value) {
                 tableWrapper.value.scrollTop = 0;
@@ -1894,6 +2263,134 @@
                 return sortOrder.value === "asc" ? comparison : -comparison;
               });
             }
+          };
+
+          // ============================================
+          // 瀑布流布局功能
+          // ============================================
+
+          const toggleLayout = () => {
+            if (layoutMode.value === "table") {
+              layoutMode.value = "waterfall";
+              waterfallLoadedCount.value = waterfallPageSize;
+              nextTick(() => {
+                if (waterfallWrapper.value) {
+                  waterfallWrapper.value.scrollTop = 0;
+                }
+              });
+            } else {
+              layoutMode.value = "table";
+              nextTick(() => {
+                if (tableWrapper.value) {
+                  tableWrapper.value.scrollTop = 0;
+                }
+              });
+            }
+            saveLayoutMode();
+          };
+
+          const saveLayoutMode = () => {
+            try {
+              localStorage.setItem(LAYOUT_STORAGE_KEY, layoutMode.value);
+            } catch (e) { /* ignore */ }
+          };
+
+          const waterfallVisibleData = computed(() => {
+            return filteredData.value.slice(0, waterfallLoadedCount.value);
+          });
+
+          const waterfallHasMore = computed(() => {
+            return waterfallLoadedCount.value < filteredData.value.length;
+          });
+
+          const handleWaterfallScroll = (e) => {
+            const { scrollTop, scrollHeight, clientHeight } = e.target;
+            if (scrollHeight - scrollTop - clientHeight < 200 && waterfallHasMore.value) {
+              waterfallLoadedCount.value = Math.min(
+                waterfallLoadedCount.value + waterfallPageSize,
+                filteredData.value.length,
+              );
+            }
+          };
+
+          const getWaterfallItemTags = (item) => {
+            return window.tagAssignments[item.id] || [];
+          };
+
+          const openProductLink = (id) => {
+            if (id) {
+              window.open(`https://www.wildberries.ru/catalog/${id}/detail.aspx`, "_blank");
+            }
+          };
+
+          const previewWaterfallImage = (item) => {
+            const url = item.image || item._img;
+            if (url) {
+              window.handleImagePreview(url, item.name || "产品图片");
+            }
+          };
+
+          const copyWaterfallItem = (item) => {
+            const text = `ID: ${item.id}\n名称: ${item.name || "-"}\n品牌: ${item.brand || "-"}\n供应商: ${item.supplier || "-"}\n价格: ${Math.floor((item.price / 100) * 0.98)}₽\n原价: ${item.basic / 100}₽\n评分: ${item.reviewRating || "-"}\n评论数: ${item.feedbacks || 0}`;
+            navigator.clipboard
+              .writeText(text)
+              .then(() => {
+                window.showCopyToast("复制成功");
+              })
+              .catch(() => {
+                const textarea = document.createElement("textarea");
+                textarea.value = text;
+                textarea.style.position = "fixed";
+                textarea.style.left = "-9999px";
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand("copy");
+                document.body.removeChild(textarea);
+                window.showCopyToast("复制成功");
+              });
+          };
+
+          const waterfallSortOptions = [
+            { key: "price", label: "价格" },
+            { key: "reviewRating", label: "评分" },
+            { key: "feedbacks", label: "评论数" },
+          ];
+
+          const handleWaterfallSort = (key) => {
+            if (sortField.value === key) {
+              if (sortOrder.value === "asc") {
+                sortOrder.value = "desc";
+              } else if (sortOrder.value === "desc") {
+                sortOrder.value = null;
+                sortField.value = null;
+              } else {
+                sortOrder.value = "asc";
+              }
+            } else {
+              sortField.value = key;
+              sortOrder.value = "asc";
+            }
+            waterfallLoadedCount.value = waterfallPageSize;
+            applySorting();
+            nextTick(() => {
+              if (waterfallWrapper.value) {
+                waterfallWrapper.value.scrollTop = 0;
+              }
+            });
+          };
+
+          const openWaterfallTagPopup = (event, itemId) => {
+            window.openTagPopup(event, itemId);
+            // 监听popup关闭后刷新瀑布流视图
+            const checkInterval = setInterval(() => {
+              const popup = document.querySelector(".tag-popup-overlay");
+              if (!popup) {
+                clearInterval(checkInterval);
+                dataVersion.value++;
+              }
+            }, 200);
+            // 最多等10秒
+            setTimeout(() => clearInterval(checkInterval), 10000);
           };
 
           // ============================================
@@ -2320,11 +2817,27 @@
             deleteTag,
             toggleTagFilter,
             applyTagFilter,
+            clearTagFilter,
 
             // 导出Excel
             exporting,
             exportToExcel,
             exportToJson,
+
+            // 布局切换
+            layoutMode,
+            toggleLayout,
+            waterfallWrapper,
+            waterfallVisibleData,
+            waterfallHasMore,
+            handleWaterfallScroll,
+            getWaterfallItemTags,
+            openProductLink,
+            copyWaterfallItem,
+            previewWaterfallImage,
+            waterfallSortOptions,
+            handleWaterfallSort,
+            openWaterfallTagPopup,
           };
         },
       }).mount("#app");
