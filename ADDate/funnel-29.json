@@ -1,0 +1,4865 @@
+{
+  "data": {
+    "chart": {
+      "byDay": [
+        {
+          "date": "2026-09-29",
+          "viewCount": 40277,
+          "openCardCount": 2311,
+          "addToCartCount": 400,
+          "addToWishlistCount": 79,
+          "orderCount": 99,
+          "orderSum": 132084,
+          "viewToOpenConversion": 6,
+          "openToCartConversion": 17,
+          "cartToOrderConversion": 25
+        }
+      ],
+      "byWeek": [
+        {
+          "date": "2026-09-28",
+          "viewCount": 40277,
+          "openCardCount": 2311,
+          "addToCartCount": 400,
+          "addToWishlistCount": 79,
+          "orderCount": 99,
+          "orderSum": 132084,
+          "viewToOpenConversion": 6,
+          "openToCartConversion": 17,
+          "cartToOrderConversion": 25
+        }
+      ],
+      "byMonth": [
+        {
+          "date": "2026-09-01",
+          "viewCount": 40277,
+          "openCardCount": 2311,
+          "addToCartCount": 400,
+          "addToWishlistCount": 79,
+          "orderCount": 99,
+          "orderSum": 132084,
+          "viewToOpenConversion": 6,
+          "openToCartConversion": 17,
+          "cartToOrderConversion": 25
+        }
+      ]
+    },
+    "groups": [
+      {
+        "itemsGroup": [
+          {
+            "nmId": 982747659,
+            "name": "Набор столовых приборов на 6 персон 24 предмета",
+            "vendorCode": "cjys24",
+            "stockMpQty": 0,
+            "stockWbQty": 961,
+            "isDeleted": false,
+            "feedbacksRating": 4.9,
+            "nmRating": 10,
+            "isCardRated": true,
+            "totalStockBalances": 1268496,
+            "mainPhoto": {
+              "thumbnail": "https://basket-41.wbbasket.ru/vol9827/part982747/982747659/images/c246x328/1.webp",
+              "mimeType": "image/jpeg"
+            },
+            "hasSizes": false,
+            "subjectId": 829,
+            "subjectName": "餐具套装",
+            "brandName": "",
+            "tagId": 0,
+            "tagName": "",
+            "viewCount": {
+              "current": 23258,
+              "dynamics": -82
+            },
+            "openCard": {
+              "current": 1008,
+              "dynamics": -85
+            },
+            "addToWishlist": {
+              "current": 42,
+              "dynamics": -86
+            },
+            "addToCart": {
+              "current": 208,
+              "dynamics": -87
+            },
+            "viewToOpen": {
+              "current": 4,
+              "dynamics": -1
+            },
+            "openToCart": {
+              "current": 21,
+              "dynamics": -2
+            },
+            "cartToOrder": {
+              "current": 32,
+              "dynamics": -3
+            },
+            "shareOrderPercent": {
+              "current": 67,
+              "dynamics": -23
+            },
+            "localizationPercent": {
+              "current": 100,
+              "dynamics": 0
+            },
+            "timeToReady": {
+              "current": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              },
+              "dynamics": {
+                "days": -2,
+                "hours": -17,
+                "mins": 0
+              }
+            },
+            "customerAvgPrice": {
+              "current": 846,
+              "dynamics": 2
+            },
+            "wbClub": {
+              "orders": {
+                "current": 22,
+                "dynamics": -84
+              },
+              "ordersSum": {
+                "current": 29040,
+                "dynamics": -83
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": -100
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": -100
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": -100
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": -100
+              }
+            },
+            "b2b": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "promoCodes": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "sellerPromo": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "loyalty": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "orders": {
+              "current": 67,
+              "dynamics": -88
+            },
+            "ordersSum": {
+              "current": 88438,
+              "dynamics": -86
+            },
+            "buyoutSum": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "buyoutCount": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "cancelSum": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "cancelCount": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "avgPrice": {
+              "current": 1320,
+              "dynamics": 11
+            },
+            "buyoutPercent": {
+              "current": 0,
+              "dynamics": -82
+            },
+            "avgOrderCountPerDay": {
+              "current": 67,
+              "dynamics": -13
+            },
+            "orderSumDynamics": -552723
+          },
+          {
+            "nmId": 1304948530,
+            "name": "Наборы столовых приборов 6 персон 18 шт серебристый",
+            "vendorCode": "PTY1802",
+            "stockMpQty": 0,
+            "stockWbQty": 925,
+            "isDeleted": false,
+            "feedbacksRating": 0,
+            "nmRating": 10,
+            "isCardRated": true,
+            "totalStockBalances": 964775,
+            "mainPhoto": {
+              "thumbnail": "https://basket-45.wbbasket.ru/vol13049/part1304948/1304948530/images/c246x328/1.webp",
+              "mimeType": "image/jpeg"
+            },
+            "hasSizes": false,
+            "subjectId": 829,
+            "subjectName": "餐具套装",
+            "brandName": "",
+            "tagId": 0,
+            "tagName": "",
+            "viewCount": {
+              "current": 3345,
+              "dynamics": 1271
+            },
+            "openCard": {
+              "current": 172,
+              "dynamics": 912
+            },
+            "addToWishlist": {
+              "current": 14,
+              "dynamics": 1300
+            },
+            "addToCart": {
+              "current": 38,
+              "dynamics": 1800
+            },
+            "viewToOpen": {
+              "current": 5,
+              "dynamics": -2
+            },
+            "openToCart": {
+              "current": 22,
+              "dynamics": 10
+            },
+            "cartToOrder": {
+              "current": 16,
+              "dynamics": 16
+            },
+            "shareOrderPercent": {
+              "current": 4.7,
+              "dynamics": 100
+            },
+            "localizationPercent": {
+              "current": 100,
+              "dynamics": 0
+            },
+            "timeToReady": {
+              "current": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              },
+              "dynamics": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              }
+            },
+            "customerAvgPrice": {
+              "current": 652,
+              "dynamics": 100
+            },
+            "wbClub": {
+              "orders": {
+                "current": 3,
+                "dynamics": 100
+              },
+              "ordersSum": {
+                "current": 3129,
+                "dynamics": 100
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "b2b": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "promoCodes": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "sellerPromo": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "loyalty": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "orders": {
+              "current": 6,
+              "dynamics": 100
+            },
+            "ordersSum": {
+              "current": 6258,
+              "dynamics": 100
+            },
+            "buyoutSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgPrice": {
+              "current": 1043,
+              "dynamics": 100
+            },
+            "buyoutPercent": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgOrderCountPerDay": {
+              "current": 6,
+              "dynamics": 100
+            },
+            "orderSumDynamics": 6258
+          },
+          {
+            "nmId": 1305049041,
+            "name": "Набор столовых приборов на 6 персон 18 шт серебристый",
+            "vendorCode": "QS1804",
+            "stockMpQty": 0,
+            "stockWbQty": 760,
+            "isDeleted": false,
+            "feedbacksRating": 0,
+            "nmRating": 10,
+            "isCardRated": true,
+            "totalStockBalances": 815100,
+            "mainPhoto": {
+              "thumbnail": "https://basket-45.wbbasket.ru/vol13050/part1305049/1305049041/images/c246x328/1.webp",
+              "mimeType": "image/jpeg"
+            },
+            "hasSizes": false,
+            "subjectId": 829,
+            "subjectName": "餐具套装",
+            "brandName": "",
+            "tagId": 0,
+            "tagName": "",
+            "viewCount": {
+              "current": 3212,
+              "dynamics": 1715
+            },
+            "openCard": {
+              "current": 160,
+              "dynamics": 1043
+            },
+            "addToWishlist": {
+              "current": 3,
+              "dynamics": 200
+            },
+            "addToCart": {
+              "current": 25,
+              "dynamics": 2400
+            },
+            "viewToOpen": {
+              "current": 5,
+              "dynamics": -3
+            },
+            "openToCart": {
+              "current": 16,
+              "dynamics": 8
+            },
+            "cartToOrder": {
+              "current": 20,
+              "dynamics": -180
+            },
+            "shareOrderPercent": {
+              "current": 4.1,
+              "dynamics": 1267
+            },
+            "localizationPercent": {
+              "current": 100,
+              "dynamics": 0
+            },
+            "timeToReady": {
+              "current": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              },
+              "dynamics": {
+                "days": -1,
+                "hours": -16,
+                "mins": 0
+              }
+            },
+            "customerAvgPrice": {
+              "current": 666,
+              "dynamics": -7
+            },
+            "wbClub": {
+              "orders": {
+                "current": 1,
+                "dynamics": 100
+              },
+              "ordersSum": {
+                "current": 1073,
+                "dynamics": 100
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "b2b": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "promoCodes": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "sellerPromo": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "loyalty": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "orders": {
+              "current": 5,
+              "dynamics": 150
+            },
+            "ordersSum": {
+              "current": 5365,
+              "dynamics": 150
+            },
+            "buyoutSum": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "buyoutCount": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "cancelSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgPrice": {
+              "current": 1073,
+              "dynamics": 0
+            },
+            "buyoutPercent": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "avgOrderCountPerDay": {
+              "current": 5,
+              "dynamics": 1567
+            },
+            "orderSumDynamics": 3219
+          },
+          {
+            "nmId": 1110553646,
+            "name": "Набор черные столовых приборов на 6 персон 24 штук",
+            "vendorCode": "CJ1010",
+            "stockMpQty": 0,
+            "stockWbQty": 936,
+            "isDeleted": false,
+            "feedbacksRating": 5,
+            "nmRating": 10,
+            "isCardRated": true,
+            "totalStockBalances": 1497600,
+            "mainPhoto": {
+              "thumbnail": "https://basket-42.wbbasket.ru/vol11105/part1110553/1110553646/images/c246x328/1.webp",
+              "mimeType": "image/jpeg"
+            },
+            "hasSizes": false,
+            "subjectId": 829,
+            "subjectName": "餐具套装",
+            "brandName": "",
+            "tagId": 0,
+            "tagName": "",
+            "viewCount": {
+              "current": 1057,
+              "dynamics": -87
+            },
+            "openCard": {
+              "current": 154,
+              "dynamics": -86
+            },
+            "addToWishlist": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "addToCart": {
+              "current": 15,
+              "dynamics": -69
+            },
+            "viewToOpen": {
+              "current": 15,
+              "dynamics": 1
+            },
+            "openToCart": {
+              "current": 10,
+              "dynamics": 5
+            },
+            "cartToOrder": {
+              "current": 27,
+              "dynamics": -3
+            },
+            "shareOrderPercent": {
+              "current": 4.8,
+              "dynamics": 66
+            },
+            "localizationPercent": {
+              "current": 100,
+              "dynamics": 0
+            },
+            "timeToReady": {
+              "current": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              },
+              "dynamics": {
+                "days": -2,
+                "hours": -16,
+                "mins": 0
+              }
+            },
+            "customerAvgPrice": {
+              "current": 1041,
+              "dynamics": -2
+            },
+            "wbClub": {
+              "orders": {
+                "current": 2,
+                "dynamics": 0
+              },
+              "ordersSum": {
+                "current": 3200,
+                "dynamics": 3
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": -100
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": -100
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": -100
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": -100
+              }
+            },
+            "b2b": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "promoCodes": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "sellerPromo": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "loyalty": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "orders": {
+              "current": 4,
+              "dynamics": -71
+            },
+            "ordersSum": {
+              "current": 6400,
+              "dynamics": -70
+            },
+            "buyoutSum": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "buyoutCount": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "cancelSum": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "cancelCount": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "avgPrice": {
+              "current": 1600,
+              "dynamics": 4
+            },
+            "buyoutPercent": {
+              "current": 0,
+              "dynamics": -85
+            },
+            "avgOrderCountPerDay": {
+              "current": 4,
+              "dynamics": 100
+            },
+            "orderSumDynamics": -15100
+          },
+          {
+            "nmId": 1110567374,
+            "name": "Набор столовых приборов на 6 персон 24 предмета",
+            "vendorCode": "QSJS24",
+            "stockMpQty": 0,
+            "stockWbQty": 827,
+            "isDeleted": false,
+            "feedbacksRating": 4.8,
+            "nmRating": 10,
+            "isCardRated": true,
+            "totalStockBalances": 992400,
+            "mainPhoto": {
+              "thumbnail": "https://basket-42.wbbasket.ru/vol11105/part1110567/1110567374/images/c246x328/1.webp",
+              "mimeType": "image/jpeg"
+            },
+            "hasSizes": false,
+            "subjectId": 829,
+            "subjectName": "餐具套装",
+            "brandName": "",
+            "tagId": 0,
+            "tagName": "",
+            "viewCount": {
+              "current": 1777,
+              "dynamics": -89
+            },
+            "openCard": {
+              "current": 202,
+              "dynamics": -86
+            },
+            "addToWishlist": {
+              "current": 2,
+              "dynamics": -93
+            },
+            "addToCart": {
+              "current": 26,
+              "dynamics": -80
+            },
+            "viewToOpen": {
+              "current": 11,
+              "dynamics": 3
+            },
+            "openToCart": {
+              "current": 13,
+              "dynamics": 4
+            },
+            "cartToOrder": {
+              "current": 15,
+              "dynamics": -9
+            },
+            "shareOrderPercent": {
+              "current": 3.6,
+              "dynamics": -33
+            },
+            "localizationPercent": {
+              "current": 100,
+              "dynamics": 0
+            },
+            "timeToReady": {
+              "current": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              },
+              "dynamics": {
+                "days": -2,
+                "hours": -16,
+                "mins": 0
+              }
+            },
+            "customerAvgPrice": {
+              "current": 732,
+              "dynamics": -13
+            },
+            "wbClub": {
+              "orders": {
+                "current": 2,
+                "dynamics": -71
+              },
+              "ordersSum": {
+                "current": 2400,
+                "dynamics": -71
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": -100
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": -100
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": -100
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": -100
+              }
+            },
+            "b2b": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "promoCodes": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "sellerPromo": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "loyalty": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "orders": {
+              "current": 4,
+              "dynamics": -88
+            },
+            "ordersSum": {
+              "current": 4800,
+              "dynamics": -88
+            },
+            "buyoutSum": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "buyoutCount": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "cancelSum": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "cancelCount": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "avgPrice": {
+              "current": 1200,
+              "dynamics": 0
+            },
+            "buyoutPercent": {
+              "current": 0,
+              "dynamics": -72
+            },
+            "avgOrderCountPerDay": {
+              "current": 4,
+              "dynamics": -15
+            },
+            "orderSumDynamics": -34800
+          },
+          {
+            "nmId": 1305049040,
+            "name": "Набор столовых приборов золотой на 6 персон 18 предмета",
+            "vendorCode": "QS1803",
+            "stockMpQty": 0,
+            "stockWbQty": 766,
+            "isDeleted": false,
+            "feedbacksRating": 0,
+            "nmRating": 10,
+            "isCardRated": true,
+            "totalStockBalances": 1016176,
+            "mainPhoto": {
+              "thumbnail": "https://basket-45.wbbasket.ru/vol13050/part1305049/1305049040/images/c246x328/1.webp",
+              "mimeType": "image/jpeg"
+            },
+            "hasSizes": false,
+            "subjectId": 829,
+            "subjectName": "餐具套装",
+            "brandName": "",
+            "tagId": 0,
+            "tagName": "",
+            "viewCount": {
+              "current": 2149,
+              "dynamics": 777
+            },
+            "openCard": {
+              "current": 86,
+              "dynamics": 378
+            },
+            "addToWishlist": {
+              "current": 8,
+              "dynamics": 100
+            },
+            "addToCart": {
+              "current": 33,
+              "dynamics": 1000
+            },
+            "viewToOpen": {
+              "current": 4,
+              "dynamics": -3
+            },
+            "openToCart": {
+              "current": 38,
+              "dynamics": 22
+            },
+            "cartToOrder": {
+              "current": 12,
+              "dynamics": 12
+            },
+            "shareOrderPercent": {
+              "current": 4,
+              "dynamics": 100
+            },
+            "localizationPercent": {
+              "current": 100,
+              "dynamics": 0
+            },
+            "timeToReady": {
+              "current": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              },
+              "dynamics": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              }
+            },
+            "customerAvgPrice": {
+              "current": 808,
+              "dynamics": 100
+            },
+            "wbClub": {
+              "orders": {
+                "current": 2,
+                "dynamics": 100
+              },
+              "ordersSum": {
+                "current": 2654,
+                "dynamics": 100
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "b2b": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "promoCodes": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "sellerPromo": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "loyalty": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "orders": {
+              "current": 4,
+              "dynamics": 100
+            },
+            "ordersSum": {
+              "current": 5308,
+              "dynamics": 100
+            },
+            "buyoutSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgPrice": {
+              "current": 1327,
+              "dynamics": 100
+            },
+            "buyoutPercent": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgOrderCountPerDay": {
+              "current": 4,
+              "dynamics": 100
+            },
+            "orderSumDynamics": 5308
+          },
+          {
+            "nmId": 1305077426,
+            "name": "Набор кухонных ножей из 7 предметов",
+            "vendorCode": "CD0536",
+            "stockMpQty": 0,
+            "stockWbQty": 486,
+            "isDeleted": false,
+            "feedbacksRating": 5,
+            "nmRating": 10,
+            "isCardRated": true,
+            "totalStockBalances": 1061424,
+            "mainPhoto": {
+              "thumbnail": "https://basket-45.wbbasket.ru/vol13050/part1305077/1305077426/images/c246x328/1.webp",
+              "mimeType": "image/jpeg"
+            },
+            "hasSizes": false,
+            "subjectId": 811,
+            "subjectName": "菜刀",
+            "brandName": "",
+            "tagId": 0,
+            "tagName": "",
+            "viewCount": {
+              "current": 1582,
+              "dynamics": -66
+            },
+            "openCard": {
+              "current": 63,
+              "dynamics": -65
+            },
+            "addToWishlist": {
+              "current": 5,
+              "dynamics": -58
+            },
+            "addToCart": {
+              "current": 13,
+              "dynamics": -72
+            },
+            "viewToOpen": {
+              "current": 4,
+              "dynamics": 0
+            },
+            "openToCart": {
+              "current": 21,
+              "dynamics": -5
+            },
+            "cartToOrder": {
+              "current": 31,
+              "dynamics": 26
+            },
+            "shareOrderPercent": {
+              "current": 6.6,
+              "dynamics": 1000
+            },
+            "localizationPercent": {
+              "current": 100,
+              "dynamics": 0
+            },
+            "timeToReady": {
+              "current": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              },
+              "dynamics": {
+                "days": -1,
+                "hours": -13,
+                "mins": 0
+              }
+            },
+            "customerAvgPrice": {
+              "current": 1380,
+              "dynamics": -5
+            },
+            "wbClub": {
+              "orders": {
+                "current": 2,
+                "dynamics": 100
+              },
+              "ordersSum": {
+                "current": 4368,
+                "dynamics": 100
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "b2b": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "promoCodes": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "sellerPromo": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "loyalty": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "orders": {
+              "current": 4,
+              "dynamics": 100
+            },
+            "ordersSum": {
+              "current": 8736,
+              "dynamics": 100
+            },
+            "buyoutSum": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "buyoutCount": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "cancelSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgPrice": {
+              "current": 2184,
+              "dynamics": 0
+            },
+            "buyoutPercent": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "avgOrderCountPerDay": {
+              "current": 4,
+              "dynamics": 1233
+            },
+            "orderSumDynamics": 4368
+          },
+          {
+            "nmId": 1304948529,
+            "name": "Наборы столовых приборов 6 персон 18 шт золотой",
+            "vendorCode": "PTY1801",
+            "stockMpQty": 0,
+            "stockWbQty": 921,
+            "isDeleted": false,
+            "feedbacksRating": 0,
+            "nmRating": 10,
+            "isCardRated": true,
+            "totalStockBalances": 1091385,
+            "mainPhoto": {
+              "thumbnail": "https://basket-45.wbbasket.ru/vol13049/part1304948/1304948529/images/c246x328/1.webp",
+              "mimeType": "image/jpeg"
+            },
+            "hasSizes": false,
+            "subjectId": 829,
+            "subjectName": "餐具套装",
+            "brandName": "",
+            "tagId": 0,
+            "tagName": "",
+            "viewCount": {
+              "current": 2924,
+              "dynamics": 1108
+            },
+            "openCard": {
+              "current": 165,
+              "dynamics": 871
+            },
+            "addToWishlist": {
+              "current": 4,
+              "dynamics": 100
+            },
+            "addToCart": {
+              "current": 29,
+              "dynamics": 383
+            },
+            "viewToOpen": {
+              "current": 6,
+              "dynamics": -1
+            },
+            "openToCart": {
+              "current": 18,
+              "dynamics": -18
+            },
+            "cartToOrder": {
+              "current": 10,
+              "dynamics": 10
+            },
+            "shareOrderPercent": {
+              "current": 2.7,
+              "dynamics": 100
+            },
+            "localizationPercent": {
+              "current": 100,
+              "dynamics": 0
+            },
+            "timeToReady": {
+              "current": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              },
+              "dynamics": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              }
+            },
+            "customerAvgPrice": {
+              "current": 703,
+              "dynamics": 100
+            },
+            "wbClub": {
+              "orders": {
+                "current": 2,
+                "dynamics": 100
+              },
+              "ordersSum": {
+                "current": 2370,
+                "dynamics": 100
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "b2b": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "promoCodes": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "sellerPromo": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "loyalty": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "orders": {
+              "current": 3,
+              "dynamics": 100
+            },
+            "ordersSum": {
+              "current": 3555,
+              "dynamics": 100
+            },
+            "buyoutSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgPrice": {
+              "current": 1185,
+              "dynamics": 100
+            },
+            "buyoutPercent": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgOrderCountPerDay": {
+              "current": 3,
+              "dynamics": 100
+            },
+            "orderSumDynamics": 3555
+          },
+          {
+            "nmId": 1110559806,
+            "name": "Набор столовых приборов на 6 персон 24 предмета",
+            "vendorCode": "QSYS24",
+            "stockMpQty": 0,
+            "stockWbQty": 223,
+            "isDeleted": false,
+            "feedbacksRating": 4.8,
+            "nmRating": 10,
+            "isCardRated": true,
+            "totalStockBalances": 255112,
+            "mainPhoto": {
+              "thumbnail": "https://basket-42.wbbasket.ru/vol11105/part1110559/1110559806/images/c246x328/1.webp",
+              "mimeType": "image/jpeg"
+            },
+            "hasSizes": false,
+            "subjectId": 829,
+            "subjectName": "餐具套装",
+            "brandName": "",
+            "tagId": 0,
+            "tagName": "",
+            "viewCount": {
+              "current": 165,
+              "dynamics": -91
+            },
+            "openCard": {
+              "current": 69,
+              "dynamics": -89
+            },
+            "addToWishlist": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "addToCart": {
+              "current": 2,
+              "dynamics": -92
+            },
+            "viewToOpen": {
+              "current": 42,
+              "dynamics": 7
+            },
+            "openToCart": {
+              "current": 3,
+              "dynamics": -1
+            },
+            "cartToOrder": {
+              "current": 50,
+              "dynamics": -12
+            },
+            "shareOrderPercent": {
+              "current": 0.9,
+              "dynamics": -64
+            },
+            "localizationPercent": {
+              "current": 100,
+              "dynamics": 0
+            },
+            "timeToReady": {
+              "current": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              },
+              "dynamics": {
+                "days": -2,
+                "hours": -6,
+                "mins": 0
+              }
+            },
+            "customerAvgPrice": {
+              "current": 674,
+              "dynamics": -21
+            },
+            "wbClub": {
+              "orders": {
+                "current": 0,
+                "dynamics": -100
+              },
+              "ordersSum": {
+                "current": 0,
+                "dynamics": -100
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": -100
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": -100
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "b2b": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "promoCodes": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "sellerPromo": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "loyalty": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "orders": {
+              "current": 1,
+              "dynamics": -94
+            },
+            "ordersSum": {
+              "current": 1144,
+              "dynamics": -94
+            },
+            "buyoutSum": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "buyoutCount": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "cancelSum": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "cancelCount": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "avgPrice": {
+              "current": 1144,
+              "dynamics": 0
+            },
+            "buyoutPercent": {
+              "current": 0,
+              "dynamics": -85
+            },
+            "avgOrderCountPerDay": {
+              "current": 1,
+              "dynamics": -57
+            },
+            "orderSumDynamics": -17162
+          },
+          {
+            "nmId": 1112774590,
+            "name": "Набор столовых приборов золото на 6 персон 24 предмета",
+            "vendorCode": "025JS",
+            "stockMpQty": 0,
+            "stockWbQty": 372,
+            "isDeleted": false,
+            "feedbacksRating": 5,
+            "nmRating": 10,
+            "isCardRated": true,
+            "totalStockBalances": 773760,
+            "mainPhoto": {
+              "thumbnail": "https://basket-42.wbbasket.ru/vol11127/part1112774/1112774590/images/c246x328/1.webp",
+              "mimeType": "image/jpeg"
+            },
+            "hasSizes": false,
+            "subjectId": 829,
+            "subjectName": "餐具套装",
+            "brandName": "",
+            "tagId": 0,
+            "tagName": "",
+            "viewCount": {
+              "current": 410,
+              "dynamics": -93
+            },
+            "openCard": {
+              "current": 10,
+              "dynamics": -93
+            },
+            "addToWishlist": {
+              "current": 1,
+              "dynamics": -75
+            },
+            "addToCart": {
+              "current": 5,
+              "dynamics": -67
+            },
+            "viewToOpen": {
+              "current": 2,
+              "dynamics": 0
+            },
+            "openToCart": {
+              "current": 50,
+              "dynamics": 40
+            },
+            "cartToOrder": {
+              "current": 20,
+              "dynamics": 13
+            },
+            "shareOrderPercent": {
+              "current": 1.6,
+              "dynamics": 433
+            },
+            "localizationPercent": {
+              "current": 100,
+              "dynamics": 0
+            },
+            "timeToReady": {
+              "current": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              },
+              "dynamics": {
+                "days": -3,
+                "hours": -20,
+                "mins": 0
+              }
+            },
+            "customerAvgPrice": {
+              "current": 1206,
+              "dynamics": -14
+            },
+            "wbClub": {
+              "orders": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "ordersSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "b2b": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "promoCodes": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "sellerPromo": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "loyalty": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "orders": {
+              "current": 1,
+              "dynamics": 0
+            },
+            "ordersSum": {
+              "current": 2080,
+              "dynamics": 0
+            },
+            "buyoutSum": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "buyoutCount": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "cancelSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgPrice": {
+              "current": 2080,
+              "dynamics": 0
+            },
+            "buyoutPercent": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "avgOrderCountPerDay": {
+              "current": 1,
+              "dynamics": 900
+            },
+            "orderSumDynamics": 0
+          },
+          {
+            "nmId": 982686664,
+            "name": "Набор столовых приборов на 6 персон 24 предмета",
+            "vendorCode": "cjxys24",
+            "stockMpQty": 0,
+            "stockWbQty": 5,
+            "isDeleted": false,
+            "feedbacksRating": 4.8,
+            "nmRating": 10,
+            "isCardRated": true,
+            "totalStockBalances": 7063,
+            "mainPhoto": {
+              "thumbnail": "https://basket-41.wbbasket.ru/vol9826/part982686/982686664/images/c246x328/1.webp",
+              "mimeType": "image/jpeg"
+            },
+            "hasSizes": false,
+            "subjectId": 829,
+            "subjectName": "餐具套装",
+            "brandName": "",
+            "tagId": 0,
+            "tagName": "",
+            "viewCount": {
+              "current": 9,
+              "dynamics": -90
+            },
+            "openCard": {
+              "current": 28,
+              "dynamics": -86
+            },
+            "addToWishlist": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "addToCart": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "viewToOpen": {
+              "current": 311,
+              "dynamics": 96
+            },
+            "openToCart": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cartToOrder": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "shareOrderPercent": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "localizationPercent": {
+              "current": 100,
+              "dynamics": 0
+            },
+            "timeToReady": {
+              "current": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              },
+              "dynamics": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              }
+            },
+            "customerAvgPrice": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "wbClub": {
+              "orders": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "ordersSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "b2b": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "promoCodes": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "sellerPromo": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "loyalty": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "orders": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "ordersSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgPrice": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutPercent": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgOrderCountPerDay": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "orderSumDynamics": 0
+          },
+          {
+            "nmId": 1088020044,
+            "name": "Паровоз сортер Монтессори деревянный развивающий",
+            "vendorCode": "BSHC01",
+            "stockMpQty": 0,
+            "stockWbQty": 0,
+            "isDeleted": false,
+            "feedbacksRating": 0,
+            "nmRating": 10,
+            "isCardRated": true,
+            "totalStockBalances": 0,
+            "mainPhoto": {
+              "thumbnail": "https://basket-42.wbbasket.ru/vol10880/part1088020/1088020044/images/c246x328/1.webp",
+              "mimeType": "image/jpeg"
+            },
+            "hasSizes": false,
+            "subjectId": 1036,
+            "subjectName": "形状配对玩具",
+            "brandName": "",
+            "tagId": 0,
+            "tagName": "",
+            "viewCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "openCard": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "addToWishlist": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "addToCart": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "viewToOpen": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "openToCart": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cartToOrder": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "shareOrderPercent": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "localizationPercent": {
+              "current": 100,
+              "dynamics": 0
+            },
+            "timeToReady": {
+              "current": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              },
+              "dynamics": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              }
+            },
+            "customerAvgPrice": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "wbClub": {
+              "orders": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "ordersSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "b2b": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "promoCodes": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "sellerPromo": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "loyalty": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "orders": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "ordersSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgPrice": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutPercent": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgOrderCountPerDay": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "orderSumDynamics": 0
+          },
+          {
+            "nmId": 1088106581,
+            "name": "Паровоз сортер Монтессори деревянный развивающий",
+            "vendorCode": "SZHC01",
+            "stockMpQty": 0,
+            "stockWbQty": 0,
+            "isDeleted": false,
+            "feedbacksRating": 0,
+            "nmRating": 10,
+            "isCardRated": true,
+            "totalStockBalances": 0,
+            "mainPhoto": {
+              "thumbnail": "https://basket-42.wbbasket.ru/vol10881/part1088106/1088106581/images/c246x328/1.webp",
+              "mimeType": "image/jpeg"
+            },
+            "hasSizes": false,
+            "subjectId": 1036,
+            "subjectName": "形状配对玩具",
+            "brandName": "",
+            "tagId": 0,
+            "tagName": "",
+            "viewCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "openCard": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "addToWishlist": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "addToCart": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "viewToOpen": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "openToCart": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cartToOrder": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "shareOrderPercent": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "localizationPercent": {
+              "current": 100,
+              "dynamics": 0
+            },
+            "timeToReady": {
+              "current": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              },
+              "dynamics": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              }
+            },
+            "customerAvgPrice": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "wbClub": {
+              "orders": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "ordersSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "b2b": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "promoCodes": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "sellerPromo": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "loyalty": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "orders": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "ordersSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgPrice": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutPercent": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgOrderCountPerDay": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "orderSumDynamics": 0
+          },
+          {
+            "nmId": 1112771627,
+            "name": "Набор столовых приборов на 6 персон 24 предмета",
+            "vendorCode": "025YS",
+            "stockMpQty": 0,
+            "stockWbQty": 363,
+            "isDeleted": false,
+            "feedbacksRating": 3.8,
+            "nmRating": 10,
+            "isCardRated": true,
+            "totalStockBalances": 667920,
+            "mainPhoto": {
+              "thumbnail": "https://basket-42.wbbasket.ru/vol11127/part1112771/1112771627/images/c246x328/1.webp",
+              "mimeType": "image/jpeg"
+            },
+            "hasSizes": false,
+            "subjectId": 829,
+            "subjectName": "餐具套装",
+            "brandName": "",
+            "tagId": 0,
+            "tagName": "",
+            "viewCount": {
+              "current": 389,
+              "dynamics": -81
+            },
+            "openCard": {
+              "current": 194,
+              "dynamics": -87
+            },
+            "addToWishlist": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "addToCart": {
+              "current": 6,
+              "dynamics": -83
+            },
+            "viewToOpen": {
+              "current": 50,
+              "dynamics": -25
+            },
+            "openToCart": {
+              "current": 3,
+              "dynamics": 1
+            },
+            "cartToOrder": {
+              "current": 0,
+              "dynamics": -11
+            },
+            "shareOrderPercent": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "localizationPercent": {
+              "current": 100,
+              "dynamics": 0
+            },
+            "timeToReady": {
+              "current": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              },
+              "dynamics": {
+                "days": -3,
+                "hours": 0,
+                "mins": 0
+              }
+            },
+            "customerAvgPrice": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "wbClub": {
+              "orders": {
+                "current": 0,
+                "dynamics": -100
+              },
+              "ordersSum": {
+                "current": 0,
+                "dynamics": -100
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "b2b": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "promoCodes": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "sellerPromo": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "loyalty": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "orders": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "ordersSum": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "buyoutSum": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "buyoutCount": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "cancelSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgPrice": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "buyoutPercent": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "avgOrderCountPerDay": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "orderSumDynamics": -7360
+          },
+          {
+            "nmId": 1288651872,
+            "name": "Деревянный тренажер Монтессори с 4 подвесами",
+            "vendorCode": "HSZJ",
+            "stockMpQty": 0,
+            "stockWbQty": 0,
+            "isDeleted": false,
+            "feedbacksRating": 0,
+            "nmRating": 5,
+            "isCardRated": true,
+            "totalStockBalances": 0,
+            "mainPhoto": {
+              "thumbnail": "https://basket-45.wbbasket.ru/vol12886/part1288651/1288651872/images/c246x328/1.webp",
+              "mimeType": "image/jpeg"
+            },
+            "hasSizes": false,
+            "subjectId": 1033,
+            "subjectName": "床铃",
+            "brandName": "",
+            "tagId": 0,
+            "tagName": "",
+            "viewCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "openCard": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "addToWishlist": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "addToCart": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "viewToOpen": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "openToCart": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cartToOrder": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "shareOrderPercent": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "localizationPercent": {
+              "current": 100,
+              "dynamics": 0
+            },
+            "timeToReady": {
+              "current": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              },
+              "dynamics": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              }
+            },
+            "customerAvgPrice": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "wbClub": {
+              "orders": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "ordersSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "b2b": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "promoCodes": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "sellerPromo": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "loyalty": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "orders": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "ordersSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgPrice": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutPercent": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgOrderCountPerDay": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "orderSumDynamics": 0
+          },
+          {
+            "nmId": 1295259742,
+            "name": "Деревянный тренажер Монтессори с 4 подвесами",
+            "vendorCode": "BSZJ",
+            "stockMpQty": 0,
+            "stockWbQty": 0,
+            "isDeleted": false,
+            "feedbacksRating": 0,
+            "nmRating": 5,
+            "isCardRated": true,
+            "totalStockBalances": 0,
+            "mainPhoto": {
+              "thumbnail": "https://basket-45.wbbasket.ru/vol12952/part1295259/1295259742/images/c246x328/1.webp",
+              "mimeType": "image/jpeg"
+            },
+            "hasSizes": false,
+            "subjectId": 1033,
+            "subjectName": "床铃",
+            "brandName": "",
+            "tagId": 0,
+            "tagName": "",
+            "viewCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "openCard": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "addToWishlist": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "addToCart": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "viewToOpen": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "openToCart": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cartToOrder": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "shareOrderPercent": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "localizationPercent": {
+              "current": 100,
+              "dynamics": 0
+            },
+            "timeToReady": {
+              "current": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              },
+              "dynamics": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              }
+            },
+            "customerAvgPrice": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "wbClub": {
+              "orders": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "ordersSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "b2b": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "promoCodes": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "sellerPromo": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "loyalty": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "orders": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "ordersSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgPrice": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutPercent": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgOrderCountPerDay": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "orderSumDynamics": 0
+          },
+          {
+            "nmId": 1324590990,
+            "name": "Коробки для хранения вещей",
+            "vendorCode": "SN2608-1",
+            "stockMpQty": 0,
+            "stockWbQty": 0,
+            "isDeleted": false,
+            "feedbacksRating": 0,
+            "nmRating": 10,
+            "isCardRated": true,
+            "totalStockBalances": 0,
+            "mainPhoto": {
+              "thumbnail": "https://basket-45.wbbasket.ru/vol13245/part1324590/1324590990/images/c246x328/1.webp",
+              "mimeType": "image/jpeg"
+            },
+            "hasSizes": false,
+            "subjectId": 937,
+            "subjectName": "储物盒",
+            "brandName": "",
+            "tagId": 0,
+            "tagName": "",
+            "viewCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "openCard": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "addToWishlist": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "addToCart": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "viewToOpen": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "openToCart": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cartToOrder": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "shareOrderPercent": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "localizationPercent": {
+              "current": 100,
+              "dynamics": 0
+            },
+            "timeToReady": {
+              "current": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              },
+              "dynamics": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              }
+            },
+            "customerAvgPrice": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "wbClub": {
+              "orders": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "ordersSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "b2b": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "promoCodes": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "sellerPromo": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "loyalty": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "orders": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "ordersSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgPrice": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutPercent": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgOrderCountPerDay": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "orderSumDynamics": 0
+          },
+          {
+            "nmId": 1325684093,
+            "name": "Коробка для хранения",
+            "vendorCode": "SN2608-6",
+            "stockMpQty": 0,
+            "stockWbQty": 0,
+            "isDeleted": false,
+            "feedbacksRating": 0,
+            "nmRating": 10,
+            "isCardRated": true,
+            "totalStockBalances": 0,
+            "mainPhoto": {
+              "thumbnail": "https://basket-45.wbbasket.ru/vol13256/part1325684/1325684093/images/c246x328/1.webp",
+              "mimeType": "image/jpeg"
+            },
+            "hasSizes": false,
+            "subjectId": 937,
+            "subjectName": "储物盒",
+            "brandName": "",
+            "tagId": 0,
+            "tagName": "",
+            "viewCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "openCard": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "addToWishlist": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "addToCart": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "viewToOpen": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "openToCart": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cartToOrder": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "shareOrderPercent": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "localizationPercent": {
+              "current": 100,
+              "dynamics": 0
+            },
+            "timeToReady": {
+              "current": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              },
+              "dynamics": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              }
+            },
+            "customerAvgPrice": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "wbClub": {
+              "orders": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "ordersSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "b2b": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "promoCodes": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "sellerPromo": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "loyalty": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "orders": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "ordersSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgPrice": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutPercent": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgOrderCountPerDay": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "orderSumDynamics": 0
+          },
+          {
+            "nmId": 1590357959,
+            "name": "Коробка для хранения с крышкой",
+            "vendorCode": "CSB-W5",
+            "stockMpQty": 0,
+            "stockWbQty": 0,
+            "isDeleted": false,
+            "feedbacksRating": 0,
+            "nmRating": 10,
+            "isCardRated": true,
+            "totalStockBalances": 0,
+            "mainPhoto": {
+              "thumbnail": "https://basket-49.wbbasket.ru/vol15903/part1590357/1590357959/images/c246x328/1.webp",
+              "mimeType": "image/jpeg"
+            },
+            "hasSizes": false,
+            "subjectId": 937,
+            "subjectName": "储物盒",
+            "brandName": "",
+            "tagId": 0,
+            "tagName": "",
+            "viewCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "openCard": {
+              "current": 0,
+              "dynamics": -100
+            },
+            "addToWishlist": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "addToCart": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "viewToOpen": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "openToCart": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cartToOrder": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "shareOrderPercent": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "localizationPercent": {
+              "current": 100,
+              "dynamics": 0
+            },
+            "timeToReady": {
+              "current": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              },
+              "dynamics": {
+                "days": 0,
+                "hours": 0,
+                "mins": 0
+              }
+            },
+            "customerAvgPrice": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "wbClub": {
+              "orders": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "ordersSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "b2b": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "promoCodes": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "sellerPromo": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "loyalty": {
+              "orderCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "orderSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "buyoutCount": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelSum": {
+                "current": 0,
+                "dynamics": 0
+              },
+              "cancelCount": {
+                "current": 0,
+                "dynamics": 0
+              }
+            },
+            "orders": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "ordersSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelSum": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "cancelCount": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgPrice": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "buyoutPercent": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "avgOrderCountPerDay": {
+              "current": 0,
+              "dynamics": 0
+            },
+            "orderSumDynamics": 0
+          }
+        ],
+        "subjectId": 0,
+        "subjectName": "",
+        "brandName": "",
+        "tagId": 0,
+        "tagName": "",
+        "viewCount": {
+          "current": 40277,
+          "dynamics": -77
+        },
+        "openCard": {
+          "current": 2311,
+          "dynamics": -81
+        },
+        "addToWishlist": {
+          "current": 79,
+          "dynamics": -79
+        },
+        "addToCart": {
+          "current": 400,
+          "dynamics": -79
+        },
+        "viewToOpen": {
+          "current": 6,
+          "dynamics": -1
+        },
+        "openToCart": {
+          "current": 17,
+          "dynamics": 2
+        },
+        "cartToOrder": {
+          "current": 25,
+          "dynamics": -8
+        },
+        "shareOrderPercent": {
+          "current": 100,
+          "dynamics": 0
+        },
+        "localizationPercent": {
+          "current": 100,
+          "dynamics": 0
+        },
+        "timeToReady": {
+          "current": {
+            "days": 0,
+            "hours": 0,
+            "mins": 0
+          },
+          "dynamics": {
+            "days": -2,
+            "hours": -16,
+            "mins": 0
+          }
+        },
+        "customerAvgPrice": {
+          "current": 846,
+          "dynamics": 0
+        },
+        "wbClub": {
+          "orders": {
+            "current": 36,
+            "dynamics": -77
+          },
+          "ordersSum": {
+            "current": 48234,
+            "dynamics": -74
+          },
+          "buyoutSum": {
+            "current": 0,
+            "dynamics": -100
+          },
+          "buyoutCount": {
+            "current": 0,
+            "dynamics": -100
+          },
+          "cancelSum": {
+            "current": 0,
+            "dynamics": -100
+          },
+          "cancelCount": {
+            "current": 0,
+            "dynamics": -100
+          }
+        },
+        "b2b": {
+          "orderCount": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "orderSum": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "buyoutSum": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "buyoutCount": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "cancelSum": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "cancelCount": {
+            "current": 0,
+            "dynamics": 0
+          }
+        },
+        "promoCodes": {
+          "orderCount": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "orderSum": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "buyoutSum": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "buyoutCount": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "cancelSum": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "cancelCount": {
+            "current": 0,
+            "dynamics": 0
+          }
+        },
+        "sellerPromo": {
+          "orderCount": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "orderSum": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "buyoutSum": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "buyoutCount": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "cancelSum": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "cancelCount": {
+            "current": 0,
+            "dynamics": 0
+          }
+        },
+        "loyalty": {
+          "orderCount": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "orderSum": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "buyoutSum": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "buyoutCount": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "cancelSum": {
+            "current": 0,
+            "dynamics": 0
+          },
+          "cancelCount": {
+            "current": 0,
+            "dynamics": 0
+          }
+        },
+        "orders": {
+          "current": 99,
+          "dynamics": -84
+        },
+        "ordersSum": {
+          "current": 132084,
+          "dynamics": -82
+        },
+        "buyoutSum": {
+          "current": 0,
+          "dynamics": -100
+        },
+        "buyoutCount": {
+          "current": 0,
+          "dynamics": -100
+        },
+        "cancelSum": {
+          "current": 0,
+          "dynamics": -100
+        },
+        "cancelCount": {
+          "current": 0,
+          "dynamics": -100
+        },
+        "avgPrice": {
+          "current": 1334,
+          "dynamics": 11
+        },
+        "buyoutPercent": {
+          "current": 0,
+          "dynamics": -82
+        },
+        "avgOrderCountPerDay": {
+          "current": 99,
+          "dynamics": 13
+        },
+        "orderSumDynamics": -604437
+      }
+    ],
+    "promoPeriods": {
+      "byDay": []
+    }
+  },
+  "error": false,
+  "errorText": "",
+  "additionalErrors": {
+    "errors": null
+  }
+}

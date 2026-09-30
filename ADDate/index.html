@@ -1,0 +1,897 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Excel JSON 工具</title>
+<script src="https://cdn.jsdelivr.net/npm/vue@3.5.13/dist/vue.global.prod.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Microsoft YaHei",Consolas,monospace;background:#1e1e1e;color:#d4d4d4;padding:20px;min-height:100vh}
+.btn{padding:9px 18px;border:none;border-radius:5px;cursor:pointer;font-size:13px;font-weight:500;white-space:nowrap;display:inline-flex;align-items:center;gap:5px;transition:all .15s}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn1{background:#0e639c;color:#fff}.btn1:hover:not(:disabled){background:#1177bb}
+.btn2{background:#1b7a1b;color:#fff}.btn2:hover:not(:disabled){background:#218838}
+.btn3{background:transparent;color:#d4d4d4;border:1px solid #555}.btn3:hover:not(:disabled){background:#333}
+.btns{padding:5px 12px;font-size:12px}
+.bar{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.info{color:#888;font-size:12px;margin-left:auto}.info .n{color:#4ec9b0;font-weight:600}
+.st{color:#888;font-size:12px;margin-bottom:10px;padding:7px 12px;background:#252526;border-radius:4px}
+.st em{color:#4ec9b0;font-style:normal}.st b{color:#e67e22;font-weight:400}
+.wrap{position:relative;background:#252526;border-radius:6px;overflow:auto;max-height:calc(100vh - 200px);min-height:300px}
+.wrap pre{margin:0;padding:16px;font-size:13px;line-height:1.6;white-space:pre-wrap;word-break:break-all}
+.cp{position:absolute;top:8px;right:8px;z-index:5;padding:3px 12px;font-size:12px;background:#3c3c3c;color:#d4d4d4;border:1px solid #555;border-radius:4px;cursor:pointer;transition:background .15s}
+.cp:hover{background:#555}.cp.ok{background:#1b5e20;border-color:#2e7d32}
+.empty{text-align:center;padding:80px 20px;color:#555}.empty .ic{font-size:48px;margin-bottom:14px}.empty .d{font-size:14px;margin-bottom:6px}.empty .h{font-size:12px;color:#444}
+.hi{display:none}
+.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);padding:10px 24px;border-radius:6px;color:#fff;font-size:14px;z-index:999;animation:in .3s ease;pointer-events:none}
+.toast.e{background:#d32f2f}.toast.s{background:#1b7a1b}.toast.i{background:#0e639c}
+@keyframes in{from{opacity:0;transform:translateX(-50%) translateY(20px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+.tabs{display:flex;gap:2px;margin-bottom:14px}
+.tab{padding:8px 20px;background:transparent;border:1px solid #444;border-bottom:none;border-radius:5px 5px 0 0;cursor:pointer;font-size:13px;color:#888;transition:all .15s}
+.tab:hover{color:#d4d4d4;background:#2a2a2a}.tab.on{color:#fff;background:#252526;border-color:#555;font-weight:600}
+/* 双栏布局 */
+.excel-split{display:flex;gap:14px;min-height:300px}
+.excel-left{flex:3;min-width:0;display:flex;flex-direction:column}
+.excel-right{flex:2;min-width:0;display:flex;flex-direction:column}
+.excel-right .empty{flex:1;display:flex;align-items:center;justify-content:center}
+.ta-label{font-size:12px;color:#888;margin-bottom:4px;display:flex;align-items:center;gap:6px}
+.ta-label .ok{color:#4ec9b0}.ta-label .err{color:#e67e22}
+.ta-box{width:100%;height:140px;background:#1a1a1a;color:#d4d4d4;border:1px solid #444;border-radius:4px;padding:8px 10px;font-family:Consolas,monospace;font-size:12px;resize:vertical;outline:none;transition:border-color .15s}
+.ta-box:focus{border-color:#0e639c}
+.ta-box.ok{border-color:#1b7a1b}.ta-box.err{border-color:#d32f2f}
+.ta-row{margin-bottom:10px}
+.merge-bar{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+.stabs{display:flex;gap:4px;margin-bottom:10px;overflow-x:auto}
+.stab{padding:5px 14px;background:transparent;border:1px solid #555;border-radius:4px;cursor:pointer;font-size:12px;color:#888;white-space:nowrap;transition:all .15s}
+.stab:hover{color:#d4d4d4;border-color:#888}.stab.on{background:#0e639c;color:#fff;border-color:#0e639c}
+.fade-enter-active,.fade-leave-active{transition:opacity .2s}
+.fade-enter-from,.fade-leave-to{opacity:0}
+/* 表格视图 */
+.btn.on{background:#0e639c;color:#fff;border-color:#0e639c}
+.tbl-wrap{background:#252526;border-radius:6px;overflow:hidden}
+.tbl-info{font-size:11px;color:#666;padding:8px 12px 0}
+.tbl-scroll{overflow-x:auto;max-height:calc(100vh - 250px);overflow-y:auto}
+.tbl{width:max-content;border-collapse:collapse;font-size:12px;min-width:100%}
+.tbl th,.tbl td{padding:5px 10px;border:1px solid #3c3c3c;white-space:nowrap;text-align:center;min-width:70px}
+.tbl th{background:#2d2d2d;color:#888;position:sticky;top:0;z-index:2}
+.tbl th.fill{color:#4ec9b0}
+.tbl th.no{color:#555}
+.tbl td.fill{color:#dcdcaa}
+.tbl td.no{color:#3c3c3c}
+.tbl .tbl-fix{position:sticky;left:0;background:#252526;z-index:1}
+.tbl thead .tbl-fix{z-index:3;background:#2d2d2d}
+.tbl tbody tr:hover td{background:#2a2a2a}
+.tbl tbody tr:hover .tbl-fix{background:#2a2a2a}
+.tbl td.tbl-fix{text-align:left;min-width:90px;max-width:180px;overflow:hidden;text-overflow:ellipsis}
+.tbl td.tbl-fix:first-child{min-width:40px;max-width:40px;text-align:center}
+.img-cell{width:48px;min-width:48px;max-width:48px;padding:2px!important}
+.img-cell img{width:40px;height:40px;object-fit:cover;border-radius:4px;display:block}
+</style>
+</head>
+<body>
+<div id="app">
+  <!-- 选项卡 -->
+  <div class="tabs">
+    <button class="tab" :class="{on:activeTab==='merge'}" @click="activeTab='merge'">合并 funnel + nmStats</button>
+    <button class="tab" :class="{on:activeTab==='excel'}" @click="activeTab='excel'">Excel 合并</button>
+  </div>
+
+  <!-- ========== 合并面板 ========== -->
+  <div v-show="activeTab==='merge'">
+    <!-- funnel.json 输入 -->
+    <div class="ta-row">
+      <div class="ta-label">funnel.json
+        <span v-if="funnelStatus==='ok'" class="ok">✓ 已解析</span>
+        <span v-if="funnelStatus==='err'" class="err">✗ 解析失败</span>
+      </div>
+      <textarea class="ta-box" :class="funnelStatus" v-model="funnelText" @input="parseFunnel" placeholder="在此粘贴 funnel.json 内容..."></textarea>
+    </div>
+    <!-- nmStats.json 输入 -->
+    <div class="ta-row">
+      <div class="ta-label">nmStats.json
+        <span v-if="nmStatsStatus==='ok'" class="ok">✓ 已解析</span>
+        <span v-if="nmStatsStatus==='err'" class="err">✗ 解析失败</span>
+      </div>
+      <textarea class="ta-box" :class="nmStatsStatus" v-model="nmStatsText" @input="parseNmStats" placeholder="在此粘贴 nmStats.json 内容..."></textarea>
+    </div>
+    <!-- 操作按钮 -->
+    <div class="merge-bar">
+      <button class="btn btn2 btns" :disabled="!canMerge" @click="doMerge">合并</button>
+      <template v-if="merged.length">
+        <button class="btn btn2 btns" @click="exportXlsx">导出 Excel</button>
+        <button class="btn btn3 btns" @click="copyResult">复制 JSON</button>
+        <button class="btn btn3 btns" :class="{on:mergeView==='table'}" @click="mergeView='table'">表格视图</button>
+        <button class="btn btn3 btns" :class="{on:mergeView==='json'}" @click="mergeView='json'">JSON 视图</button>
+      </template>
+    </div>
+    <!-- 统计信息 -->
+    <div class="st" v-if="merged.length">
+      共 <em>{{ stats.total }}</em> 条 &nbsp;|&nbsp; 漏斗 <em>{{ stats.funnelCount }}</em> 条 &nbsp;|&nbsp; 匹配广告 <em>{{ stats.matched }}</em> 条
+      <template v-if="stats.unmatched>0">&nbsp;|&nbsp; <b>{{ stats.unmatched }} 条未匹配</b></template>
+      <template v-if="stats.dupRemoved>0">&nbsp;|&nbsp; <b>nmStats {{ stats.nmTotal }} 行，去重移除 {{ stats.dupRemoved }}，保留 {{ stats.nmKept }}</b></template>
+    </div>
+    <!-- JSON 视图 -->
+    <div class="wrap" v-if="merged.length && mergeView==='json'">
+      <button class="cp" :class="{ok:copied}" @click="copyResult">{{ copied ? '✓ 已复制' : '复制' }}</button>
+      <pre>{{ mergedJson }}</pre>
+    </div>
+    <!-- 表格视图 -->
+    <div class="tbl-wrap" v-if="merged.length && mergeView==='table'">
+      <div class="tbl-info">拖动横向滚动条查看全部 {{ tableCols.length }} 列</div>
+      <div class="tbl-scroll">
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th class="tbl-fix img-cell">图片</th>
+              <th class="tbl-fix">#</th>
+              <th class="tbl-fix">nmId</th>
+              <th class="tbl-fix">名称</th>
+              <th v-for="c in tableCols" :key="c.key" :class="{fill:c.fill,no:!c.fill}">{{ c.key }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(row,i) in tableData" :key="i">
+              <td class="tbl-fix img-cell">
+                <img v-if="row._isFirst && row._mainPhoto" :src="row._mainPhoto" />
+              </td>
+              <td class="tbl-fix">{{ i+1 }}</td>
+              <td class="tbl-fix">{{ row.nmId }}</td>
+              <td class="tbl-fix">{{ row._name }}</td>
+              <td v-for="c in tableCols" :key="c.key" :class="{fill:c.fill,no:!c.fill}">{{ row[c.key] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- 空状态 -->
+    <div class="wrap" v-if="!merged.length">
+      <div class="empty"><div class="ic">📋</div><div class="d">在上方粘贴两份 JSON 后点击「合并」</div><div class="h">以 nmId / nm_id 关联，nmStats 重复时保留 views 更大的</div></div>
+    </div>
+  </div>
+
+  <!-- ========== Excel 面板 ========== -->
+  <div v-show="activeTab==='excel'">
+    <div class="bar">
+      <button class="btn btn1" @click="openXlsx">选择 Excel 文件</button>
+      <input type="file" ref="xfi" class="hi" accept=".xlsx,.xls,.csv" @change="handleXlsxFile">
+      <button class="btn btn3 btns" :disabled="!excelJson.length" @click="copyExcel">复制 JSON</button>
+      <button class="btn btn2 btns" :disabled="!merged.length" @click="mergeInExcel">合并 JSON</button>
+      <button class="btn btn1 btns" :disabled="!merged.length" @click="writeXlsx">写入合并数据</button>
+      <button class="btn btn1 btns" :disabled="!merged.length" @click="mergeToNewFile">合并到新文件</button>
+      <span class="info">{{ xlName ? '📄 ' + xlName : '未打开文件' }}</span>
+    </div>
+
+    <div class="excel-split">
+      <!-- 左侧：解析的 Excel 数据 -->
+      <div class="excel-left">
+        <div class="stabs" v-if="sheets.length">
+          <button class="stab" :class="{on:currentSheet==='__all__'}" @click="selectSheet('__all__')">全部</button>
+          <button class="stab" v-for="s in sheets" :key="s" :class="{on:s===currentSheet}" @click="selectSheet(s)">{{ s }}</button>
+        </div>
+        <div class="st" v-if="excelJson.length && currentSheet!=='__all__'">共 <em>{{ excelRows }}</em> 行 · <em>{{ excelCols }}</em> 列</div>
+        <div class="merge-bar" v-if="excelJson.length">
+          <button class="btn btn3 btns" :class="{on:excelPreviewMode==='table'}" @click="excelPreviewMode='table'">表格</button>
+          <button class="btn btn3 btns" :class="{on:excelPreviewMode==='json'}" @click="excelPreviewMode='json'">JSON</button>
+          <button class="btn btn3 btns" style="margin-left:auto" @click="copyExcel">{{ excelCopied ? '✓ 已复制' : '复制' }}</button>
+        </div>
+        <!-- 表格视图 -->
+        <div class="tbl-scroll" v-if="excelJson.length && excelPreviewMode==='table'" style="flex:1;min-height:0">
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th class="tbl-fix" style="min-width:40px;max-width:40px;text-align:center">#</th>
+                <th v-for="(key,i) in excelJsonKeys" :key="i" class="tbl-fix" style="min-width:90px">{{ key }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(row,i) in excelJson" :key="i">
+                <td class="tbl-fix" style="min-width:40px;max-width:40px;text-align:center">{{ i+1 }}</td>
+                <td v-for="key in excelJsonKeys" :key="key" class="tbl-fix" style="min-width:90px;max-width:160px;overflow:hidden;text-overflow:ellipsis">{{ row[key] != null ? row[key] : '' }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- JSON 视图 -->
+        <div class="wrap" v-if="excelJson.length && excelPreviewMode==='json'">
+          <pre>{{ excelJsonText }}</pre>
+        </div>
+        <div class="wrap" v-if="!excelJson.length">
+          <div class="empty"><div class="ic">📂</div><div class="d">点击「选择 Excel 文件」打开 .xlsx 或 .xls</div></div>
+        </div>
+      </div>
+
+      <!-- 右侧：待合并数据（同步自合并面板） -->
+      <div class="excel-right">
+        <template v-if="merged.length">
+          <div class="tbl-info" style="margin-bottom:6px">待合并数据（共 {{ stats.total }} 条，同步自合并面板）</div>
+          <div class="tbl-info" style="color:#4ec9b0;margin-bottom:6px">fill 列将覆盖写入对应工作表</div>
+          <div class="tbl-info" style="margin-bottom:6px;color:#888">按 nmId 匹配工作表名称</div>
+          <div class="tbl-scroll" style="flex:1;min-height:0">
+            <table class="tbl">
+              <thead>
+                <tr>
+                  <th class="tbl-fix">nmId</th>
+                  <th v-for="c in tableCols.filter(c=>c.fill)" :key="c.key">{{ c.key }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(row,i) in tableData" :key="i">
+                  <td class="tbl-fix">{{ row.nmId }}</td>
+                  <td v-for="c in tableCols.filter(c=>c.fill)" :key="c.key">{{ row[c.key] }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </template>
+        <div class="empty" v-else>
+          <div style="text-align:center;color:#555;font-size:14px">暂无合并数据<br><small>请先在「合并 funnel + nmStats」中完成合并</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <transition name="fade">
+    <div class="toast" :class="toastType" v-if="toastMsg">{{ toastMsg }}</div>
+  </transition>
+</div>
+
+<script>
+const { createApp, ref, reactive, computed, nextTick } = Vue;
+
+createApp({
+  setup() {
+    // ---- 通用 ----
+    const activeTab = ref('merge');
+    const toastMsg = ref('');
+    const toastType = ref('i');
+    let toastTimer = null;
+    const showToast = (msg, type = 'i') => {
+      toastMsg.value = msg; toastType.value = type;
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => { toastMsg.value = ''; }, 2500);
+    };
+
+    // ---- 合并面板 ----
+    const funnelText = ref('');
+    const nmStatsText = ref('');
+    const funnel = ref(null);
+    const nmstats = ref(null);
+    const funnelStatus = ref('');   // '' | 'ok' | 'err'
+    const nmStatsStatus = ref('');
+    const merged = ref([]);
+    const copied = ref(false);
+    let copyTimer = null;
+
+    const stats = reactive({
+      total: 0, funnelCount: 0, matched: 0, unmatched: 0,
+      nmTotal: 0, dupRemoved: 0, nmKept: 0
+    });
+
+    const canMerge = computed(() => funnelStatus.value === 'ok' && nmStatsStatus.value === 'ok');
+    const mergedJson = computed(() => JSON.stringify(merged.value, null, 2));
+    const mergeView = ref('table');
+
+    // 表格列定义：fill=从数据填充，no=留空不修改
+    const tableCols = [
+      { key:'图片', fill:false },
+      { key:'日期', fill:true,  map:m=>fmtDate(m.date) },
+      { key:'曝光', fill:true,  map:m=>m.viewCount },
+      { key:'总点击', fill:true,  map:m=>m.openCard },
+      { key:'点击率', fill:false },
+      { key:'总加购', fill:true,  map:m=>m.addToCart },
+      { key:'加购率', fill:false },
+      { key:'订单转化率', fill:false },
+      { key:'总订单', fill:true, map:m=>m.orders },
+      { key:'总销售额', fill:true, map:m=>m.ordersSum },
+      { key:'客单价', fill:false },
+      { key:'付费成交订单', fill:false },
+      { key:'免费成交订单', fill:false },
+      { key:'利润', fill:false },
+      { key:'付费成交金额', fill:true,  map:m=>m.adSumPrice },
+      { key:'免费成交金额', fill:false },
+      { key:'广告费', fill:true,  map:m=>m.adSpend },
+      { key:'付费曝光', fill:true,  map:m=>m.adViews },
+      { key:'付费点击', fill:true,  map:m=>m.adClicks },
+      { key:'付费加购', fill:true,  map:m=>m.adAtbs },
+      { key:'付费订单', fill:true,  map:m=>m.adOrders },
+      { key:'付费点击率', fill:false },
+      { key:'付费转化率', fill:false },
+      { key:'千次展示费', fill:false },
+      { key:'单次点击费', fill:false },
+      { key:'付费投产', fill:false },
+      { key:'状态', fill:false },
+      { key:'广告变更', fill:false },
+      { key:'其他说明', fill:false }
+    ];
+
+    const tableData = computed(() => {
+      const seenNmId = new Set();
+      return merged.value.map(m => {
+        const isFirst = !seenNmId.has(String(m.nmId));
+        seenNmId.add(String(m.nmId));
+        const row = { nmId: m.nmId, _name: m.name, _mainPhoto: m.mainPhoto || '', _isFirst: isFirst };
+        tableCols.forEach(c => {
+          row[c.key] = c.fill ? (c.map(m) ?? '') : '';
+        });
+        return row;
+      });
+    });
+
+    const tableDataBySheet = computed(() => {
+      const groups = [];
+      const seen = new Map();
+      merged.value.forEach(m => {
+        const key = String(m.nmId);
+        if (seen.has(key)) return;
+        seen.set(key, true);
+        const mainPhoto = m.mainPhoto || '';
+        const rows = merged.value.filter(x => String(x.nmId) === key).map((x, i) => {
+          const row = tableData.value.find(r => r.nmId === x.nmId);
+          return row ? { ...row, _mainPhoto: mainPhoto, _isFirst: i === 0 } : null;
+        }).filter(Boolean);
+        groups.push({ nmId: key, rows, count: rows.length });
+      });
+      return groups;
+    });
+
+    const mergeSheet = ref('');
+    const mergeSheetData = computed(() => tableDataBySheet.value.find(g => g.nmId === mergeSheet.value) || null);
+
+    Vue.watch(tableDataBySheet, (v) => {
+      if (v.length && (!mergeSheet.value || !v.find(g => g.nmId === mergeSheet.value))) {
+        mergeSheet.value = v[0].nmId;
+      }
+    });
+
+    const tryParse = (raw) => { try { return JSON.parse(raw); } catch(e) { return null; } };
+
+    const fmtDate = (d) => {
+      if (!d) return '';
+      if (d instanceof Date) d = d.toISOString().slice(0, 10);
+      const s = String(d).slice(0, 10);
+      const p = s.split('-');
+      return p.length === 3 ? p[0] + '年' + p[1] + '月' + p[2] + '日' : s;
+    };
+
+    const parseFunnel = () => {
+      const raw = funnelText.value.trim();
+      if (!raw) { funnelStatus.value = ''; funnel.value = null; return; }
+      const d = tryParse(raw);
+      if (d) { funnelStatus.value = 'ok'; funnel.value = d; }
+      else { funnelStatus.value = 'err'; funnel.value = null; }
+    };
+
+    const parseNmStats = () => {
+      const raw = nmStatsText.value.trim();
+      if (!raw) { nmStatsStatus.value = ''; nmstats.value = null; return; }
+      const d = tryParse(raw);
+      if (d) { nmStatsStatus.value = 'ok'; nmstats.value = d; }
+      else { nmStatsStatus.value = 'err'; nmstats.value = null; }
+    };
+
+    const gv = (o, k) => (o && o[k] != null) ? o[k] : 0;
+
+    const doMerge = () => {
+      if (!funnel.value || !nmstats.value) { showToast('请先粘贴并成功解析两份 JSON', 'e'); return; }
+
+      // 提取 funnel items
+      let items = [];
+      const f = funnel.value;
+      if (f.data && f.data.groups) {
+        f.data.groups.forEach(g => { if (g.itemsGroup) items = items.concat(g.itemsGroup); });
+      }
+
+      // nmStats 去重：按 nm_id 保留 views 最大的
+      const map = {};
+      let ndup = 0, ntotal = 0;
+      const nms = nmstats.value;
+      if (Array.isArray(nms)) {
+        nms.forEach(it => {
+          if (it.attribution_stage === 'nm' && it.nm_id) {
+            ntotal++;
+            const old = map[it.nm_id];
+            if (!old || (it.views || 0) > (old.views || 0)) {
+              if (old) ndup++;
+              map[it.nm_id] = it;
+            } else { ndup++; }
+          }
+        });
+      }
+
+      // 取 funnel 中的统一日期
+      const chartDate = (funnel.value.data && funnel.value.data.chart && funnel.value.data.chart.byDay && funnel.value.data.chart.byDay[0])
+        ? funnel.value.data.chart.byDay[0].date : '';
+
+      let matched = 0;
+      const result = items.map(item => {
+        const nm = map[item.nmId];
+        if (nm) matched++;
+        return {
+          nmId: item.nmId, name: item.name || '', vendorCode: item.vendorCode || '',
+          subjectName: item.subjectName || '', brandName: item.brandName || '',
+          date: chartDate,
+          mainPhoto: item.mainPhoto ? (item.mainPhoto.thumbnail||'') : '',
+          stockWbQty: item.stockWbQty != null ? item.stockWbQty : 0,
+          feedbacksRating: item.feedbacksRating != null ? item.feedbacksRating : 0,
+          nmRating: item.nmRating != null ? item.nmRating : 0,
+          viewCount: gv(item.viewCount, 'current'), viewCountDyn: gv(item.viewCount, 'dynamics'),
+          openCard: gv(item.openCard, 'current'), openCardDyn: gv(item.openCard, 'dynamics'),
+          addToCart: gv(item.addToCart, 'current'), addToCartDyn: gv(item.addToCart, 'dynamics'),
+          orders: gv(item.orders, 'current'), ordersDyn: gv(item.orders, 'dynamics'),
+          ordersSum: gv(item.ordersSum, 'current'), ordersSumDyn: gv(item.ordersSum, 'dynamics'),
+          buyoutPercent: gv(item.buyoutPercent, 'current'), buyoutPercentDyn: gv(item.buyoutPercent, 'dynamics'),
+          avgPrice: gv(item.avgPrice, 'current'), avgPriceDyn: gv(item.avgPrice, 'dynamics'),
+          cancelCount: gv(item.cancelCount, 'current'), cancelSum: gv(item.cancelSum, 'current'),
+          buyoutCount: gv(item.buyoutCount, 'current'), buyoutSum: gv(item.buyoutSum, 'current'),
+          viewToOpen: gv(item.viewToOpen, 'current'),
+          openToCart: gv(item.openToCart, 'current'),
+          cartToOrder: gv(item.cartToOrder, 'current'),
+          adSpend: nm ? gv(nm, 'spend') : 0, adViews: nm ? gv(nm, 'views') : 0,
+          adClicks: nm ? gv(nm, 'clicks') : 0, adOrders: nm ? gv(nm, 'orders') : 0,
+          adSumPrice: nm ? gv(nm, 'sum_price') : 0, adCtr: nm ? gv(nm, 'ctr') : 0,
+          adCpc: nm ? gv(nm, 'cpc') : 0, adCr: nm ? gv(nm, 'cr') : 0,
+          adCpm: nm ? gv(nm, 'cpm') : 0, adCpo: nm ? gv(nm, 'cpo') : 0,
+          adSum: nm ? gv(nm, 'sum') : 0, adAvgPosition: nm ? gv(nm, 'avg_position') : 0,
+          adAtbs: nm ? gv(nm, 'atbs') : 0
+        };
+      });
+
+      merged.value = result;
+      stats.total = result.length;
+      stats.funnelCount = items.length;
+      stats.matched = matched;
+      stats.unmatched = items.length - matched;
+      stats.nmTotal = ntotal;
+      stats.dupRemoved = ndup;
+      stats.nmKept = Object.keys(map).length;
+      showToast(`合并完成：${result.length} 条`, 's');
+    };
+
+    const copyResult = async () => {
+      try { await navigator.clipboard.writeText(mergedJson.value); } catch(e) { showToast('复制失败', 'e'); return; }
+      copied.value = true; clearTimeout(copyTimer); copyTimer = setTimeout(() => { copied.value = false; }, 1500);
+    };
+
+    const exportXlsx = async () => {
+      if (!merged.value.length) { showToast('暂无数据', 'e'); return; }
+      const w = new ExcelJS.Workbook();
+      const s = w.addWorksheet('合并结果');
+      const keys = Object.keys(merged.value[0]);
+      const hr = s.getRow(1);
+      keys.forEach((k, i) => { hr.getCell(i + 1).value = k; });
+      hr.commit();
+      const txt = { name: 1, vendorCode: 1, subjectName: 1, brandName: 1, date: 1, mainPhoto: 1 };
+      merged.value.forEach((row, ri) => {
+        const r = s.getRow(ri + 2);
+        keys.forEach((k, i) => {
+          let v = row[k];
+          if (k === 'date') v = fmtDate(v);
+          const colIdx = i + 1;
+          if (!txt[k] && v !== '' && v !== null && v !== undefined) {
+            const n = Number(v); r.getCell(colIdx).value = isNaN(n) ? String(v) : n;
+          } else {
+            r.getCell(colIdx).value = (v != null && v !== undefined) ? String(v) : '';
+          }
+          if (k === 'date') r.getCell(colIdx).numFmt = '@';
+        });
+        r.commit();
+      });
+      const buf = await w.xlsx.writeBuffer();
+      const blob = new Blob([buf], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = '合并结果.xlsx';
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast('已导出 合并结果.xlsx', 's');
+    };
+
+    // 共享：对工作簿执行合并写入，返回统计
+    const applyMerge = (wb) => {
+      const wsn = new Set(wb.worksheets.map(ws => String(ws.name)));
+      const fillCols = tableCols.filter(c => c.fill).map(c => c.key);
+      const allColKeys = tableCols.map(c => c.key);
+
+      const cellToDate = (cv) => {
+        if (cv instanceof Date) return cv.toISOString().slice(0, 10);
+        if (typeof cv === 'number') { const d = new Date((cv - 25569) * 86400 * 1000); return d.toISOString().slice(0, 10); }
+        const s = String(cv || '').trim();
+        const m = s.match(/^(\d{4})年(\d{2})月(\d{2})日$/);
+        if (m) return m[1] + '-' + m[2] + '-' + m[3];
+        return s.slice(0, 10);
+      };
+
+      const convertDateCell = (cell) => {
+        const cv = cell.value;
+        if (cv == null || cv === undefined || cv === '') return;
+        let dateStr = '';
+        if (cv instanceof Date) {
+          dateStr = fmtDate(cv);
+        } else {
+          const num = Number(cv);
+          if (!isNaN(num) && num > 20000 && num < 100000) {
+            dateStr = fmtDate(new Date((num - 25569) * 86400 * 1000));
+          } else {
+            const str = String(cv).trim();
+            if (/^\d{4}年\d{2}月\d{2}日$/.test(str)) dateStr = str;
+          }
+        }
+        if (!dateStr) return;
+        cell.value = dateStr;
+        if (!cell.style) cell.style = {};
+        cell.style.numFmt = '@';
+      };
+
+      const normalizeExistingDates = (ws) => {
+        const hr = ws.getRow(1);
+        let dateColIdx = -1;
+        for (let c = 1; c <= allColKeys.length + 10; c++) {
+          const v = hr.getCell(c).value;
+          if (v != null && v !== undefined && String(v).trim() === '日期') { dateColIdx = c; break; }
+        }
+        if (dateColIdx < 1) return;
+        ws.eachRow((row, rn) => {
+          if (rn === 1) return;
+          convertDateCell(row.getCell(dateColIdx));
+        });
+      };
+
+      let newSheets = 0, matchedRows = 0, appendedRows = 0;
+
+      wb.worksheets.forEach(ws => normalizeExistingDates(ws));
+
+      for (const item of merged.value) {
+        const nmId = String(item.nmId);
+
+        const vals = {};
+        tableCols.forEach(c => { vals[c.key] = c.fill ? (c.map ? c.map(item) : '') : ''; });
+        vals['日期'] = fmtDate(item.date);
+        const targetDate = (item.date || '').slice(0, 10);  // ISO 格式，用于比对
+
+        let ws;
+        if (wsn.has(nmId)) { ws = wb.getWorksheet(nmId); }
+        else { ws = wb.addWorksheet(nmId); wsn.add(nmId); newSheets++; }
+
+        const hr = ws.getRow(1);
+        const hcols = [];
+        for (let c = 1; c <= allColKeys.length + 10; c++) {
+          const v = hr.getCell(c).value;
+          if (v != null && v !== undefined) hcols.push({ key: String(v).trim(), col: c });
+        }
+        if (hcols.length === 0) {
+          allColKeys.forEach((k, i) => { hr.getCell(i + 1).value = k; hcols.push({ key: k, col: i + 1 }); });
+          hr.commit();
+        }
+
+        const dateCol = hcols.find(h => h.key === '日期');
+        if (!dateCol) continue;
+
+        let matchRow = -1;
+        for (let r = 2; r <= ws.rowCount; r++) {
+          if (cellToDate(ws.getRow(r).getCell(dateCol.col).value) === targetDate) { matchRow = r; break; }
+        }
+
+        if (matchRow >= 2) {
+          const row = ws.getRow(matchRow);
+          hcols.forEach(h => {
+            if (!fillCols.includes(h.key)) return;
+            const v = vals[h.key];
+            if (v !== undefined && v !== null && v !== '') {
+              row.getCell(h.col).value = v;
+            }
+          });
+          matchedRows++;
+        } else {
+          const nextRow = ws.lastRow ? (ws.lastRow.number + 1) : 2;
+          const row = ws.getRow(nextRow);
+          hcols.forEach(h => {
+            if (h.key === '日期') {
+              const dc = row.getCell(h.col);
+              dc.value = vals['日期'];
+              dc.numFmt = '@';
+              return;
+            }
+            const v = vals[h.key];
+            row.getCell(h.col).value = (v !== undefined && v !== null && v !== '') ? v : '';
+          });
+          row.commit();
+          appendedRows++;
+        }
+      }
+      wb.eachSheet(ws => normalizeExistingDates(ws));
+      return { matchedRows, appendedRows, newSheets };
+    };
+
+    // 将产品图片写入各工作表第一行第一列（通过 A2 标记避免重复写入）
+    const addImagesToWorkbook = async (wb) => {
+      const photoMap = {};
+      for (const item of merged.value) {
+        const nmId = String(item.nmId);
+        if (!photoMap[nmId] && item.mainPhoto) {
+          photoMap[nmId] = item.mainPhoto;
+        }
+      }
+      for (const ws of wb.worksheets) {
+        const name = String(ws.name);
+        const photoUrl = photoMap[name];
+        if (!photoUrl) continue;
+        const marker = String(ws.getCell(2, 1).value || '');
+        if (marker === '__IMG__') continue;
+        try {
+          const resp = await fetch(photoUrl);
+          if (!resp.ok) continue;
+          const buf = await resp.arrayBuffer();
+          const ext = (photoUrl.split('.').pop() || 'webp').split('?')[0];
+          const imgId = wb.addImage({ buffer: buf, extension: ext });
+          ws.addImage(imgId, {
+            tl: { col: 0, row: 0 },
+            ext: { width: 44, height: 44 }
+          });
+          ws.getRow(1).height = 48;
+          ws.getColumn(1).width = 8;
+          ws.getCell(2, 1).value = '__IMG__';
+        } catch(e) { /* 加载失败静默跳过 */ }
+      }
+    };
+
+    // 写入已有 Excel 文件（直接覆盖）
+    const writeXlsx = async () => {
+      if (!merged.value.length) { showToast('暂无数据', 'e'); return; }
+      if (!window.showOpenFilePicker) { showToast('当前浏览器不支持，请用 Chrome/Edge', 'e'); return; }
+
+      let fileHandle, wb, msg = '';
+      if (hasMerged && workbook && excelFileHandle) {
+        fileHandle = excelFileHandle;
+        wb = workbook;
+        msg = '已保存（使用内存中已合并的数据）';
+      } else {
+        try {
+          if (excelFileHandle && workbook) {
+            fileHandle = excelFileHandle;
+            const file = await fileHandle.getFile();
+            wb = new ExcelJS.Workbook(); await wb.xlsx.load(await file.arrayBuffer());
+          } else {
+            [fileHandle] = await window.showOpenFilePicker({
+              types: [{ description: 'Excel', accept: { 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': ['.xlsx'] } }],
+              multiple: false
+            });
+            const file = await fileHandle.getFile();
+            wb = new ExcelJS.Workbook(); await wb.xlsx.load(await file.arrayBuffer());
+          }
+        } catch(e) {
+          if (e.name !== 'AbortError') showToast('读取文件失败: ' + e.message, 'e');
+          return;
+        }
+        const { matchedRows, appendedRows, newSheets } = applyMerge(wb);
+        await addImagesToWorkbook(wb);
+        msg = `完成：更新 ${matchedRows} 行，追加 ${appendedRows} 行`;
+        if (newSheets > 0) msg += `，新建 ${newSheets} 个工作表`;
+      }
+
+      const outBuf = await wb.xlsx.writeBuffer();
+      const writable = await fileHandle.createWritable();
+      await writable.write(outBuf);
+      await writable.close();
+
+      excelFileHandle = fileHandle;
+      hasMerged = false;
+      const f = await fileHandle.getFile();
+      workbook = new ExcelJS.Workbook(); await workbook.xlsx.load(await f.arrayBuffer());
+      parseAllSheets();
+      selectSheet(sheets.value[0] || '');
+      showToast(msg, 's');
+    };
+
+    // 合并到新文件（基于模板，输出为新文件下载）
+    const mergeToNewFile = async () => {
+      if (!merged.value.length) { showToast('暂无数据', 'e'); return; }
+
+      let wb;
+      if (hasMerged && workbook) {
+        wb = workbook;
+      } else {
+        try {
+          if (excelFileHandle && workbook) {
+            const file = await excelFileHandle.getFile();
+            wb = new ExcelJS.Workbook(); await wb.xlsx.load(await file.arrayBuffer());
+          } else if (window.showOpenFilePicker) {
+            const [fh] = await window.showOpenFilePicker({
+              types: [{ description: 'Excel', accept: { 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': ['.xlsx'] } }],
+              multiple: false
+            });
+            const file = await fh.getFile();
+            wb = new ExcelJS.Workbook(); await wb.xlsx.load(await file.arrayBuffer());
+          } else {
+            wb = new ExcelJS.Workbook();
+          }
+        } catch(e) {
+          if (e.name === 'AbortError') return;
+          wb = new ExcelJS.Workbook();
+        }
+        applyMerge(wb);
+        await addImagesToWorkbook(wb);
+      }
+      const buf = await wb.xlsx.writeBuffer();
+      const blob = new Blob([buf], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      const baseName = xlName.value ? xlName.value.replace(/\.xlsx?$/i, '') : '导出';
+      a.href = url; a.download = baseName + '-副本.xlsx';
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      let outMsg = '已导出 ' + baseName + '-副本.xlsx';
+      showToast(outMsg, 's');
+    };
+
+    // ---- Excel 面板 ----
+    const xfi = ref(null);
+    const xlName = ref('');
+    const allSheetsData = reactive({});   // { 工作表名: [{...}, ...] }
+    const excelJsonText = computed(() => JSON.stringify(excelJson.value, null, 2));
+    const excelRows = ref(0);
+    const excelCols = ref(0);
+    const sheets = ref([]);
+    const currentSheet = ref('');         // '' 或工作表名 或 '__all__'
+    const excelCopied = ref(false);
+    let exCopyTimer = null;
+    const excelPreviewMode = ref('table'); // 'table' | 'json'
+    let workbook = null;
+    let excelFileHandle = null;
+    let hasMerged = false;       // 是否已在内存中执行过合并
+
+    const excelJson = computed(() => {
+      if (currentSheet.value === '__all__') return allSheetsData;
+      if (currentSheet.value && allSheetsData[currentSheet.value]) return allSheetsData[currentSheet.value];
+      return [];
+    });
+
+    const excelJsonKeys = computed(() => {
+      const data = excelJson.value;
+      if (Array.isArray(data) && data.length > 0) return Object.keys(data[0]);
+      return [];
+    });
+
+    const sheetToJson = (sheet) => {
+      const hd = [], rows = [];
+      let mc = 1;
+      sheet.eachRow({ includeEmpty: true }, r => { if (r.actualCellCount > mc) mc = r.actualCellCount; });
+      const fr = sheet.getRow(1);
+      if (fr && fr.actualCellCount > 0) {
+        for (let c = 1; c <= mc; c++) {
+          const v = fr.getCell(c).value;
+          hd.push((v != null && v !== undefined) ? String(v) : ('列' + c));
+        }
+      } else { for (let c = 1; c <= mc; c++) hd.push('列' + c); }
+      sheet.eachRow((r, rn) => {
+        if (rn === 1) return;
+        const o = {};
+        for (let c = 1; c <= mc; c++) {
+          let cv = r.getCell(c).value;
+          if (cv != null && cv !== undefined) {
+            if (cv instanceof Date) { cv = fmtDate(cv); }
+            else {
+              const num = Number(cv);
+              if (!isNaN(num) && num > 20000 && num < 100000) {
+                cv = fmtDate(new Date((num - 25569) * 86400 * 1000));
+              } else if (typeof cv === 'object' && cv.richText) {
+                cv = cv.richText.map(rt => rt.text).join('');
+              } else {
+                cv = String(cv);
+              }
+            }
+          } else cv = '';
+          o[hd[c - 1]] = cv;
+        }
+        rows.push(o);
+      });
+      return rows;
+    };
+
+    const parseAllSheets = () => {
+      if (!workbook) return;
+      // 清空旧数据
+      Object.keys(allSheetsData).forEach(k => delete allSheetsData[k]);
+      workbook.worksheets.forEach(ws => {
+        allSheetsData[ws.name] = sheetToJson(ws);
+      });
+      sheets.value = workbook.worksheets.map(ws => ws.name);
+    };
+
+    const selectSheet = (name) => {
+      currentSheet.value = name;
+      const data = name === '__all__' ? {} : allSheetsData[name];
+      if (name === '__all__') {
+        excelRows.value = 0; excelCols.value = 0;
+      } else if (data) {
+        excelRows.value = data.length;
+        excelCols.value = data.length > 0 ? Object.keys(data[0]).length : 0;
+      }
+    };
+
+    const openXlsx = async () => {
+      try {
+        if (window.showOpenFilePicker) {
+          const handles = await window.showOpenFilePicker({
+            types: [{ description: 'Excel', accept: { 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': ['.xlsx'] } },
+                    { description: '旧版 Excel', accept: { 'application/vnd.ms-excel': ['.xls'] } }],
+            multiple: false
+          });
+          const f = await handles[0].getFile();
+          excelFileHandle = handles[0];
+          const buf = await f.arrayBuffer();
+          workbook = new ExcelJS.Workbook(); await workbook.xlsx.load(buf);
+          xlName.value = f.name;
+          hasMerged = false;
+          parseAllSheets();
+          selectSheet(sheets.value[0] || '');
+        } else { xfi.value.click(); }
+      } catch(e) { if (e.name !== 'AbortError') showToast('打开失败: ' + e.message, 'e'); }
+    };
+
+    const handleXlsxFile = async (e) => {
+      const f = e.target.files[0]; if (!f) return;
+      try {
+        const buf = await f.arrayBuffer();
+        workbook = new ExcelJS.Workbook(); await workbook.xlsx.load(buf);
+        xlName.value = f.name;
+        hasMerged = false;
+        parseAllSheets();
+        selectSheet(sheets.value[0] || '');
+      } catch(ex) { showToast('解析失败: ' + ex.message, 'e'); }
+      e.target.value = '';
+    };
+
+    const copyExcel = async () => {
+      try { await navigator.clipboard.writeText(excelJsonText.value); } catch(e) { showToast('复制失败', 'e'); return; }
+      excelCopied.value = true; clearTimeout(exCopyTimer); exCopyTimer = setTimeout(() => { excelCopied.value = false; }, 1500);
+    };
+
+    // 合并 JSON：只合并不导出，在内存中更新 workbook 并刷新显示
+    const mergeInExcel = async () => {
+      if (!merged.value.length) { showToast('暂无合并数据', 'e'); return; }
+      if (!workbook) {
+        if (window.showOpenFilePicker) {
+          try {
+            const handles = await window.showOpenFilePicker({
+              types: [{ description: 'Excel', accept: { 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': ['.xlsx'] } }],
+              multiple: false
+            });
+            const f = await handles[0].getFile();
+            excelFileHandle = handles[0];
+            workbook = new ExcelJS.Workbook(); await workbook.xlsx.load(await f.arrayBuffer());
+            xlName.value = f.name;
+          } catch(e) {
+            if (e.name !== 'AbortError') showToast('打开文件失败: ' + e.message, 'e');
+            return;
+          }
+        } else {
+          showToast('当前浏览器不支持，请用 Chrome/Edge', 'e');
+          return;
+        }
+      }
+      const { matchedRows, appendedRows, newSheets } = applyMerge(workbook);
+      await addImagesToWorkbook(workbook);
+      hasMerged = true;
+      parseAllSheets();
+      selectSheet(sheets.value[0] || '');
+      let msg = `合并完成：更新 ${matchedRows} 行，追加 ${appendedRows} 行`;
+      if (newSheets > 0) msg += `，新建 ${newSheets} 个工作表`;
+      showToast(msg, 's');
+    };
+
+    return {
+      activeTab, toastMsg, toastType,
+      funnelText, nmStatsText, funnelStatus, nmStatsStatus, canMerge, merged, mergedJson, stats, copied,
+      mergeView, tableCols, tableData, tableDataBySheet, mergeSheet, mergeSheetData,
+      parseFunnel, parseNmStats, doMerge, copyResult, exportXlsx, writeXlsx, mergeToNewFile,
+      xfi, xlName, excelJson, excelJsonText, excelJsonKeys, excelRows, excelCols, sheets, currentSheet, excelCopied, excelPreviewMode,
+      openXlsx, handleXlsxFile, selectSheet, copyExcel, mergeInExcel
+    };
+  }
+}).mount('#app');
+</script>
+</body>
+</html>
