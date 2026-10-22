@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>产品数据表格 - Vue3 虚拟列表</title>
+    <title>产品数据表格</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
     <style>
@@ -1115,6 +1115,7 @@
             📜 解析历史 <span class="badge-count">{{ historyList.length }}</span>
             <span style="margin-left: 4px; font-size: 11px;">{{ showHistory ? '▲' : '▼' }}</span>
           </button>
+          <span style="margin-left: 10px; font-size: 12px; color: #e67e22;">⚠ 缓存有限，请及时保存JSON</span>
           <div class="history-list" v-if="showHistory">
             <div
               v-for="(entry, index) in historyList"
@@ -1689,7 +1690,8 @@
           const fileInput = ref(null);
 
           // 解析历史记录
-          const STORAGE_KEY = "json_parse_history";
+          const DB_NAME = "TableAppDB";
+          const STORE_NAME = "history";
           const MAX_HISTORY = 100;
           const showHistory = ref(false);
           const currentHistoryId = ref(null);
@@ -1702,33 +1704,53 @@
           const showTagInput = ref(false);
           const tagInputRef = ref(null);
 
-          const loadHistoryFromStorage = () => {
+          // IndexedDB 辅助函数
+          const openDB = () => {
+            return new Promise((resolve, reject) => {
+              const request = indexedDB.open(DB_NAME, 1);
+              request.onupgradeneeded = (e) => {
+                const db = e.target.result;
+                if (!db.objectStoreNames.contains(STORE_NAME)) {
+                  db.createObjectStore(STORE_NAME, { keyPath: "id" });
+                }
+              };
+              request.onsuccess = (e) => resolve(e.target.result);
+              request.onerror = (e) => reject(e.target.error);
+            });
+          };
+
+          const loadHistoryFromStorage = async () => {
             try {
-              const stored = localStorage.getItem(STORAGE_KEY);
-              if (stored) {
-                historyList.value = JSON.parse(stored);
-              }
+              const db = await openDB();
+              const tx = db.transaction(STORE_NAME, "readonly");
+              const store = tx.objectStore(STORE_NAME);
+              const request = store.getAll();
+              await new Promise((resolve, reject) => {
+                tx.oncomplete = resolve;
+                tx.onerror = reject;
+              });
+              historyList.value = request.result.sort((a, b) => a.id - b.id);
             } catch (e) {
               console.error("读取历史记录失败:", e);
               historyList.value = [];
             }
           };
 
-          const saveHistoryToStorage = () => {
-            try {
-              localStorage.setItem(STORAGE_KEY, JSON.stringify(historyList.value));
-            } catch (e) {
-              console.error("保存历史记录失败（可能数据过大）:", e);
-              // 如果存储失败，尝试移除最旧的记录
-              if (historyList.value.length > 1) {
-                historyList.value.shift();
-                try {
-                  localStorage.setItem(STORAGE_KEY, JSON.stringify(historyList.value));
-                } catch (e2) {
-                  console.error("再次保存失败:", e2);
-                }
-              }
+          const saveHistoryToStorage = async () => {
+            const db = await openDB();
+            const tx = db.transaction(STORE_NAME, "readwrite");
+            const store = tx.objectStore(STORE_NAME);
+
+            // 先清空，再批量写入当前列表
+            store.clear();
+            for (const entry of historyList.value) {
+              // toRaw 去掉 Vue 响应式代理，IndexedDB 才能克隆
+              store.put(Vue.toRaw(entry));
             }
+            await new Promise((resolve, reject) => {
+              tx.oncomplete = resolve;
+              tx.onerror = reject;
+            });
           };
 
           const addToHistory = (rawJson, source) => {
@@ -1790,10 +1812,12 @@
             saveHistoryToStorage();
           };
 
-          const clearHistory = () => {
+          const clearHistory = async () => {
             historyList.value = [];
             currentHistoryId.value = null;
-            localStorage.removeItem(STORAGE_KEY);
+            const db = await openDB();
+            const tx = db.transaction(STORE_NAME, "readwrite");
+            tx.objectStore(STORE_NAME).clear();
           };
 
           const currentHistoryRemark = computed(() => {
