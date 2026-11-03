@@ -1062,6 +1062,9 @@
           <button class="import-btn layout-toggle-btn" @click="toggleLayout" :style="{ background: layoutMode === 'table' ? '#6c757d' : '#28a745' }">
             {{ layoutMode === 'table' ? '📋 当前: 表格' : '🛍️ 当前: 瀑布流' }}
           </button>
+          <button class="import-btn" @click="toggleInsertProductInput" style="background: #e67e22;">
+            {{ showInsertProductInput ? '❌ 关闭插入' : '➕ 插入产品' }}
+          </button>
         </div>
         <div v-if="showJsonInput" style="width: 100%;">
           <textarea
@@ -1069,6 +1072,17 @@
             placeholder="请在此粘贴JSON数据..."
             style="width: 100%; height: 150px; padding: 10px; border: 2px solid #dee2e6; border-radius: 5px; font-size: 13px; font-family: Consolas, Monaco, monospace; resize: vertical;"
           ></textarea>
+        </div>
+        <div v-if="showInsertProductInput" style="width: 100%;">
+          <textarea
+            v-model="insertProductText"
+            placeholder='请在此粘贴单个产品的JSON数据（如 {"id":123, "name":"商品名", ...}）...'
+            style="width: 100%; height: 120px; padding: 10px; border: 2px solid #e67e22; border-radius: 5px; font-size: 13px; font-family: Consolas, Monaco, monospace; resize: vertical;"
+          ></textarea>
+          <div style="display: flex; gap: 10px; margin-top: 8px;">
+            <button class="import-btn primary" @click="parseAndInsertProduct">✅ 确认插入</button>
+            <span style="font-size: 12px; color: #6c757d; line-height: 36px;">将单个产品追加到当前数据中</span>
+          </div>
         </div>
 
         <!-- 标签管理 -->
@@ -1688,6 +1702,10 @@
           const showJsonInput = ref(false);
           const jsonInputText = ref("");
           const fileInput = ref(null);
+
+          // 插入单个产品JSON
+          const showInsertProductInput = ref(false);
+          const insertProductText = ref("");
 
           // 解析历史记录
           const DB_NAME = "TableAppDB";
@@ -2543,6 +2561,67 @@
           };
 
           // ============================================
+          // 插入单个产品功能
+          // ============================================
+
+          const toggleInsertProductInput = () => {
+            showInsertProductInput.value = !showInsertProductInput.value;
+            if (showInsertProductInput.value) {
+              insertProductText.value = "";
+            }
+          };
+
+          const parseAndInsertProduct = () => {
+            const text = insertProductText.value.trim();
+            if (!text) {
+              error.value = "请输入产品JSON数据";
+              return;
+            }
+
+            try {
+              const parsed = JSON.parse(text);
+
+              // 支持单个对象或数组（取第一个）
+              let product;
+              if (Array.isArray(parsed)) {
+                if (parsed.length === 0) {
+                  error.value = "数组为空，请提供有效的产品数据";
+                  return;
+                }
+                product = parsed[0];
+              } else if (typeof parsed === "object" && parsed !== null) {
+                product = parsed;
+              } else {
+                error.value = "JSON格式不正确，需要对象或数组";
+                return;
+              }
+
+              // 处理price和basic（与processJsonData保持一致）
+              if (product.sizes && product.sizes[0] && product.sizes[0].price) {
+                product.price = product.sizes[0].price.product;
+                product.basic = product.sizes[0].price.basic;
+              }
+
+              // 追加到allData
+              allData.value.push(product);
+
+              // 重新应用过滤和排序
+              applyTagFilter();
+
+              // 关闭输入框并清空
+              showInsertProductInput.value = false;
+              insertProductText.value = "";
+              error.value = null;
+
+              window.showCopyToast("产品已插入成功 (ID: " + (product.id || "未知") + ")");
+
+            } catch (err) {
+              console.error("解析产品JSON出错:", err);
+              error.value = "JSON解析失败: " + err.message;
+            }
+          };
+
+          // ============================================
           // Excel 导出功能
           // ============================================
 
@@ -2803,6 +2882,12 @@
             showJsonInput,
             jsonInputText,
             fileInput,
+
+            // 插入单个产品
+            showInsertProductInput,
+            insertProductText,
+            toggleInsertProductInput,
+            parseAndInsertProduct,
 
             // 解析历史
             showHistory,
