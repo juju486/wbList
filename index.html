@@ -329,6 +329,80 @@
         transform: scale(1.05);
       }
 
+      /* 编辑产品JSON弹窗 */
+      .edit-modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        animation: fadeIn 0.2s ease;
+      }
+
+      .edit-modal {
+        background: white;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 700px;
+        max-height: 85vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        animation: zoomIn 0.2s ease;
+      }
+
+      .edit-modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .edit-modal-close {
+        cursor: pointer;
+        font-size: 24px;
+        line-height: 1;
+        padding: 0 4px;
+        transition: opacity 0.2s;
+      }
+
+      .edit-modal-close:hover {
+        opacity: 0.7;
+      }
+
+      .edit-modal-textarea {
+        flex: 1;
+        width: 100%;
+        min-height: 400px;
+        padding: 16px;
+        border: none;
+        outline: none;
+        resize: vertical;
+        font-family: Consolas, Monaco, monospace;
+        font-size: 13px;
+        line-height: 1.5;
+        box-sizing: border-box;
+      }
+
+      .edit-modal-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 12px 20px;
+        background: #f8f9fa;
+        border-top: 1px solid #e9ecef;
+      }
+
       .copy-btn {
         background: #667eea;
         color: white;
@@ -346,6 +420,22 @@
 
       .copy-btn:active {
         background: #28a745;
+      }
+
+      .action-btn {
+        color: white;
+        border: none;
+        border-radius: 3px;
+        padding: 2px 6px;
+        cursor: pointer;
+        font-size: 12px;
+        line-height: 1.4;
+        white-space: nowrap;
+        transition: background 0.2s;
+      }
+
+      .action-btn:hover {
+        opacity: 0.85;
       }
 
       .import-btn {
@@ -907,22 +997,23 @@
 
       .waterfall-card-actions {
         display: flex;
-        gap: 8px;
-        padding: 0 16px 14px;
+        gap: 5px;
+        padding: 0 12px 12px;
       }
 
       .waterfall-card-btn {
         flex: 1;
-        padding: 8px 12px;
+        padding: 5px 6px;
         border: 1px solid #dee2e6;
-        border-radius: 6px;
+        border-radius: 5px;
         background: white;
         cursor: pointer;
-        font-size: 12px;
+        font-size: 11px;
         font-weight: 500;
         transition: all 0.2s;
         text-align: center;
         color: #495057;
+        white-space: nowrap;
       }
 
       .waterfall-card-btn:hover {
@@ -1015,6 +1106,25 @@
           >
           <img class="image-preview" src="" alt="产品图片" />
           <div class="image-preview-info"></div>
+        </div>
+      </div>
+
+      <!-- 编辑产品JSON弹窗 -->
+      <div class="edit-modal-overlay" v-if="showEditModal" @click.self="closeEditModal">
+        <div class="edit-modal">
+          <div class="edit-modal-header">
+            <span>✏️ 编辑产品 JSON</span>
+            <span class="edit-modal-close" @click="closeEditModal">&times;</span>
+          </div>
+          <textarea
+            class="edit-modal-textarea"
+            v-model="editProductText"
+            placeholder="请输入产品JSON..."
+          ></textarea>
+          <div class="edit-modal-footer">
+            <button class="import-btn" @click="closeEditModal">取消</button>
+            <button class="import-btn primary" @click="saveEditProduct">💾 保存</button>
+          </div>
         </div>
       </div>
 
@@ -1290,6 +1400,10 @@
                   <span>💬 {{ item.feedbacks || 0 }}</span>
                   <span>📦 {{ item.totalQuantity || 0 }}</span>
                 </div>
+                <div class="waterfall-card-meta" style="margin-top:2px;">
+                  <span>🕒 首次: {{ formatTime(item.firstFeedbackTime) }}</span>
+                  <span>🗨️ 30天: {{ item.recent30FeedbackCount != null ? item.recent30FeedbackCount : '-' }}</span>
+                </div>
                 <!-- 标签 -->
                 <div class="waterfall-card-tags">
                   <span
@@ -1308,8 +1422,10 @@
               </div>
               <!-- 操作按钮 -->
               <div class="waterfall-card-actions">
-                <button class="waterfall-card-btn" @click.stop="copyWaterfallItem(item)">📋 复制</button>
-                <button class="waterfall-card-btn primary" @click.stop="openProductLink(item.id)">🔗 查看</button>
+                <button class="waterfall-card-btn" @click.stop="copyWaterfallItem(item)">📋</button>
+                <button class="waterfall-card-btn primary" @click.stop="openProductLink(item.id)">🔗</button>
+                <button class="waterfall-card-btn" @click.stop="openEditModal(item.id)">✏️</button>
+                <button class="waterfall-card-btn" style="color:#dc3545;" @click.stop="deleteProduct(item.id)">🗑️</button>
               </div>
             </div>
             <!-- 无数据提示 -->
@@ -1552,6 +1668,8 @@
             nmReviewRating: "NM评价评分",
             feedbacks: "评论数",
             nmFeedbacks: "NM反馈数",
+            firstFeedbackTime: "首次评论时间",
+            recent30FeedbackCount: "近30天评论数",
             colors: "颜色",
             subjectId: "主题ID",
             subjectParentId: "主题父ID",
@@ -1626,6 +1744,13 @@
             // { key: "supplierRating", width: "100px" },
             { key: "reviewRating", width: "80px" },
             { key: "feedbacks", width: "90px" },
+            {
+              key: "firstFeedbackTime",
+              width: "150px",
+              sortable: true,
+              render: (item) => formatTime(item.firstFeedbackTime),
+            },
+            { key: "recent30FeedbackCount", width: "120px", sortable: true },
             // { key: "wh", width: "100px" },
             { key: "isNew", width: "90px" },
             {
@@ -1661,6 +1786,17 @@
                 };
                 const encoded = encodeURIComponent(JSON.stringify(data));
                 return `<button class="copy-btn" onclick="window.copyRowData(this.getAttribute('data-copy'))" data-copy="${encoded}" title="复制行数据">📋</button>`;
+              },
+            },
+            {
+              key: "actions",
+              width: "110px",
+              title: "操作",
+              sortable: false,
+              render: (item) => {
+                const id = item.id ?? "";
+                return `<button class="action-btn" onclick="window.openEditModal('${id}')" style="background:#6c757d;" title="编辑">编辑</button>
+                        <button class="action-btn" onclick="window.deleteProduct('${id}')" style="background:#dc3545;" title="删除">删除</button>`;
               },
             },
             // 自定义列示例：图片列（带懒加载和备用链接）
@@ -1706,6 +1842,11 @@
           // 插入单个产品JSON
           const showInsertProductInput = ref(false);
           const insertProductText = ref("");
+
+          // 编辑产品JSON
+          const showEditModal = ref(false);
+          const editProductId = ref(null);
+          const editProductText = ref("");
 
           // 解析历史记录
           const DB_NAME = "TableAppDB";
@@ -2080,6 +2221,28 @@
             }
 
             return String(value);
+          };
+
+          // 格式化时间戳为可读日期
+          const formatTime = (value) => {
+            if (value === null || value === undefined || value === "") return "-";
+            const num = Number(value);
+            if (!Number.isFinite(num) || num <= 0) return String(value);
+
+            // 判断是秒级还是毫秒级时间戳（秒级约10位，毫秒级约13位）
+            let ms = num;
+            if (num < 100000000000) {
+              ms = num * 1000; // 秒级时间戳
+            }
+
+            const d = new Date(ms);
+            if (Number.isNaN(d.getTime())) return String(value);
+
+            const pad = (n) => String(n).padStart(2, "0");
+            return (
+              `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ` +
+              `${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`
+            );
           };
 
           // ============================================
@@ -2604,6 +2767,17 @@
 
               // 追加到allData
               allData.value.push(product);
+              if (currentHistoryId.value != null) {
+                const historyEntry = historyList.value.find(
+                  (entry) => entry.id === currentHistoryId.value,
+                );
+                if (historyEntry) {
+                  historyEntry.rawJson = JSON.stringify(Vue.toRaw(allData.value));
+                  historyEntry.recordCount = allData.value.length;
+                  saveHistoryToStorage();
+                }
+              }
+
 
               // 重新应用过滤和排序
               applyTagFilter();
@@ -2620,6 +2794,71 @@
               error.value = "JSON解析失败: " + err.message;
             }
           };
+
+          // ============================================
+          // 编辑 / 删除产品功能
+          // ============================================
+
+          const openEditModal = (id) => {
+            const item = allData.value.find((d) => String(d.id) === String(id));
+            if (!item) {
+              window.showCopyToast("未找到该产品");
+              return;
+            }
+            editProductId.value = item.id;
+            editProductText.value = JSON.stringify(item, null, 2);
+            showEditModal.value = true;
+          };
+
+          const closeEditModal = () => {
+            showEditModal.value = false;
+            editProductId.value = null;
+            editProductText.value = "";
+          };
+
+          const saveEditProduct = () => {
+            const text = editProductText.value.trim();
+            if (!text) {
+              window.showCopyToast("编辑内容不能为空");
+              return;
+            }
+            try {
+              const parsed = JSON.parse(text);
+              const idx = allData.value.findIndex(
+                (d) => String(d.id) === String(editProductId.value),
+              );
+              if (idx === -1) {
+                window.showCopyToast("未找到该产品");
+                closeEditModal();
+                return;
+              }
+              // 若编辑后ID变了，用新ID替换；同时保留编辑内容
+              allData.value[idx] = parsed;
+              applyTagFilter();
+              closeEditModal();
+              window.showCopyToast("保存成功");
+            } catch (err) {
+              console.error("保存产品JSON出错:", err);
+              window.showCopyToast("JSON解析失败: " + err.message);
+            }
+          };
+
+          const deleteProduct = (id) => {
+            const idx = allData.value.findIndex(
+              (d) => String(d.id) === String(id),
+            );
+            if (idx === -1) return;
+            if (!window.confirm(`确定要删除产品 ID: ${id} 吗？`)) return;
+            allData.value.splice(idx, 1);
+            applyTagFilter();
+            window.showCopyToast("删除成功");
+          };
+
+          // 暴露给全局（供 v-html 渲染的按钮调用）
+          window.openEditModal = openEditModal;
+          window.closeEditModal = closeEditModal;
+          window.saveEditProduct = saveEditProduct;
+          window.deleteProduct = deleteProduct;
 
           // ============================================
           // Excel 导出功能
@@ -2889,6 +3128,15 @@
             toggleInsertProductInput,
             parseAndInsertProduct,
 
+            // 编辑/删除产品
+            showEditModal,
+            editProductId,
+            editProductText,
+            openEditModal,
+            closeEditModal,
+            saveEditProduct,
+            deleteProduct,
+
             // 解析历史
             showHistory,
             currentHistoryId,
@@ -2900,6 +3148,7 @@
             getFieldTitle,
             getFieldValue,
             formatValue,
+            formatTime,
             createLazyImage,
             handleSort,
             handleSearch,
