@@ -642,7 +642,7 @@
 
       .tag-badge.active {
         border-color: #333;
-        box-shadow: 0 0 0 2px rgba(0,0,0,0.15);
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
       }
 
       .tag-badge-all {
@@ -753,7 +753,7 @@
         background: white;
         border: 1px solid #dee2e6;
         border-radius: 8px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
         padding: 10px;
         z-index: 1000;
         min-width: 180px;
@@ -880,7 +880,9 @@
         border-radius: 12px;
         overflow: hidden;
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-        transition: transform 0.2s, box-shadow 0.2s;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
         display: flex;
         flex-direction: column;
       }
@@ -1110,11 +1112,17 @@
       </div>
 
       <!-- 编辑产品JSON弹窗 -->
-      <div class="edit-modal-overlay" v-if="showEditModal" @click.self="closeEditModal">
+      <div
+        class="edit-modal-overlay"
+        v-if="showEditModal"
+        @click.self="closeEditModal"
+      >
         <div class="edit-modal">
           <div class="edit-modal-header">
             <span>✏️ 编辑产品 JSON</span>
-            <span class="edit-modal-close" @click="closeEditModal">&times;</span>
+            <span class="edit-modal-close" @click="closeEditModal"
+              >&times;</span
+            >
           </div>
           <textarea
             class="edit-modal-textarea"
@@ -1123,13 +1131,26 @@
           ></textarea>
           <div class="edit-modal-footer">
             <button class="import-btn" @click="closeEditModal">取消</button>
-            <button class="import-btn primary" @click="saveEditProduct">💾 保存</button>
+            <button class="import-btn primary" @click="saveEditProduct">
+              💾 保存
+            </button>
           </div>
         </div>
       </div>
 
-      <div class="controls" style="flex-direction: column; align-items: stretch;">
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+      <div
+        class="controls"
+        style="flex-direction: column; align-items: stretch"
+      >
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+          "
+        >
           <div class="search-box">
             <input
               type="text"
@@ -1152,46 +1173,97 @@
             </span>
           </div>
         </div>
-        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-          <button class="import-btn" @click="triggerFileImport">📁 导入JSON文件</button>
+        <div
+          style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap"
+        >
+          <button class="import-btn" @click="triggerFileImport">
+            📁 导入JSON文件
+          </button>
           <input
             type="file"
             ref="fileInput"
             accept=".json"
-            style="display: none;"
+            style="display: none"
             @change="handleFileImport"
           />
-          <button class="import-btn" @click="toggleJsonInput">{{ showJsonInput ? '❌ 关闭输入' : '✏️ 粘贴JSON' }}</button>
-          <button class="import-btn primary" @click="parseJsonInput" v-if="showJsonInput">✅ 解析JSON</button>
-          <button class="import-btn" @click="exportToExcel" :disabled="exporting" style="background: #217346;">
+          <button class="import-btn" @click="toggleJsonInput">
+            {{ showJsonInput ? '❌ 关闭输入' : '✏️ 粘贴JSON' }}
+          </button>
+          <button
+            class="import-btn primary"
+            @click="parseJsonInput"
+            v-if="showJsonInput"
+          >
+            ✅ 解析JSON
+          </button>
+          <button
+            class="import-btn"
+            @click="exportToExcel"
+            :disabled="exporting"
+            style="background: #217346"
+          >
             {{ exporting ? '⏳ 导出中...' : '📥 导出 Excel' }}
           </button>
-          <button class="import-btn" @click="exportToJson" style="background: #e67e22;">
+          <button
+            class="import-btn"
+            @click="exportToJson"
+            style="background: #e67e22"
+          >
             📤 导出 JSON
           </button>
-          <button class="import-btn layout-toggle-btn" @click="toggleLayout" :style="{ background: layoutMode === 'table' ? '#6c757d' : '#28a745' }">
+          <button
+            class="import-btn layout-toggle-btn"
+            @click="toggleLayout"
+            :style="{ background: layoutMode === 'table' ? '#6c757d' : '#28a745' }"
+          >
             {{ layoutMode === 'table' ? '📋 当前: 表格' : '🛍️ 当前: 瀑布流' }}
           </button>
-          <button class="import-btn" @click="toggleInsertProductInput" style="background: #e67e22;">
+          <button
+            class="import-btn"
+            @click="toggleInsertProductInput"
+            style="background: #e67e22"
+          >
             {{ showInsertProductInput ? '❌ 关闭插入' : '➕ 插入产品' }}
           </button>
         </div>
-        <div v-if="showJsonInput" style="width: 100%;">
+        <div v-if="showJsonInput" style="width: 100%">
           <textarea
             v-model="jsonInputText"
             placeholder="请在此粘贴JSON数据..."
-            style="width: 100%; height: 150px; padding: 10px; border: 2px solid #dee2e6; border-radius: 5px; font-size: 13px; font-family: Consolas, Monaco, monospace; resize: vertical;"
+            style="
+              width: 100%;
+              height: 150px;
+              padding: 10px;
+              border: 2px solid #dee2e6;
+              border-radius: 5px;
+              font-size: 13px;
+              font-family: Consolas, Monaco, monospace;
+              resize: vertical;
+            "
           ></textarea>
         </div>
-        <div v-if="showInsertProductInput" style="width: 100%;">
+        <div v-if="showInsertProductInput" style="width: 100%">
           <textarea
             v-model="insertProductText"
             placeholder='请在此粘贴单个产品的JSON数据（如 {"id":123, "name":"商品名", ...}）...'
-            style="width: 100%; height: 120px; padding: 10px; border: 2px solid #e67e22; border-radius: 5px; font-size: 13px; font-family: Consolas, Monaco, monospace; resize: vertical;"
+            style="
+              width: 100%;
+              height: 120px;
+              padding: 10px;
+              border: 2px solid #e67e22;
+              border-radius: 5px;
+              font-size: 13px;
+              font-family: Consolas, Monaco, monospace;
+              resize: vertical;
+            "
           ></textarea>
-          <div style="display: flex; gap: 10px; margin-top: 8px;">
-            <button class="import-btn primary" @click="parseAndInsertProduct">✅ 确认插入</button>
-            <span style="font-size: 12px; color: #6c757d; line-height: 36px;">将单个产品追加到当前数据中</span>
+          <div style="display: flex; gap: 10px; margin-top: 8px">
+            <button class="import-btn primary" @click="parseAndInsertProduct">
+              ✅ 确认插入
+            </button>
+            <span style="font-size: 12px; color: #6c757d; line-height: 36px"
+              >将单个产品追加到当前数据中</span
+            >
           </div>
         </div>
 
@@ -1202,7 +1274,8 @@
             class="tag-badge tag-badge-all"
             :class="{ active: activeTagFilter === null }"
             @click="clearTagFilter"
-          >全部</span>
+            >全部</span
+          >
           <span
             v-for="tag in allTags"
             :key="tag"
@@ -1212,9 +1285,17 @@
             @click="toggleTagFilter(tag)"
           >
             {{ tag }}
-            <span class="tag-delete-btn" @click.stop="deleteTag(tag)" title="删除此标签">×</span>
+            <span
+              class="tag-delete-btn"
+              @click.stop="deleteTag(tag)"
+              title="删除此标签"
+              >×</span
+            >
           </span>
-          <span v-if="showTagInput" style="display: inline-flex; align-items: center; gap: 4px;">
+          <span
+            v-if="showTagInput"
+            style="display: inline-flex; align-items: center; gap: 4px"
+          >
             <input
               type="text"
               v-model="newTagName"
@@ -1230,16 +1311,22 @@
             v-if="!showTagInput"
             class="tag-badge tag-badge-add"
             @click="showTagInput = true; $nextTick(() => $refs.tagInputRef && $refs.tagInputRef.focus())"
-          >+</span>
+            >+</span
+          >
         </div>
 
         <!-- 解析历史记录 -->
         <div class="history-section" v-if="historyList.length > 0">
           <button class="history-toggle" @click="showHistory = !showHistory">
-            📜 解析历史 <span class="badge-count">{{ historyList.length }}</span>
-            <span style="margin-left: 4px; font-size: 11px;">{{ showHistory ? '▲' : '▼' }}</span>
+            📜 解析历史
+            <span class="badge-count">{{ historyList.length }}</span>
+            <span style="margin-left: 4px; font-size: 11px"
+              >{{ showHistory ? '▲' : '▼' }}</span
+            >
           </button>
-          <span style="margin-left: 10px; font-size: 12px; color: #e67e22;">⚠ 缓存有限，请及时保存JSON</span>
+          <span style="margin-left: 10px; font-size: 12px; color: #e67e22"
+            >⚠ 缓存有限，请及时保存JSON</span
+          >
           <div class="history-list" v-if="showHistory">
             <div
               v-for="(entry, index) in historyList"
@@ -1250,7 +1337,7 @@
             >
               <div class="history-item-info">
                 <div class="history-item-time">{{ entry.time }}</div>
-                <div style="margin: 4px 0;">
+                <div style="margin: 4px 0">
                   <input
                     type="text"
                     :value="entry.remark || ''"
@@ -1261,20 +1348,39 @@
                   />
                 </div>
                 <div>
-                  <span class="history-item-count">{{ entry.recordCount }}</span> 条记录
-                  <span style="color: #adb5bd; font-size: 11px; margin-left: 6px;">{{ entry.source }}</span>
+                  <span class="history-item-count"
+                    >{{ entry.recordCount }}</span
+                  >
+                  条记录
+                  <span
+                    style="color: #adb5bd; font-size: 11px; margin-left: 6px"
+                    >{{ entry.source }}</span
+                  >
                 </div>
               </div>
-              <button class="history-item-delete" @click.stop="deleteHistory(entry.id)" title="删除此记录">×</button>
+              <button
+                class="history-item-delete"
+                @click.stop="deleteHistory(entry.id)"
+                title="删除此记录"
+              >
+                ×
+              </button>
             </div>
             <div class="history-footer">
-              <button class="history-clear-btn" @click="clearHistory">清空全部历史</button>
+              <button class="history-clear-btn" @click="clearHistory">
+                清空全部历史
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="table-wrapper" ref="tableWrapper" @scroll="handleScroll" v-show="layoutMode === 'table'">
+      <div
+        class="table-wrapper"
+        ref="tableWrapper"
+        @scroll="handleScroll"
+        v-show="layoutMode === 'table'"
+      >
         <div v-if="loading" class="loading">正在加载数据...</div>
         <div v-else-if="error" class="error">❌ 加载数据失败: {{ error }}</div>
         <div
@@ -1348,7 +1454,12 @@
       </div>
 
       <!-- 瀑布流布局 -->
-      <div class="waterfall-wrapper" ref="waterfallWrapper" @scroll="handleWaterfallScroll" v-show="layoutMode === 'waterfall'">
+      <div
+        class="waterfall-wrapper"
+        ref="waterfallWrapper"
+        @scroll="handleWaterfallScroll"
+        v-show="layoutMode === 'waterfall'"
+      >
         <div v-if="loading" class="loading">正在加载数据...</div>
         <div v-else-if="error" class="error">❌ 加载数据失败: {{ error }}</div>
         <div v-else>
@@ -1375,7 +1486,10 @@
               class="waterfall-card"
             >
               <!-- 图片区域 -->
-              <div class="waterfall-card-img" @click="previewWaterfallImage(item)">
+              <div
+                class="waterfall-card-img"
+                @click="previewWaterfallImage(item)"
+              >
                 <img
                   :src="item.image || item._img || ''"
                   loading="lazy"
@@ -1387,22 +1501,35 @@
               </div>
               <!-- 商品信息 -->
               <div class="waterfall-card-body">
-                <div class="waterfall-card-name">{{ item.name || '未命名商品' }}</div>
+                <div class="waterfall-card-name">
+                  {{ item.name || '未命名商品' }}
+                </div>
                 <div class="waterfall-card-brand">
-                  <strong>{{ item.brand || '未知品牌' }}</strong> / {{ item.supplier || '未知供应商' }}
+                  <strong>{{ item.brand || '未知品牌' }}</strong> / {{
+                  item.supplier || '未知供应商' }}
                 </div>
                 <div class="waterfall-card-price-row">
-                  <span class="waterfall-card-price">₽{{ Math.floor((item.price / 100) * 0.98) }}</span>
-                  <span class="waterfall-card-price-original">₽{{ item.basic / 100 }}</span>
+                  <span class="waterfall-card-price"
+                    >₽{{ Math.floor((item.price / 100) * 1) }}</span
+                  >
+                  <span class="waterfall-card-price-original"
+                    >₽{{ item.basic / 100 }}</span
+                  >
                 </div>
                 <div class="waterfall-card-meta">
-                  <span><span class="star">★</span> {{ item.reviewRating || '-' }}</span>
+                  <span
+                    ><span class="star">★</span> {{ item.reviewRating || '-'
+                    }}</span
+                  >
                   <span>💬 {{ item.feedbacks || 0 }}</span>
                   <span>📦 {{ item.totalQuantity || 0 }}</span>
                 </div>
-                <div class="waterfall-card-meta" style="margin-top:2px;">
+                <div class="waterfall-card-meta" style="margin-top: 2px">
                   <span>🕒 首次: {{ formatTime(item.firstFeedbackTime) }}</span>
-                  <span>🗨️ 30天: {{ item.recent30FeedbackCount != null ? item.recent30FeedbackCount : '-' }}</span>
+                  <span
+                    >🗨️ 30天: {{ item.recent30FeedbackCount != null ?
+                    item.recent30FeedbackCount : '-' }}</span
+                  >
                 </div>
                 <!-- 标签 -->
                 <div class="waterfall-card-tags">
@@ -1412,20 +1539,44 @@
                     class="tag-row-badge"
                     :style="getTagStyle(tag)"
                     @click.stop="toggleTagFilter(tag)"
-                  >{{ tag }}</span>
+                    >{{ tag }}</span
+                  >
                   <button
                     class="tag-row-add-btn"
                     @click.stop="openWaterfallTagPopup($event, item.id)"
                     title="添加标签"
-                  >+</button>
+                  >
+                    +
+                  </button>
                 </div>
               </div>
               <!-- 操作按钮 -->
               <div class="waterfall-card-actions">
-                <button class="waterfall-card-btn" @click.stop="copyWaterfallItem(item)">📋</button>
-                <button class="waterfall-card-btn primary" @click.stop="openProductLink(item.id)">🔗</button>
-                <button class="waterfall-card-btn" @click.stop="openEditModal(item.id)">✏️</button>
-                <button class="waterfall-card-btn" style="color:#dc3545;" @click.stop="deleteProduct(item.id)">🗑️</button>
+                <button
+                  class="waterfall-card-btn"
+                  @click.stop="copyWaterfallItem(item)"
+                >
+                  📋
+                </button>
+                <button
+                  class="waterfall-card-btn primary"
+                  @click.stop="openProductLink(item.id)"
+                >
+                  🔗
+                </button>
+                <button
+                  class="waterfall-card-btn"
+                  @click.stop="openEditModal(item.id)"
+                >
+                  ✏️
+                </button>
+                <button
+                  class="waterfall-card-btn"
+                  style="color: #dc3545"
+                  @click.stop="deleteProduct(item.id)"
+                >
+                  🗑️
+                </button>
               </div>
             </div>
             <!-- 无数据提示 -->
@@ -1434,8 +1585,12 @@
               <div class="waterfall-empty-text">暂无数据</div>
             </div>
             <!-- 加载更多 -->
-            <div v-if="waterfallHasMore" class="waterfall-empty" style="padding: 30px;">
-              <div style="color: #6c757d; font-size: 14px;">滚动加载更多...</div>
+            <div
+              v-if="waterfallHasMore"
+              class="waterfall-empty"
+              style="padding: 30px"
+            >
+              <div style="color: #6c757d; font-size: 14px">滚动加载更多...</div>
             </div>
           </div>
         </div>
@@ -1726,7 +1881,7 @@
               sortable: true,
               render: (item) => {
                 // 向下取整
-                return `<span style="color: red;">${Math.floor((item.price / 100) * 0.98)}</span>`;
+                return `<span style="color: red;">${Math.floor((item.price / 100) * 1)}</span>`;
               },
             },
             {
@@ -1763,11 +1918,16 @@
                 if (itemTags.length === 0) {
                   return `<button class="tag-row-add-btn" onclick="window.openTagPopup(event, '${item.id}')" title="添加标签">+</button>`;
                 }
-                const badges = itemTags.map((t) => {
-                  const color = window.getTagColor(t);
-                  return `<span class="tag-row-badge" style="background:${color.bg};color:${color.text}" onclick="window.toggleTagFilterGlobal('${t.replace(/'/g, "\\'")}')" title="点击筛选此标签">${t}</span>`;
-                }).join("");
-                return badges + ` <button class="tag-row-add-btn" onclick="window.openTagPopup(event, '${item.id}')" title="添加标签">+</button>`;
+                const badges = itemTags
+                  .map((t) => {
+                    const color = window.getTagColor(t);
+                    return `<span class="tag-row-badge" style="background:${color.bg};color:${color.text}" onclick="window.toggleTagFilterGlobal('${t.replace(/'/g, "\\'")}')" title="点击筛选此标签">${t}</span>`;
+                  })
+                  .join("");
+                return (
+                  badges +
+                  ` <button class="tag-row-add-btn" onclick="window.openTagPopup(event, '${item.id}')" title="添加标签">+</button>`
+                );
               },
             },
             {
@@ -1826,7 +1986,9 @@
             try {
               const saved = localStorage.getItem(LAYOUT_STORAGE_KEY);
               if (saved === "table" || saved === "waterfall") return saved;
-            } catch (e) { /* ignore */ }
+            } catch (e) {
+              /* ignore */
+            }
             return "table";
           };
           const layoutMode = ref(getSavedLayoutMode());
@@ -2090,10 +2252,17 @@
             // 文本搜索过滤
             if (query) {
               data = data.filter((item) => {
-                if (item.id && String(item.id).toLowerCase().includes(query)) return true;
-                if (item.name && item.name.toLowerCase().includes(query)) return true;
-                if (item.brand && item.brand.toLowerCase().includes(query)) return true;
-                if (item.supplier && item.supplier.toLowerCase().includes(query)) return true;
+                if (item.id && String(item.id).toLowerCase().includes(query))
+                  return true;
+                if (item.name && item.name.toLowerCase().includes(query))
+                  return true;
+                if (item.brand && item.brand.toLowerCase().includes(query))
+                  return true;
+                if (
+                  item.supplier &&
+                  item.supplier.toLowerCase().includes(query)
+                )
+                  return true;
                 return false;
               });
             }
@@ -2225,7 +2394,8 @@
 
           // 格式化时间戳为可读日期
           const formatTime = (value) => {
-            if (value === null || value === undefined || value === "") return "-";
+            if (value === null || value === undefined || value === "")
+              return "-";
             const num = Number(value);
             if (!Number.isFinite(num) || num <= 0) return String(value);
 
@@ -2497,7 +2667,9 @@
           const saveLayoutMode = () => {
             try {
               localStorage.setItem(LAYOUT_STORAGE_KEY, layoutMode.value);
-            } catch (e) { /* ignore */ }
+            } catch (e) {
+              /* ignore */
+            }
           };
 
           const waterfallVisibleData = computed(() => {
@@ -2510,7 +2682,10 @@
 
           const handleWaterfallScroll = (e) => {
             const { scrollTop, scrollHeight, clientHeight } = e.target;
-            if (scrollHeight - scrollTop - clientHeight < 200 && waterfallHasMore.value) {
+            if (
+              scrollHeight - scrollTop - clientHeight < 200 &&
+              waterfallHasMore.value
+            ) {
               waterfallLoadedCount.value = Math.min(
                 waterfallLoadedCount.value + waterfallPageSize,
                 filteredData.value.length,
@@ -2524,7 +2699,10 @@
 
           const openProductLink = (id) => {
             if (id) {
-              window.open(`https://www.wildberries.ru/catalog/${id}/detail.aspx`, "_blank");
+              window.open(
+                `https://www.wildberries.ru/catalog/${id}/detail.aspx`,
+                "_blank",
+              );
             }
           };
 
@@ -2536,7 +2714,7 @@
           };
 
           const copyWaterfallItem = (item) => {
-            const text = `ID: ${item.id}\n名称: ${item.name || "-"}\n品牌: ${item.brand || "-"}\n供应商: ${item.supplier || "-"}\n价格: ${Math.floor((item.price / 100) * 0.98)}₽\n原价: ${item.basic / 100}₽\n评分: ${item.reviewRating || "-"}\n评论数: ${item.feedbacks || 0}`;
+            const text = `ID: ${item.id}\n名称: ${item.name || "-"}\n品牌: ${item.brand || "-"}\n供应商: ${item.supplier || "-"}\n价格: ${Math.floor((item.price / 100) * 1)}₽\n原价: ${item.basic / 100}₽\n评分: ${item.reviewRating || "-"}\n评论数: ${item.feedbacks || 0}`;
             navigator.clipboard
               .writeText(text)
               .then(() => {
@@ -2772,12 +2950,13 @@
                   (entry) => entry.id === currentHistoryId.value,
                 );
                 if (historyEntry) {
-                  historyEntry.rawJson = JSON.stringify(Vue.toRaw(allData.value));
+                  historyEntry.rawJson = JSON.stringify(
+                    Vue.toRaw(allData.value),
+                  );
                   historyEntry.recordCount = allData.value.length;
                   saveHistoryToStorage();
                 }
               }
-
 
               // 重新应用过滤和排序
               applyTagFilter();
@@ -2787,8 +2966,9 @@
               insertProductText.value = "";
               error.value = null;
 
-              window.showCopyToast("产品已插入成功 (ID: " + (product.id || "未知") + ")");
-
+              window.showCopyToast(
+                "产品已插入成功 (ID: " + (product.id || "未知") + ")",
+              );
             } catch (err) {
               console.error("解析产品JSON出错:", err);
               error.value = "JSON解析失败: " + err.message;
@@ -2914,9 +3094,22 @@
               headerRow.height = 28;
 
               const headerStyle = {
-                font: { bold: true, size: 11, name: "Microsoft YaHei", color: { argb: "FFFFFFFF" } },
-                fill: { type: "pattern", pattern: "solid", fgColor: { argb: "FF667EEA" } },
-                alignment: { horizontal: "center", vertical: "middle", wrapText: true },
+                font: {
+                  bold: true,
+                  size: 11,
+                  name: "Microsoft YaHei",
+                  color: { argb: "FFFFFFFF" },
+                },
+                fill: {
+                  type: "pattern",
+                  pattern: "solid",
+                  fgColor: { argb: "FF667EEA" },
+                },
+                alignment: {
+                  horizontal: "center",
+                  vertical: "middle",
+                  wrapText: true,
+                },
                 border: {
                   top: { style: "thin" },
                   left: { style: "thin" },
@@ -2939,11 +3132,18 @@
               worksheet.getColumn(1).width = 22;
               for (let i = 0; i < DISPLAY_FIELDS.length; i++) {
                 const w = parseInt(DISPLAY_FIELDS[i].width) || 100;
-                worksheet.getColumn(i + 2).width = Math.max(Math.round(w / 7.5), 10);
+                worksheet.getColumn(i + 2).width = Math.max(
+                  Math.round(w / 7.5),
+                  10,
+                );
               }
 
               const cellStyle = {
-                alignment: { horizontal: "center", vertical: "middle", wrapText: true },
+                alignment: {
+                  horizontal: "center",
+                  vertical: "middle",
+                  wrapText: true,
+                },
                 border: {
                   top: { style: "thin" },
                   left: { style: "thin" },
@@ -2959,32 +3159,32 @@
 
                 const rowValues = [""].concat(
                   DISPLAY_FIELDS.map((field) => {
-                  let value = getFieldValue(item, field.key);
-                  if (value == null || value === "") return "";
-                  if (field.key === "price") {
-                    return Math.floor((value / 100) * 0.98);
-                  }
-                  if (field.key === "basic") {
-                    return value / 100;
-                  }
-                  if (field.key === "isNew") {
-                    return value ? "是" : "否";
-                  }
-                  if (typeof value === "boolean") {
-                    return value ? "是" : "否";
-                  }
-                  if (Array.isArray(value)) {
-                    if (field.key === "colors") {
-                      return value.map((c) => c.name).join(", ");
+                    let value = getFieldValue(item, field.key);
+                    if (value == null || value === "") return "";
+                    if (field.key === "price") {
+                      return Math.floor((value / 100) * 1);
                     }
-                    return value.length + " 项";
-                  }
-                  if (typeof value === "object") {
-                    return JSON.stringify(value);
-                  }
-                  return value;
-                })
-              );
+                    if (field.key === "basic") {
+                      return value / 100;
+                    }
+                    if (field.key === "isNew") {
+                      return value ? "是" : "否";
+                    }
+                    if (typeof value === "boolean") {
+                      return value ? "是" : "否";
+                    }
+                    if (Array.isArray(value)) {
+                      if (field.key === "colors") {
+                        return value.map((c) => c.name).join(", ");
+                      }
+                      return value.length + " 项";
+                    }
+                    if (typeof value === "object") {
+                      return JSON.stringify(value);
+                    }
+                    return value;
+                  }),
+                );
 
                 const row = worksheet.addRow(rowValues);
                 row.height = 135;
@@ -3001,10 +3201,7 @@
                 if (!result) continue;
 
                 const imageId = workbook.addImage({
-                  base64: result.base64.replace(
-                    /^data:image\/\w+;base64,/,
-                    "",
-                  ),
+                  base64: result.base64.replace(/^data:image\/\w+;base64,/, ""),
                   extension: result.ext,
                 });
 
